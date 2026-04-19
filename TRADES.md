@@ -1,25 +1,31 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: initialised 2026-04-19_
+_Last updated: 2026-04-19 (initialised)_
 
 ---
 
-## ACTIVE TRADES
+## MONDAY SIGNALS (Week of —)
 
-| Ticker | Price | Signal | Entry Target | Stop Loss | Catalyst (SEC Sourced) |
-|--------|-------|--------|-------------|-----------|------------------------|
-| —      | —     | —      | —           | —         | —                      |
+| Ticker | Signal | Entry Target | Stop Loss | Conviction | Catalyst Summary |
+|--------|--------|-------------|-----------|------------|-----------------|
+| —      | —      | —           | —         | —          | —               |
 
 ---
 
-## ACTIVE P&L TRACKER
+## ACTIVE POSITIONS
 
-| Ticker | Entry Price | Current Price | $ P&L | % P&L | Position Size |
-|--------|-------------|---------------|-------|-------|---------------|
-| —      | —           | —             | —     | —     | $100          |
+| Ticker | Entry Price | Entry Date | Position Size | Current Price | $ P&L | % P&L | Status |
+|--------|-------------|------------|--------------|---------------|-------|-------|--------|
+| —      | —           | —          | $100         | —             | —     | —     | —      |
 
-**Total Deployed:** $0 / $500  
-**Realised P&L:** $0.00  
+**Total Deployed:** $0 / $500
+**Realised P&L:** $0.00
 **Unrealised P&L:** $0.00
+
+---
+
+## WEEKLY RESEARCH LOG
+
+_Candidates found during daily scans. Aggregated each Monday to produce signals._
 
 ---
 
