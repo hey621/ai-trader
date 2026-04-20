@@ -7,64 +7,70 @@ Credentials:
 - Resend key: $RESEND_KEY
 
 ## Step 0 — Read State
-Run: cat TRADES.md
-Note any tickers in ARCHIVE LOG closed within the last 30 days. Skip these in all steps.
+Read TRADES.md. Note any tickers in ARCHIVE LOG closed within the last 30 days — skip these throughout.
 
-## Step 1 — Polygon Screen
-Run: python3 screen.py
+## Step 1 — Screen for Candidates (max 6 WebSearches)
+Use WebSearch to find penny stock movers passing all filters. Run these searches:
 
-If the output contains MARKET_CLOSED, the market is not open. Send a brief email to hey@bradscanvas.com with subject "PennyAlpha — Market Closed [DATE]" and body "No scan performed — market is closed." Then stop. Do not proceed further.
+1. Search: "penny stocks high relative volume today site:finviz.com OR site:barchart.com OR site:marketbeat.com"
+2. Search: "biotech penny stocks FDA catalyst moving today RVOL"
+3. Search: "AI chip penny stocks unusual volume today"
+4. Search: "uranium lithium defence penny stocks moving today high volume"
 
-This calls the Polygon API and outputs one JSON object per line for each stock passing:
+From results, extract tickers where ALL of the following appear true:
 - Price $0.50–$5.00
-- RVOL >= 2.0
+- Relative Volume (RVOL) > 2.0
 - Daily dollar volume >= $500k
 - Bid/ask spread <= 3%
-- Price above 20-day SMA
+- Price above 20-day moving average
 
-Each JSON line contains: ticker, price, rvol, dollar_vol, spread, sma20, above_sma20, resistance, upside_pct, tech_score.
+Discard any ticker in the ARCHIVE LOG. Target 15–20 candidates.
+Sector mix: ~70% Biotech / ~20% AI-Infrastructure or Chips / ~10% Energy (uranium, lithium) or Defence/Space.
 
-Discard any ticker in the ARCHIVE LOG. Discard any ticker with tech_score < 3. Target 15–20 survivors. Aim for ~70% Biotech / ~20% AI-Infrastructure or Chips / ~10% Energy (uranium, lithium) or Defence/Space by sector. Use one WebSearch per ticker to confirm sector if unsure.
+Assign a preliminary Tech Score (0–5):
+- Price above 20-day MA: +1
+- Price above 50-day MA: +1
+- RVOL > 3.0: +1
+- At least 15% upside to nearest resistance: +1
+- Higher lows pattern visible recently: +1
 
-## Step 2 — Deep Research (max 25 WebSearches total)
-For each surviving candidate, run all of these checks:
+Discard any ticker with Tech Score < 3.
 
-a) SEC Validation — find a recent 8-K, 10-Q, or S-1 confirming the news catalyst. Drop the ticker if none found.
+## Step 2 — Deep Research (max 19 WebSearches total, ~1-2 per ticker)
+For each surviving candidate:
 
-b) FDA/PDUFA Calendar — search for any FDA decision date, Phase II/III readout, or PDUFA date within 60 days. Note the date or N/A.
+a) SEC Validation — search "[TICKER] SEC 8-K OR 10-Q OR S-1 2026". Drop if no recent filing confirms the catalyst.
 
-c) Dilution Check — estimate cash runway from the most recent 10-Q. Flag "HIGH DILUTION RISK" if under 4 months of runway.
+b) FDA/PDUFA Calendar — search "[TICKER] FDA PDUFA date 2026". Flag "TOMORROW CATALYST" if date is next trading day. Note date or N/A.
 
-d) Short Squeeze Potential — find short float percentage. Flag "SQUEEZE CANDIDATE" if above 20%.
+c) Dilution Check — from 10-Q, estimate cash runway. Flag "HIGH DILUTION RISK" if under 4 months.
 
-e) Insider Activity — search Form 4 filings for insider purchases in the last 30 days. Note Y or N.
+d) Short Squeeze — search "[TICKER] short interest float". Flag "SQUEEZE CANDIDATE" if short float > 20%.
 
-f) Earnings Date — search for the next earnings report date. Flag "EARNINGS <7D" if within 7 days.
+e) Insider Activity — search "[TICKER] Form 4 insider buying 2026". Note Y or N.
 
-g) Analyst Activity — any upgrades, initiations, or price target changes in the last 14 days? Note Y or N.
+f) Earnings Date — search "[TICKER] earnings date". Flag "EARNINGS <7D" if within 7 days.
 
-h) Additional SMAs — note whether price is above the 9-day MA (momentum) and 200-day MA (long-term trend).
+g) Analyst Activity — any upgrades, initiations, or price target changes in last 14 days? Note Y or N.
 
-i) VWAP — is price trading above today's VWAP? Note Y or N.
-
-j) 52-Week High — what is the 52-week high? Calculate upside to 52-week high as a secondary resistance target.
+h) Technical levels — note 9-day MA, 200-day MA, VWAP, 52-week high if available.
 
 ## Step 3 — Append to WEEKLY RESEARCH LOG
-Only log tickers with tech_score >= 3. Append to TRADES.md under ## WEEKLY RESEARCH LOG. Never overwrite existing entries.
+Only log tickers with Tech Score >= 3. Append under ## WEEKLY RESEARCH LOG. Never overwrite existing entries.
 
 ### YYYY-MM-DD Morning Scan
-| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | SMA9 | SMA20 | SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
-|--------|-------|------|-----------|--------|-----------|------|-------|--------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
-| TICK | $X.XX | X.Xx | $XXXk | X.X% | X/5 | Y/N | $X.XX | Y/N | Y/N | $X.XX | $X.XX | X% | [flags] | [SEC ref] | [date/N/A] | [date/N/A] | Y/N | Y/N |
+| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
+|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
+| TICK | $X.XX | X.Xx | $XXXk | X.X% | X/5 | Y/N | Y/N | Y/N | Y/N | $X.XX | $X.XX | X% | [flags] | [SEC ref] | [date/N/A] | [date/N/A] | Y/N | Y/N |
 
 Do not modify MONDAY SIGNALS or ACTIVE POSITIONS sections.
 
 ## Step 4 — Commit and Push
+```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
 git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
 git commit -m "Research: morning scan YYYY-MM-DD"
 git push
-
-
+```

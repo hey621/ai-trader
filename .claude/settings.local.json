@@ -10,7 +10,24 @@
       "Bash(git commit *)",
       "Bash(git branch *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"import alpaca_mcp_server; print\\('found'\\)\")",
+      "Read(//usr/local/bin/**)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(python3 -c \"import alpaca; print\\(alpaca.__version__\\)\")",
+      "Bash(python3 -c \"from alpaca.trading.client import TradingClient; print\\('alpaca-py ok'\\)\")",
+      "Bash(python3 -c \"from alpaca.trading.client import TradingClient; print\\('ok'\\)\")",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python3 -c ' *)",
+      "Bash(gh auth *)",
+      "Bash(git -C /Users/bradwalls/Documents/AI-trader remote -v)",
+      "Bash(git -C /Users/bradwalls/Documents/AI-trader status)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ]
   }
 }
