@@ -4,8 +4,8 @@ SIGNAL MODE. Read the full week of research and produce final BUY / SELL / HOLD 
 This is the only output Brad acts on. Email signals to hey@bradscanvas.com.
 
 Credentials:
-- GitHub token: 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
-- Resend key: re_7HPmdVCU_3k58K1kqtmsZQbGowdZVukig
+- GitHub token: $GITHUB_TOKEN
+- Resend key: $RESEND_KEY
 
 ## Step 0 — Read Full State
 Run: cat TRADES.md
@@ -64,7 +64,7 @@ ARCHIVE LOG — append any closed tickers with Eligible Again = today + 30 days.
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
-git remote set-url origin https://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@github.com/hey621/ai-trader.git
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
 git commit -m "Monday signals YYYY-MM-DD"
 git push
@@ -75,7 +75,7 @@ Send a clean email to hey@bradscanvas.com containing only the MONDAY SIGNALS tab
 
 Use curl to call the Resend API:
 - Endpoint: https://api.resend.com/emails
-- Authorization: Bearer re_7HPmdVCU_3k58K1kqtmsZQbGowdZVukig
+- Authorization: Bearer $RESEND_KEY
 - From: onboarding@resend.dev
 - To: hey@bradscanvas.com
 - Subject: PennyAlpha Monday Signals — [DATE]

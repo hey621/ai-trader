@@ -3,8 +3,8 @@
 Lightweight mid-day check. Only email Brad if something needs action.
 
 Credentials:
-- GitHub token: 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
-- Resend key: re_7HPmdVCU_3k58K1kqtmsZQbGowdZVukig
+- GitHub token: $GITHUB_TOKEN
+- Resend key: $RESEND_KEY
 
 ## Step 1 — Run Position Check
 ```
@@ -29,13 +29,13 @@ Commit and push:
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
-git remote set-url origin https://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@github.com/hey621/ai-trader.git
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
 git commit -m "Alert: stop/target triggered YYYY-MM-DD"
 git push
 ```
 
-Then email hey@bradscanvas.com via Resend API (Bearer re_7HPmdVCU_3k58K1kqtmsZQbGowdZVukig):
+Then email hey@bradscanvas.com via Resend API (Bearer $RESEND_KEY):
 - From: onboarding@resend.dev
 - Subject: ACTION NEEDED — PennyAlpha Alert [DATE]
 - Body: List each alert line clearly. State whether it was a stop loss (LOSS) or target (WIN). End with: "Update your positions — next Monday signal will reflect this close."

@@ -3,8 +3,8 @@
 RESEARCH MODE ONLY. Do not produce trading signals. Append findings to TRADES.md.
 
 Credentials:
-- GitHub token: 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
-- Resend key: re_7HPmdVCU_3k58K1kqtmsZQbGowdZVukig
+- GitHub token: $GITHUB_TOKEN
+- Resend key: $RESEND_KEY
 
 ## Step 0 — Read State
 Run: cat TRADES.md
@@ -51,7 +51,7 @@ Do not modify MONDAY SIGNALS or ACTIVE POSITIONS sections.
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
-git remote set-url origin https://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@github.com/hey621/ai-trader.git
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
 git commit -m "Research: morning scan YYYY-MM-DD"
 git push

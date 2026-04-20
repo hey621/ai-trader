@@ -4,7 +4,8 @@ import json
 import urllib.request
 from datetime import date, timedelta
 
-POLYGON_KEY = "vTsb4KhgEMTkAigTlWOkKXr5xStlg_qV"
+import os
+POLYGON_KEY = os.environ.get("POLYGON_KEY", "")
 BASE = "https://api.polygon.io"
 
 def get(path):
