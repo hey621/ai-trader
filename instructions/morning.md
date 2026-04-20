@@ -60,3 +60,11 @@ Only log tickers with tech_score >= 3. Append to TRADES.md under ## WEEKLY RESEA
 Do not modify MONDAY SIGNALS or ACTIVE POSITIONS sections.
 
 ## Step 4 — Commit and Push
+git config user.email bot@pennyalpha.local
+git config user.name PennyAlpha_Bot
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
+git add TRADES.md
+git commit -m "Research: morning scan YYYY-MM-DD"
+git push
+
+
