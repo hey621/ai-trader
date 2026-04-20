@@ -1,0 +1,79 @@
+name: PennyAlpha Trading
+
+on:
+  schedule:
+    # Monday 10:30 AM ET (14:30 UTC) — place trades after morning research
+    - cron: "30 14 * * 1"
+    # Mon–Fri 3:45 PM ET (19:45 UTC) — check stops/targets before close
+    - cron: "45 19 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Which job to run (trade or close)"
+        required: true
+        default: close
+        type: choice
+        options:
+          - trade
+          - close
+
+jobs:
+  trade:
+    name: Place Monday Trades
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'trade' ||
+      github.event_name == 'schedule' && github.event.schedule == '30 14 * * 1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Place trades
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python trade.py
+
+      - name: Commit updated TRADES.md
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Trades: placed Monday orders $(date -u +%Y-%m-%d)"
+          git push
+
+  close:
+    name: Check Stops & Targets
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.job == 'close' ||
+      github.event_name == 'schedule' && github.event.schedule == '45 19 * * 1-5'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Check and close positions
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python close.py
+
+      - name: Commit updated TRADES.md
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Trades: position update $(date -u +%Y-%m-%d)"
+          git push

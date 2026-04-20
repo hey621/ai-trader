@@ -1,25 +1,30 @@
 #!/usr/bin/env python3
-"""Check ACTIVE POSITIONS against current Polygon prices. Print alerts for stop loss / target hits."""
-import json
-import re
-import urllib.request
-
+"""Check ACTIVE POSITIONS against current Alpaca prices. Print alerts for stop loss / target hits."""
 import os
-POLYGON_KEY = os.environ.get("POLYGON_KEY", "")
-BASE = "https://api.polygon.io"
+import re
+import sys
 
-def get_price(ticker):
-    url = f"{BASE}/v2/snapshot/locale/us/markets/stocks/tickers/{ticker}?apiKey={POLYGON_KEY}"
+from alpaca.trading.client import TradingClient
+from alpaca.data.historical import StockHistoricalDataClient
+from alpaca.data.requests import StockLatestTradeRequest
+
+API_KEY = os.environ.get("ALPACA_API_KEY", "")
+SECRET_KEY = os.environ.get("ALPACA_SECRET_KEY", "")
+
+trading = TradingClient(API_KEY, SECRET_KEY, paper=True)
+data_client = StockHistoricalDataClient(API_KEY, SECRET_KEY)
+
+
+def get_price(ticker: str) -> float | None:
     try:
-        with urllib.request.urlopen(url, timeout=10) as r:
-            data = json.loads(r.read())
-        return data.get("ticker", {}).get("day", {}).get("c") or \
-               data.get("ticker", {}).get("lastTrade", {}).get("p")
+        req = StockLatestTradeRequest(symbol_or_symbols=ticker)
+        trade = data_client.get_stock_latest_trade(req)
+        return float(trade[ticker].price)
     except Exception:
         return None
 
-def parse_positions(trades_md):
-    """Extract active positions from TRADES.md. Returns list of dicts."""
+
+def parse_positions(trades_md: str) -> list[dict]:
     positions = []
     in_section = False
     for line in trades_md.splitlines():
@@ -33,15 +38,16 @@ def parse_positions(trades_md):
             if len(cols) >= 5 and cols[0] and cols[0] != "—":
                 ticker = cols[0]
                 entry_str = re.sub(r"[^\d.]", "", cols[1]) if len(cols) > 1 else ""
-                stop_str  = re.sub(r"[^\d.]", "", cols[7]) if len(cols) > 7 else ""
+                stop_str = re.sub(r"[^\d.]", "", cols[7]) if len(cols) > 7 else ""
                 try:
                     entry = float(entry_str)
-                    stop  = float(stop_str) if stop_str else entry * 0.90
+                    stop = float(stop_str) if stop_str else entry * 0.90
                     target = entry * 1.20
                     positions.append({"ticker": ticker, "entry": entry, "stop": stop, "target": target})
                 except ValueError:
                     pass
     return positions
+
 
 if __name__ == "__main__":
     with open("TRADES.md") as f:
@@ -50,7 +56,7 @@ if __name__ == "__main__":
     positions = parse_positions(md)
     if not positions:
         print("NO_ACTIVE_POSITIONS")
-        raise SystemExit(0)
+        sys.exit(0)
 
     alerts = []
     updates = []
@@ -63,10 +69,10 @@ if __name__ == "__main__":
         status = "OK"
         if price <= p["stop"]:
             status = "STOP_HIT"
-            alerts.append(f"STOP LOSS HIT: {p['ticker']} now ${price:.2f} ({pct:+.1f}%) — entry was ${p['entry']:.2f}, stop was ${p['stop']:.2f}")
+            alerts.append(f"STOP LOSS HIT: {p['ticker']} now ${price:.2f} ({pct:+.1f}%) — entry ${p['entry']:.2f}, stop ${p['stop']:.2f}")
         elif price >= p["target"]:
             status = "TARGET_HIT"
-            alerts.append(f"TARGET HIT: {p['ticker']} now ${price:.2f} ({pct:+.1f}%) — entry was ${p['entry']:.2f}, target was ${p['target']:.2f}")
+            alerts.append(f"TARGET HIT: {p['ticker']} now ${price:.2f} ({pct:+.1f}%) — entry ${p['entry']:.2f}, target ${p['target']:.2f}")
         updates.append(f"{p['ticker']}: ${price:.2f} ({pct:+.1f}%) [{status}]")
 
     print("--- Position Check ---")
