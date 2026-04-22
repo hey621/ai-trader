@@ -7,7 +7,7 @@ _Last updated: 2026-04-22 (Monday aggregation)_
 
 | Ticker | Signal | Entry Target | Stop Loss | Conviction | Catalyst Summary |
 |--------|--------|-------------|-----------|------------|-----------------|
-| —      | —      | —           | —         | —          | No research data available this week |
+| —      | —      | —           | —         | —          | No qualifying candidates this week — JAGU dropped (RVOL 0.59 < 2.0 threshold) |
 
 ---
 
@@ -26,15 +26,6 @@ _Last updated: 2026-04-22 (Monday aggregation)_
 ## WEEKLY RESEARCH LOG
 
 _Candidates found during daily scans. Aggregated each Monday to produce signals._
-
----
-
-### 2026-04-22 Morning Scan
-_Scan notes: Web search returned limited real-time data; 5 tickers evaluated (JAGU, SNGX, MNKD, DVLT, PDSB). SNGX excluded (Tech Score 2/5; price below 20-day MA). MNKD excluded (RVOL 1.52x < 2.0 threshold). DVLT excluded (RVOL 0.88x). PDSB excluded (insufficient volume data). One candidate qualifies._
-
-| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
-|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
-| JAGU | $2.99 | ~2x est. | ~$996k | N/A | 3/5 | N/A | Y est. | Y | Y est. | $4.00 | $5.50 | 34% | INSIDER BUY | 10-K filed Mar 2026; IPO Feb 2026 $25M raised | N/A | N/A | N | Y |
 
 ---
 
