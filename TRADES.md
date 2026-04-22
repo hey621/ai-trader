@@ -1,13 +1,13 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-19 (initialised)_
+_Last updated: 2026-04-22 (Monday aggregation)_
 
 ---
 
-## MONDAY SIGNALS (Week of —)
+## MONDAY SIGNALS (Week of 2026-04-22)
 
 | Ticker | Signal | Entry Target | Stop Loss | Conviction | Catalyst Summary |
 |--------|--------|-------------|-----------|------------|-----------------|
-| —      | —      | —           | —         | —          | —               |
+| —      | —      | —           | —         | —          | No research data available this week |
 
 ---
 
@@ -39,4 +39,3 @@ _Candidates found during daily scans. Aggregated each Monday to produce signals.
 
 ## ARCHIVE LOG
 _Tickers archived here are ineligible for re-suggestion for 30 days from close date._
-
