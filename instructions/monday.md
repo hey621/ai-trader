@@ -12,7 +12,7 @@ Run: cat TRADES.md
 Read everything: MONDAY SIGNALS, ACTIVE POSITIONS, WEEKLY RESEARCH LOG, CLOSED TRADES, ARCHIVE LOG.
 
 ## Step 1 — Review Existing Positions (SELL or HOLD)
-For each ticker in ACTIVE POSITIONS, use WebSearch or python3 screen.py to get the current price.
+For each ticker in ACTIVE POSITIONS, use WebSearch to find the current price (search "[TICKER] stock price today").
 - SELL if: up >= 20% from entry, down >= 10% from entry (stop loss hit), or original catalyst is resolved/broken.
 - HOLD if: thesis still intact, within stop loss, has not hit target yet.
 
@@ -35,10 +35,10 @@ Rank all candidates by conviction score, highest first.
 Budget: $500 total. Max 5 active positions at $100 each.
 Count current HOLD positions. Fill remaining open slots with top-ranked candidates.
 
-For each BUY candidate, run python3 screen.py and confirm:
+For each BUY candidate, use WebSearch to confirm:
 - Price still $0.50–$5.00
-- Spread still <= 3%
-- Still above 20-day SMA
+- Still trading with high volume (RVOL > 2.0)
+- Catalyst still valid
 
 Drop any candidate that no longer passes. Use up to 5 WebSearches to verify SEC catalysts are still valid.
 
