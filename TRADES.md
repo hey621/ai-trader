@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-23 (Morning scan)_
+_Last updated: 2026-04-23 (Afternoon scan)_
 
 ---
 
@@ -59,6 +59,19 @@ _Second-pass screened out (RVOL <2.0): EDIT ($2.21, RVOL ~0.02 — ~34K vs 1.73M
 _Second-pass screened out (Tech Score <3): GCTS ($1.15, Hold consensus, revenue missed, short float 3.2%)_
 _Second-pass screened out (RVOL unconfirmed): MBOT ($2.48, LIBERTY® FMR launch at SIR Apr-2026 is a catalyst but RVOL unconfirmed); CELZ ($2.47, H1-2026 ADAPT data catalyst, cash ~4.3 months runway — borderline HIGH DILUTION RISK, RVOL unconfirmed)_
 _Note on ASTC ($2.85): 65.6% short float — extreme SQUEEZE CANDIDATE — but Tech Score <3 and $30M shelf filing = HIGH DILUTION RISK; float only 1.76M shares; monitor for squeeze setup only_
+
+---
+
+### 2026-04-23 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
+|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
+| MDAI | ~$1.95 | ~2.0x est | ~$1.2M | ~2.5% est | 3/5 | Y | Y | N | Y | $2.20 | $3.21 | +156% | RVOL UNCONFIRMED; BARDA NON-DILUTIVE | 10-K/Q confirmed; BARDA PBS $31.7M non-dilutive award; Q4-2025 earnings filed Mar-2026 | N/A | N/A | Y ($5.00 med; 3x Strong Buy) | N |
+
+_Screened out (RVOL <2.0): CELZ ($2.29, RVOL ~0.40 — ~40K vs ~102K avg); MBOT ($2.36, RVOL ~1.04 — 1.87M vs 1.8M avg)_
+_Screened out (below 20-day MA / Strong Sell signal): GEVO ($1.80, Strong Sell technical rating, multiple MAs bearish)_
+_Screened out (RVOL unconfirmed / MA position uncertain): BZAI ($2.14, re-screened from Apr-22 — at/below $2.20 support; Nokia AI partnership catalyst confirmed but RVOL and MA position unverified for Apr-23)_
+_**ALERT — GRCE morning scan entry INVALIDATED**: FDA issued Complete Response Letter (CRL) for GTx-104 on Apr-23-26 PDUFA day. CRL cites CMC/leachables/manufacturing deficiencies (no additional clinical data required); company plans Type A meeting and resubmission. Stock expected to drop sharply from ~$4.58 morning open. Conviction FULLY REVERSED — do not hold longs._
 
 ---
 
