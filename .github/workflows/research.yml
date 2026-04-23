@@ -1,0 +1,152 @@
+name: PennyAlpha Research
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    # Monday Pre-Market: 8:00 AM ET (13:00 UTC)
+    - cron: "0 13 * * 1"
+    # Monday Aggregation: 8:45 AM ET (13:45 UTC)
+    - cron: "45 13 * * 1"
+    # Morning Research: 9:15 AM ET (14:15 UTC) Mon–Fri
+    - cron: "15 14 * * 1-5"
+    # Afternoon Research: 3:30 PM ET (20:30 UTC) Mon–Fri
+    - cron: "30 20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Which task to run"
+        required: true
+        default: morning
+        type: choice
+        options:
+          - morning
+          - afternoon
+          - monday_premarket
+          - monday
+
+jobs:
+  monday_premarket:
+    name: Monday Pre-Market Scan
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'monday_premarket' ||
+      github.event_name == 'schedule' && github.event.schedule == '0 13 * * 1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run pre-market scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+        run: python agent.py monday_premarket
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Research: Monday pre-market $(date -u +%Y-%m-%d)"
+          git push
+
+  monday:
+    name: Monday Aggregation
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'monday' ||
+      github.event_name == 'schedule' && github.event.schedule == '45 13 * * 1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run Monday aggregation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+        run: python agent.py monday
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Monday signals $(date -u +%Y-%m-%d)"
+          git push
+
+  morning:
+    name: Morning Research
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'morning' ||
+      github.event_name == 'schedule' && github.event.schedule == '15 14 * * 1-5'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run morning scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+        run: python agent.py morning
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Research: morning scan $(date -u +%Y-%m-%d)"
+          git push
+
+  afternoon:
+    name: Afternoon Research
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'afternoon' ||
+      github.event_name == 'schedule' && github.event.schedule == '30 20 * * 1-5'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run afternoon scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+        run: python agent.py afternoon
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          git diff --cached --quiet || git commit -m "Research: afternoon scan $(date -u +%Y-%m-%d)"
+          git push

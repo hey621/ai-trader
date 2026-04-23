@@ -1,2 +1,4 @@
 alpaca-py
 pytz
+anthropic
+requests
