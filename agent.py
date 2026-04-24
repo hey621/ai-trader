@@ -107,12 +107,31 @@ TASK_FILES = {
     "monday": "instructions/monday.md",
 }
 
+ALREADY_RAN_MARKERS = {
+    "morning": lambda d: f"### {d} Morning Scan",
+    "afternoon": lambda d: f"### {d} Afternoon Scan",
+    "monday_premarket": lambda d: f"### {d} Pre-Market (Monday)",
+    "monday": lambda d: f"Week of {d}",
+}
+
+
+def already_ran_today(task: str, today: str) -> bool:
+    try:
+        return ALREADY_RAN_MARKERS[task](today) in read_trades_md()
+    except Exception:
+        return False
+
 
 def run(task: str) -> None:
     with open(TASK_FILES[task]) as f:
         instruction = f.read()
 
     today = datetime.utcnow().strftime("%Y-%m-%d")
+
+    if already_ran_today(task, today):
+        print(f"Already ran {task} today ({today}) — skipping duplicate.", flush=True)
+        return
+
     trades = read_trades_md()
 
     system = (
