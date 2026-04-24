@@ -142,7 +142,7 @@ def run(task: str) -> None:
             f"  subject: PennyAlpha {scan_label} Scan — {today}\n"
             f"  body: A plain-text summary including:\n"
             f"    - Number of candidates screened and how many passed\n"
-            f"    - A table of all tickers logged to the research log (Ticker | Price | Tech Score | Flags | Catalyst)\n"
+            f"    - A table of all tickers logged to the research log (Ticker | Company Name | Price | Tech Score | Flags | Catalyst)\n"
             f"    - A brief note on any tickers screened out for notable reasons\n"
             f"  Keep it concise — Brad reads this on his phone."
         )
