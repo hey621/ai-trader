@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-24 (Afternoon scan)_
+_Last updated: 2026-04-24 (Morning + Afternoon scans)_
 
 ---
 
@@ -72,6 +72,22 @@ _Screened out (RVOL <2.0): CELZ ($2.29, RVOL ~0.40 — ~40K vs ~102K avg); MBOT 
 _Screened out (below 20-day MA / Strong Sell signal): GEVO ($1.80, Strong Sell technical rating, multiple MAs bearish)_
 _Screened out (RVOL unconfirmed / MA position uncertain): BZAI ($2.14, re-screened from Apr-22 — at/below $2.20 support; Nokia AI partnership catalyst confirmed but RVOL and MA position unverified for Apr-23)_
 _**ALERT — GRCE morning scan entry INVALIDATED**: FDA issued Complete Response Letter (CRL) for GTx-104 on Apr-23-26 PDUFA day. CRL cites CMC/leachables/manufacturing deficiencies (no additional clinical data required); company plans Type A meeting and resubmission. Stock expected to drop sharply from ~$4.58 morning open. Conviction FULLY REVERSED — do not hold longs._
+
+---
+
+### 2026-04-24 Morning Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
+|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
+| ABCL | ~$4.05 | UNCONFIRMED | ~$2M est | ~2.0% est | 4/5 | Y est | Y est | N | Y est | $4.98 | $6.62 | +64% to 52W high | RVOL UNCONFIRMED; SQUEEZE CANDIDATE (21.5% short float; 15.8 days-to-cover); BELOW 200-DAY SMA; SELL SIGNAL (1W/1M); EARNINGS MAY-11-26 | 10-K filed Mar-2026; Q4-2025 8-K (EPS beat +83%); $680M cash (zero dilution risk); Revenue +160% YoY ($75M in 2025) | N/A | May-11-26 | Y (Strong Buy consensus; 14 analysts; avg PT $9.35; range $7–$12) | Y (Thermopylae Holdings, 10% owner, bought 38K shares at $3.44 — Form 4 filed Mar-2026) |
+
+_Screened out (RVOL <2.0): PACB ($1.59 Apr-23 close; RVOL ~0.33 — 1.85M vs 5.55M avg — fails filter; Hold consensus 3 analysts; Barclays PT $1.00 below current price; Trillion Gene Atlas + SPRQ-Nx catalysts intact but volume insufficient); OABI ($1.53 est Apr-24; RVOL ~0.78 — below 2.0 threshold per Apr-16 data; insider SOLD $10,663 on Apr-8-26 — negative signal)_
+_Screened out (RVOL near-0 / dilution): UROY ($3.65 Apr-22; RVOL ~0 apparent post-merger-announcement Apr-16 — 504 shares traded vs 2.38M avg; merger requires $813M new equity ≈ 223M new shares issued to Sweetwater owners — HIGH DILUTION RISK structural; short float ~11.13% — not a squeeze candidate; shareholder vote expected Jul-2026)_
+_Note on ABCL: Currently trading below 200-day SMA (confirmed via TradingView technical analysis; 52W range $3.14–$6.62; current ~$4.05). Technical rating sell 1W/1M signals. R1 resistance $4.977 (+23% upside from current). Mitigating factors: $680M cash (no dilution risk), revenue growth +160% YoY, Q4-2025 EPS beat +83%, Thermopylae Holdings (10% owner) Form 4 purchase 38K shares at $3.44 in March 2026, short float 21.5% (days-to-cover 15.8 — SQUEEZE CANDIDATE). 14-analyst Strong Buy, avg PT $9.35 range $7–$12. Phase II ABCL635 readout expected Q3-2026 (post-Labor Day). RVOL must be confirmed above 2.0 intraday before treating as actionable; below-200-day-SMA position is a meaningful risk factor requiring close above SMA200 to upgrade conviction._
+_Note on PACB: 23.99% short float (SQUEEZE CANDIDATE threshold met) and 24.46% gain over prior month are positives; Trillion Gene Atlas (Anthropic + NVIDIA, March 2026) and SPRQ-Nx H2-2026 launch are strong catalysts. However, RVOL 0.33 fails filter and Barclays PT $1.00 (below current $1.59) is a bearish overhang. Monitor for RVOL recovery above 2.0._
+_Note on CDXS (from Apr-24 afternoon scan entry): Earnings Apr-30-26 now within EARNINGS <7D window as of today. Tech Score 4/5 from Apr-24 afternoon entry stands. Monitor intraday for RVOL confirmation prior to earnings catalyst window._
+_Note on IFRX (from Apr-24 afternoon scan entry): No new flags since Apr-24 afternoon entry. Earnings est. May-6–11-26 — outside 7-day window. RVOL ~2.3x confirmed Apr-22; re-verify today._
+_Sector mix this scan: 100% Biotech (1 qualifying candidate: ABCL, RVOL unconfirmed). No AI/Chip, Energy, or Defence candidates qualified (UROY RVOL failed; all AI/Chip and Defence names either above $5 or RVOL insufficient)._
 
 ---
 
