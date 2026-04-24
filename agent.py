@@ -134,13 +134,26 @@ def run(task: str) -> None:
 
     trades = read_trades_md()
 
+    scan_label = {"morning": "Morning", "afternoon": "Afternoon"}.get(task)
+    email_instruction = ""
+    if scan_label:
+        email_instruction = (
+            f"\nAfter calling write_trades_md, send a summary email using send_email with:\n"
+            f"  subject: PennyAlpha {scan_label} Scan — {today}\n"
+            f"  body: A plain-text summary including:\n"
+            f"    - Number of candidates screened and how many passed\n"
+            f"    - A table of all tickers logged to the research log (Ticker | Price | Tech Score | Flags | Catalyst)\n"
+            f"    - A brief note on any tickers screened out for notable reasons\n"
+            f"  Keep it concise — Brad reads this on his phone."
+        )
+
     system = (
         f"You are PennyAlpha_Bot. Today is {today} UTC.\n"
         "Use web_search for ALL internet lookups — including pre-market movers, prices, SEC filings, and FDA dates.\n"
         "Do NOT attempt to run Python scripts (premarket.py, screen.py, stopwatch.py) — use web_search instead.\n"
         "Do NOT run git commands — the CI workflow commits and pushes after you finish.\n"
         "Do NOT reference GITHUB_TOKEN or RESEND_KEY — use the send_email tool instead.\n"
-        "When you have finished all updates, call write_trades_md with the COMPLETE file content."
+        f"When you have finished all updates, call write_trades_md with the COMPLETE file content.{email_instruction}"
     )
 
     messages = [
