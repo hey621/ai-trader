@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-23 (Afternoon scan)_
+_Last updated: 2026-04-24 (Afternoon scan)_
 
 ---
 
@@ -72,6 +72,22 @@ _Screened out (RVOL <2.0): CELZ ($2.29, RVOL ~0.40 — ~40K vs ~102K avg); MBOT 
 _Screened out (below 20-day MA / Strong Sell signal): GEVO ($1.80, Strong Sell technical rating, multiple MAs bearish)_
 _Screened out (RVOL unconfirmed / MA position uncertain): BZAI ($2.14, re-screened from Apr-22 — at/below $2.20 support; Nokia AI partnership catalyst confirmed but RVOL and MA position unverified for Apr-23)_
 _**ALERT — GRCE morning scan entry INVALIDATED**: FDA issued Complete Response Letter (CRL) for GTx-104 on Apr-23-26 PDUFA day. CRL cites CMC/leachables/manufacturing deficiencies (no additional clinical data required); company plans Type A meeting and resubmission. Stock expected to drop sharply from ~$4.58 morning open. Conviction FULLY REVERSED — do not hold longs._
+
+---
+
+### 2026-04-24 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
+|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
+| CDXS | ~$2.40 | ~1.7x est | ~$1.4M est | ~1.5% | 4/5 | Y | Y | Y (crossed Apr-22) | Y est | $2.60 | $3.87 | +61% to 52W high | RVOL BORDERLINE (~1.5–1.9x); EARNINGS <7D (APR-30-26); 200-DAY MA CROSS APR-22 | 10-K/Q confirmed; EPS beat +357% Q4-2025 (Mar-11-26 8-K); Apr-30-26 Q1 earnings confirmed | N/A | Apr-30-26 | Y ($6.10–$8.00 avg; Cantor PT $11; consensus Hold w/ Buy skew; 6 analysts) | N (institutional 13G filings; Opaleye 10.45M shares) |
+| IFRX | ~$1.60 | ~2.3x | ~$1.5M est | ~2.0% | 3/5 | Y | Y | N | Y est | $1.94 | $1.94 | +21% to 52W high | EARNINGS <14D (MAY-06-26 est); NASDAQ DEFICIENCY NOTICE (Mar-11-26, min bid); NO CONFIRMED PDUFA | 6-K Apr-9-26; Phase 3 AAD late-breaker Mar-28-26 (vilobelimab PG data confirmed); annual report filed Mar-19-26 | No PDUFA confirmed (BLA not yet filed for PG; Phase 3 IDMC stopped trial — reassessing indication) | May-06–11-26 est | Y — Guggenheim Buy/$14 PT reaffirmed Apr-21-26 (within 14 days); avg $7.00 PT (+340%); 5 analysts Strong Buy consensus | N (director Nicolas Fulford Form 4 unconfirmed for Apr-2026) |
+
+_Screened out (RVOL <2.0): ATNM ($1.31–$1.32 Apr-23 close; vol 195K vs avg ~700K = RVOL ~0.28 — volume sharply faded after Apr-22 spike of 1.38M); MDAI ($1.87 Apr-23 close; vol ~184K vs avg 694K = RVOL ~0.27 — failed to sustain volume from prior scan); SIDU ($3.71–$3.84 Apr-23 close; vol 17M vs 35-day avg 35.8M = RVOL ~0.47 — offering closed Apr-21, volume decelerating)_
+_Screened out (price >$5): BCAB ($5.64–$5.84 post-50:1 reverse split Apr-6-26; 211% short float but price now >$5 range)_
+_Note on CDXS: Crossed above 200-day MA on Apr-22-26 — first time in months (MarketBeat confirmed "Share Price Crosses Above 200-Day Moving Average" Apr-22-26). Today ~−7.4% intraday pullback to ~$2.40 is likely pre-earnings volatility compression. Earnings Apr-30 Q1-2026 confirmed. Cash $78.2M (>12 months runway). Short float 7.76%. RVOL borderline estimated 1.5–1.9x; dollar vol ~$1.4M. Tech Score elevated to 4/5 on 200-day MA cross event. Monitor for close near session high as bullish confirmation. Cantor PT $11 implies +358% from current price._
+_Note on IFRX: Nasdaq minimum bid price deficiency notice received Mar-11-26 (180-day cure period ≈ Sep-8-26 deadline). This is a meaningful risk. Cash $63.8M → runway to mid-2027 (~14+ months, confirmed). Phase 3 IDMC stopped pyoderma gangrenosum trial — BLA not yet filed; Guggenheim maintained Buy/$14 Apr-21-26 based on pipeline recalibration and vilobelimab commercial path. No PDUFA date set for PG. Volume Apr-22: 967K–1.03M vs avg 415K = RVOL ~2.3x. Price recovered from $1.20 lows (Apr-17) to $1.60–$1.63 range — technical bounce with momentum. Earnings May-6 to May-11-26 estimated. 52W low $0.711; 52W high $1.94. If RVOL confirmed at close, Tech Score 3/5 supported._
+_Sector mix this scan: 100% Biotech (2/2 qualifying candidates). AI/Chip/Energy/Defence candidates MAPS ($0.39 = below $0.50 floor), SIDU (RVOL failed), MDAI (RVOL failed) all screened out._
+_Note on SIDU dilution update: $58.5M registered direct offering priced Apr-19-26 (13.45M shares at $4.35); offering closed Apr-21-26. Float expansion confirmed. HIGH DILUTION RISK flag stands from prior scan._
 
 ---
 
