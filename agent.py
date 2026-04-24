@@ -3,6 +3,7 @@
 import os
 import sys
 import json
+import time
 import requests
 from datetime import datetime
 
@@ -15,14 +16,14 @@ TAVILY_KEY = os.environ.get("TAVILY_API_KEY", "")
 def tavily_search(query: str) -> str:
     r = requests.post(
         "https://api.tavily.com/search",
-        json={"api_key": TAVILY_KEY, "query": query, "max_results": 5, "search_depth": "basic"},
+        json={"api_key": TAVILY_KEY, "query": query, "max_results": 3, "search_depth": "basic"},
         timeout=30,
     )
     r.raise_for_status()
     results = r.json().get("results", [])
     out = []
     for res in results:
-        out.append(f"**{res['title']}**\n{res['url']}\n{res.get('content', '')[:600]}")
+        out.append(f"**{res['title']}**\n{res['url']}\n{res.get('content', '')[:300]}")
     return "\n\n".join(out) or "No results found."
 
 
@@ -133,13 +134,22 @@ def run(task: str) -> None:
     client = anthropic.Anthropic()
 
     for _ in range(60):
-        resp = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=8096,
-            system=system,
-            tools=TOOLS,
-            messages=messages,
-        )
+        for attempt in range(4):
+            try:
+                resp = client.messages.create(
+                    model="claude-sonnet-4-6",
+                    max_tokens=8096,
+                    system=system,
+                    tools=TOOLS,
+                    messages=messages,
+                )
+                break
+            except anthropic.RateLimitError:
+                if attempt == 3:
+                    raise
+                wait = 60 * (attempt + 1)
+                print(f"Rate limited — waiting {wait}s before retry {attempt + 2}/4", flush=True)
+                time.sleep(wait)
         messages.append({"role": "assistant", "content": resp.content})
 
         if resp.stop_reason == "end_turn":
