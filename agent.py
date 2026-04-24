@@ -16,7 +16,7 @@ TAVILY_KEY = os.environ.get("TAVILY_API_KEY", "")
 def tavily_search(query: str) -> str:
     r = requests.post(
         "https://api.tavily.com/search",
-        json={"api_key": TAVILY_KEY, "query": query, "max_results": 3, "search_depth": "basic"},
+        json={"api_key": TAVILY_KEY, "query": query, "max_results": 5, "search_depth": "basic"},
         timeout=30,
     )
     r.raise_for_status()
