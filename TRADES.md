@@ -36,12 +36,20 @@ _Scan time: 8:00 AM EST | Criteria: price $0.50–$5.00, PM move ≥5% UP, prev 
 | Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
 |--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
 | DKI | ~$0.46 | $0.58 | +26.21% | UP | est ~3% | N (recent IPO-stage; 52W low context) | PIPE close Apr-25-26 ($3.8M) + $800K content IP acquisition; AIGC gaming/film ecosystem launch | Y — 6-K filed Apr-25-26 |
+| MSS | ~$1.17 | ~$1.34 | +14.5% | UP | est <3% | N/A (post-split distorted) | Worldcoin WLD treasury ($70M convertible notes PIPE); 1-for-10 rev split Apr-24-26 (Nasdaq compliance) | Y — 8-K Apr-22-26 |
+| SMX | $2.08 | $2.42 | +17.3% | UP | est <3% | Unknown | DMPP platform launch Apr-6-26; Apr-27 catalyst UNCONFIRMED | Y (6-K Apr-6-26); Apr-27 catalyst N |
+
+_Note: premarket.py returned HTTP 403 (POLYGON\_KEY not configured); MSS and SMX identified via WebSearch fallback._
 
 **⚠️ DKI DISQUALIFIED — HIGH DILUTION RISK:** PIPE priced at **$0.35/share** (11M+ new shares issued at ~40% discount to current premarket price of $0.58). The premarket move is likely driven by retail excitement around the AIGC/AI announcement, NOT fundamental value accretion. The PIPE investors at $0.35 have immediate paper gains and potential early exit motivation. No clean catalyst without dilution overhang. **DO NOT FLAG for Monday aggregation conviction bonus.**
 
+**⚠️ MSS DISQUALIFIED — HIGH DILUTION RISK:** $70M convertible notes private placement (SPA Sep-2025) convert to equity; Registration Rights Agreement obligates MSS to register conversion shares. 1-for-10 reverse split Apr-24-26 is Nasdaq compliance-driven (not a bullish signal). Pre-market move likely retail crypto enthusiasm for Worldcoin pivot. **DO NOT FLAG for Monday aggregation conviction bonus.**
+
+**⚠️ SMX DISQUALIFIED — HIGH DILUTION RISK:** $250M mixed securities shelf filed Mar-25-26 (massive relative to market cap); equity incentive plan amendment + large RSU grants Apr-24-26 add further dilution pressure. Apr-27 specific catalyst UNCONFIRMED — prior DMPP launch was Apr-6-26 (3 weeks prior). **DO NOT FLAG for Monday aggregation conviction bonus.**
+
 _Additional archive checks (30-day lookback): No tickers in ARCHIVE LOG — no skip required._
 
-**Premarket scan conclusion:** Zero qualifying UP movers cleared all filters (price range ✓, PM move ≥5% ✓, dilution ✗). No tickers starred (*) for Monday aggregation +2 conviction bonus.
+**Premarket scan conclusion:** Zero qualifying UP movers cleared all filters across 3 candidates screened (DKI, MSS, SMX — all disqualified HIGH DILUTION RISK). No tickers starred (*) for Monday aggregation +2 conviction bonus.
 
 **Notable status updates from prior scan entries (as of premarket Apr-27-26):**
 
