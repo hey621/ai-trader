@@ -45,7 +45,7 @@ Flag any ticker here with a star (*) next to its name in the Monday aggregation 
 Do not modify MONDAY SIGNALS or ACTIVE POSITIONS.
 
 ## Step 4 — Send Email Summary
-Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+**Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
 
 ```python
 import os, json, urllib.request
