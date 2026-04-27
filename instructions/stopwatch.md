@@ -1,41 +1,50 @@
 # PennyAlpha_Bot — Daily Stop Loss Watch (12:00 PM EST)
 
-Lightweight mid-day check. Only email Brad if something needs action.
+Mid-day automated position management. Trail stops, close positions, email Brad if action was taken.
 
 Credentials:
 - GitHub token: $GITHUB_TOKEN
 - Resend key: $RESEND_KEY
+- Alpaca key: $ALPACA_API_KEY
+- Alpaca secret: $ALPACA_SECRET_KEY
 
-## Step 1 — Run Position Check
-```
-python3 stopwatch.py
-```
+## Step 1 — Trail Stops
+Run: `python3 stopwatch.py`
 
-This reads ACTIVE POSITIONS from TRADES.md, fetches current prices from Polygon, and prints one of:
-- NO_ACTIVE_POSITIONS — do nothing, exit.
-- ALL_CLEAR: No stops or targets hit. — do nothing, exit.
-- STOP LOSS HIT or TARGET HIT lines — these require action.
+This checks current prices against each active position and:
+- Trails the stop on Alpaca to breakeven if the position is up ≥10%
+- Trails the stop to +10% if the position is up ≥20%
+- Updates TRADES.md with new stop prices
+- Prints NO_ACTIVE_POSITIONS, ALL_CLEAR, or position status lines
 
-## Step 2 — If ALL_CLEAR or NO_ACTIVE_POSITIONS
-Do nothing. Do not email. Do not commit. Exit.
+If output is NO_ACTIVE_POSITIONS — skip all remaining steps. Exit.
 
-## Step 3 — If Any STOP LOSS HIT or TARGET HIT Alerts
-Update TRADES.md:
-- Move the affected ticker from ACTIVE POSITIONS to CLOSED TRADES. Label WIN if target hit, LOSS if stop hit.
-- Add ticker to ARCHIVE LOG with Eligible Again = today + 30 days.
-- Update Total Deployed and Unrealised P&L in ACTIVE POSITIONS section.
+## Step 2 — Close Positions
+Run: `python3 close.py`
 
-Commit and push:
+This closes any position where stop or target has been hit (including positions already closed by Alpaca bracket orders). Updates TRADES.md automatically.
+
+Output will be either:
+- `ALL_CLEAR: No positions closed.` — no further action needed except commit if stopwatch trailed any stops
+- One or more closed position lines — requires commit and email
+
+## Step 3 — Commit and Push
+If either script modified TRADES.md (stops trailed or positions closed), commit and push:
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
 git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
-git commit -m "Alert: stop/target triggered YYYY-MM-DD"
+git commit -m "Alert: position update YYYY-MM-DD"
 git push
 ```
 
-Then email hey@bradscanvas.com via Resend API (Bearer $RESEND_KEY):
+If neither script changed anything, skip this step.
+
+## Step 4 — Email Brad (only if positions were closed)
+If close.py closed one or more positions, email hey@bradscanvas.com via Resend API (Bearer $RESEND_KEY):
 - From: bot@mail.bradscanvas.com
-- Subject: ACTION NEEDED — PennyAlpha Alert [DATE]
-- Body: List each alert line clearly. State whether it was a stop loss (LOSS) or target (WIN). End with: "Update your positions — next Monday signal will reflect this close."
+- Subject: ACTION — PennyAlpha Position Closed [DATE]
+- Body: List each closed position clearly: ticker, entry price, exit price, result (WIN/LOSS), P&L%. End with: "Next Monday signal will reflect this close."
+
+If only stops were trailed (no closes), do NOT email.
