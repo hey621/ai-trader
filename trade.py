@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
 # Run locally: .venv/bin/python3 trade.py  (after setting ALPACA_API_KEY / ALPACA_SECRET_KEY)
-"""Read Monday BUY signals from TRADES.md and place Alpaca paper orders."""
+"""Read Monday BUY signals from TRADES.md and place Alpaca bracket orders."""
 import os
 import re
+import math
 import sys
 from datetime import date
 
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import MarketOrderRequest
-from alpaca.trading.enums import OrderSide, TimeInForce
+from alpaca.trading.requests import (
+    MarketOrderRequest, StopLossRequest, TakeProfitRequest,
+)
+from alpaca.trading.enums import OrderSide, TimeInForce, OrderClass
 from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.requests import StockLatestQuoteRequest
 
 API_KEY = os.environ.get("ALPACA_API_KEY", "")
 SECRET_KEY = os.environ.get("ALPACA_SECRET_KEY", "")
-BUDGET_PER_POSITION = 100.00
+
+BUDGET_BY_CONVICTION = {"HIGH": 150.00, "MED": 100.00, "LOW": 75.00}
+DEFAULT_BUDGET = 100.00
+STOP_PCT = 0.10
+DEFAULT_TARGET_PCT = 0.20
 MAX_POSITIONS = 5
 
 trading = TradingClient(API_KEY, SECRET_KEY, paper=True)
@@ -37,17 +44,27 @@ def parse_buy_signals(md: str) -> list[dict]:
                 signal = cols[1] if len(cols) > 1 else ""
                 entry_str = re.sub(r"[^\d.]", "", cols[2]) if len(cols) > 2 else ""
                 stop_str = re.sub(r"[^\d.]", "", cols[3]) if len(cols) > 3 else ""
+                target_str = re.sub(r"[^\d.]", "", cols[4]) if len(cols) > 4 else ""
+                conviction_raw = cols[5].upper() if len(cols) > 5 else ""
                 if signal.upper() == "BUY" and ticker:
+                    if "HIGH" in conviction_raw:
+                        conv = "HIGH"
+                    elif "LOW" in conviction_raw:
+                        conv = "LOW"
+                    else:
+                        conv = "MED"
                     signals.append({
                         "ticker": ticker,
                         "entry_target": float(entry_str) if entry_str else None,
                         "stop_loss": float(stop_str) if stop_str else None,
+                        "target": float(target_str) if target_str else None,
+                        "conviction": conv,
                     })
     return signals
 
 
-def parse_active_positions(md: str) -> list[str]:
-    tickers = []
+def parse_active_tickers(md: str) -> set[str]:
+    tickers = set()
     in_section = False
     for line in md.splitlines():
         if "## ACTIVE POSITIONS" in line:
@@ -58,7 +75,7 @@ def parse_active_positions(md: str) -> list[str]:
         if in_section and line.startswith("|") and "---" not in line and "Ticker" not in line:
             cols = [c.strip() for c in line.strip("|").split("|")]
             if cols[0] and cols[0] != "—":
-                tickers.append(cols[0])
+                tickers.add(cols[0])
     return tickers
 
 
@@ -72,16 +89,18 @@ def get_ask_price(ticker: str) -> float | None:
         return None
 
 
-def place_order(ticker: str, notional: float) -> dict | None:
+def place_bracket_order(ticker: str, shares: int, stop: float, target: float) -> object | None:
     try:
         req = MarketOrderRequest(
             symbol=ticker,
-            notional=round(notional, 2),
+            qty=shares,
             side=OrderSide.BUY,
             time_in_force=TimeInForce.DAY,
+            order_class=OrderClass.BRACKET,
+            stop_loss=StopLossRequest(stop_price=round(stop, 2)),
+            take_profit=TakeProfitRequest(limit_price=round(target, 2)),
         )
-        order = trading.submit_order(req)
-        return order
+        return trading.submit_order(req)
     except Exception as e:
         print(f"  Order failed for {ticker}: {e}")
         return None
@@ -106,8 +125,6 @@ def update_active_positions(md: str, new_rows: list[str]) -> str:
                 for row in new_rows:
                     result.append(row)
                 inserted = True
-                result.append(line)
-                continue
             if in_section and line.startswith("##") and not line.startswith("## ACTIVE"):
                 if not inserted:
                     for row in new_rows:
@@ -132,18 +149,17 @@ def main():
         print("No BUY signals found in TRADES.md.")
         sys.exit(0)
 
-    active_tickers = parse_active_positions(md)
-    # Also check actual Alpaca positions
+    active_tickers = parse_active_tickers(md)
     try:
         alpaca_positions = {p.symbol for p in trading.get_all_positions()}
     except Exception:
         alpaca_positions = set()
 
-    slots_used = len(alpaca_positions) if alpaca_positions else len(active_tickers)
-    slots_available = MAX_POSITIONS - slots_used
+    all_held = alpaca_positions | active_tickers
+    slots_available = MAX_POSITIONS - len(all_held)
 
     print(f"BUY signals: {[s['ticker'] for s in signals]}")
-    print(f"Alpaca positions: {alpaca_positions or active_tickers}")
+    print(f"Currently held: {all_held or 'none'}")
     print(f"Slots available: {slots_available}/{MAX_POSITIONS}")
 
     if slots_available <= 0:
@@ -157,8 +173,8 @@ def main():
         if placed >= slots_available:
             break
         ticker = sig["ticker"]
-        if ticker in alpaca_positions or ticker in active_tickers:
-            print(f"  {ticker}: already in portfolio, skipping.")
+        if ticker in all_held:
+            print(f"  {ticker}: already held, skipping.")
             continue
 
         ask = get_ask_price(ticker)
@@ -168,15 +184,26 @@ def main():
             print(f"  {ticker}: ask ${ask:.2f} out of range, skipping.")
             continue
 
-        print(f"  Placing ${BUDGET_PER_POSITION:.0f} BUY order for {ticker} @ ~${ask:.2f}...")
-        order = place_order(ticker, BUDGET_PER_POSITION)
+        budget = BUDGET_BY_CONVICTION.get(sig["conviction"], DEFAULT_BUDGET)
+        shares = math.floor(budget / ask)
+        if shares < 1:
+            print(f"  {ticker}: budget ${budget:.0f} too small for ask ${ask:.2f}, skipping.")
+            continue
+
+        stop = sig["stop_loss"] or round(ask * (1 - STOP_PCT), 2)
+        target = sig["target"] or round(ask * (1 + DEFAULT_TARGET_PCT), 2)
+
+        deployed = round(shares * ask, 2)
+        print(f"  Placing {shares} shares of {ticker} @ ~${ask:.2f} "
+              f"(${deployed:.0f}, {sig['conviction']}) | stop=${stop:.2f} target=${target:.2f}")
+
+        order = place_bracket_order(ticker, shares, stop, target)
         if order:
-            stop = sig["stop_loss"] or round(ask * 0.90, 2)
             today = date.today().isoformat()
-            shares_approx = round(BUDGET_PER_POSITION / ask, 1)
-            row = f"| {ticker} | ${ask:.2f} | {today} | ${BUDGET_PER_POSITION:.0f} | — | — | — | Active | stop=${stop:.2f} |"
+            row = (f"| {ticker} | ${ask:.2f} | {today} | ${deployed:.0f} | {shares} "
+                   f"| — | — | Active | ${stop:.2f} | ${target:.2f} |")
             new_rows.append(row)
-            print(f"    Order submitted: {order.id}")
+            print(f"    Bracket order submitted: {order.id}")
             placed += 1
         else:
             print(f"  {ticker}: order failed.")

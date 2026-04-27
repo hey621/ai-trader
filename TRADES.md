@@ -5,17 +5,17 @@ _Last updated: 2026-04-27 (Monday 8:45 AM EST Aggregation)_
 
 ## MONDAY SIGNALS (Week of 2026-04-27)
 
-| Ticker | Signal | Entry Target | Stop Loss | Conviction | Catalyst Summary |
-|--------|--------|-------------|-----------|------------|-----------------|
+| Ticker | Signal | Entry Target | Stop Loss | Target | Conviction | Catalyst Summary |
+|--------|--------|-------------|-----------|--------|------------|-----------------|
 | —      | —      | —           | —         | —          | No qualifying BUY candidates — top-ranked picks ABCL (conv 6, RVOL ~1.80x unconfirmed ≥2.0) and CDXS (conv 5, RVOL ~0.85x today) both fail RVOL > 2.0 intraday confirmation. Zero active positions. All other candidates (ATNM conv 4, IFRX/BTAI/MDAI conv 3) also fail RVOL threshold. |
 
 ---
 
 ## ACTIVE POSITIONS
 
-| Ticker | Entry Price | Entry Date | Position Size | Current Price | $ P&L | % P&L | Status |
-|--------|-------------|------------|--------------|---------------|-------|-------|--------|
-| —      | —           | —          | $100         | —             | —     | —     | —      |
+| Ticker | Entry Price | Entry Date | Deployed | Shares | Current Price | $ P&L | % P&L | Stop | Target | Status |
+|--------|-------------|------------|----------|--------|---------------|-------|-------|------|--------|--------|
+| —      | —           | —          | —        | —      | —             | —     | —     | —    | —      | —      |
 
 **Total Deployed:** $0 / $500
 **Realised P&L:** $0.00

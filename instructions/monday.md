@@ -32,8 +32,10 @@ Disqualified if in ARCHIVE LOG within 30 days
 Rank all candidates by conviction score, highest first.
 
 ## Step 3 — Select BUY Candidates
-Budget: $500 total. Max 5 active positions at $100 each.
+Budget: $500 total. Max 5 active positions. Size by conviction: HIGH=$150, MED=$100, LOW=$75.
 Count current HOLD positions. Fill remaining open slots with top-ranked candidates.
+
+Sector cap: no more than 3 positions in any single sector (Biotech, AI/Chip, Energy/Defence). If top candidates are all Biotech, skip the 4th Biotech and take the next best non-Biotech candidate instead.
 
 For each BUY candidate, use WebSearch to confirm:
 - Price still $0.50–$5.00
@@ -42,19 +44,24 @@ For each BUY candidate, use WebSearch to confirm:
 
 Drop any candidate that no longer passes. Use up to 5 WebSearches to verify SEC catalysts are still valid.
 
+For each BUY, set:
+- Entry Target: current ask price
+- Stop Loss: entry × 0.90 (10% stop)
+- Target: nearest resistance level from research log (use resistance column). If no resistance data, use entry × 1.20.
+
 ## Step 4 — Update TRADES.md
 Rewrite the file completely, preserving all sections. Changes:
 
 MONDAY SIGNALS — replace entirely with this week's signals:
-| Ticker | Signal | Entry Target | Stop Loss | Conviction | Catalyst Summary |
-|--------|--------|-------------|-----------|------------|-----------------|
-| TICK | BUY | $X.XX | $X.XX | HIGH/MED/LOW | one sentence |
-| TICK | HOLD | $X.XX (entry) | $X.XX | HIGH/MED/LOW | one sentence |
-| TICK | SELL | — | — | — | reason for exit |
+| Ticker | Signal | Entry Target | Stop Loss | Target | Conviction | Catalyst Summary |
+|--------|--------|-------------|-----------|--------|------------|-----------------|
+| TICK | BUY | $X.XX | $X.XX | $X.XX | HIGH/MED/LOW | one sentence |
+| TICK | HOLD | $X.XX (entry) | $X.XX | $X.XX | HIGH/MED/LOW | one sentence |
+| TICK | SELL | — | — | — | — | reason for exit |
 
 ACTIVE POSITIONS — update prices and P&L. Add new BUYs. Remove SELLs.
 
-WEEKLY RESEARCH LOG — clear it entirely (new week starts fresh).
+WEEKLY RESEARCH LOG — move all entries older than 14 days into a ## RESEARCH ARCHIVE section at the bottom of the file (create it if it doesn't exist). Do not delete them. Keep the current week's entries in place.
 
 CLOSED TRADES — append any new SELLs with entry price, exit price, result, date.
 
