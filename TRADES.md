@@ -1,5 +1,6 @@
 # TRADES.md — PennyAlpha_Bot Workspace
 _Last updated: 2026-04-27_
+_Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
 
@@ -69,3 +70,10 @@ _Candidates found during daily scans. Aggregated each Monday to produce signals.
 
 ## ARCHIVE LOG
 _Tickers archived here are ineligible for re-suggestion for 30 days from close date._
+
+---
+
+## RESEARCH ARCHIVE
+_Research log entries older than 14 days from the current review date are moved here automatically._
+
+_No archived entries yet._
