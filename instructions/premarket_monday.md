@@ -32,17 +32,26 @@ d) Any dilution risk (recent S-1 or ATM offering)?
 
 No need for full deep research — the afternoon/morning scans this week will do that. This is a quick pre-market priority flag only.
 
-## Step 3 — Append to WEEKLY RESEARCH LOG
-Add a clearly labelled pre-market section at the top of this week's log:
+## Step 3 — Update WATCHLIST and Research Log
+Write qualifying candidates to the `## WATCHLIST` section in TRADES.md so the 10:15 AM morning execution scan picks them up:
 
-### YYYY-MM-DD Pre-Market (Monday)
+```
+## WATCHLIST
+_Updated: YYYY-MM-DD pre-market scan_
+
+| Ticker | Close Price | Catalyst | Expected | Score | Flags |
+|--------|------------|---------|---------|-------|-------|
+| TICK | $X.XX | one line | pre-market today | X/5 | flags |
+```
+
+Pre-market movers with confirmed catalysts score +2 conviction in the morning execution scan.
+
+Also append a `### YYYY-MM-DD Pre-Market (Monday)` section under `## WEEKLY RESEARCH LOG` with the full table:
+
 | Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
 |--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
-| TICK | $X.XX | $X.XX | +X.X% | UP | X.X% | Y/N | [one line] | Y/N |
 
-Flag any ticker here with a star (*) next to its name in the Monday aggregation — pre-market movers with confirmed catalysts get +2 conviction bonus in Step 2 of monday.md.
-
-Do not modify MONDAY SIGNALS or ACTIVE POSITIONS.
+Do not modify ACTIVE POSITIONS.
 
 ## Step 4 — Send Email Summary
 **Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:

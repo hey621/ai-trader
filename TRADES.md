@@ -1,13 +1,20 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-27 (Monday 8:45 AM EST Aggregation)_
+_Last updated: 2026-04-27_
 
 ---
 
-## MONDAY SIGNALS (Week of 2026-04-27)
+## EXECUTION QUEUE
+_Populated by morning execution scan. Consumed and cleared by trade.py._
 
-| Ticker | Signal | Entry Target | Stop Loss | Target | Conviction | Catalyst Summary |
-|--------|--------|-------------|-----------|--------|------------|-----------------|
-| —      | —      | —           | —         | —          | No qualifying BUY candidates — top-ranked picks ABCL (conv 6, RVOL ~1.80x unconfirmed ≥2.0) and CDXS (conv 5, RVOL ~0.85x today) both fail RVOL > 2.0 intraday confirmation. Zero active positions. All other candidates (ATNM conv 4, IFRX/BTAI/MDAI conv 3) also fail RVOL threshold. |
+| Ticker | Signal | Entry | Stop | Target | Conviction | Catalyst |
+|--------|--------|-------|------|--------|------------|---------|
+
+---
+
+## WATCHLIST
+_Populated by afternoon/pre-market scans. Reviewed by next morning execution scan._
+
+_No watchlist candidates._
 
 ---
 

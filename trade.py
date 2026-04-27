@@ -32,7 +32,7 @@ def parse_buy_signals(md: str) -> list[dict]:
     signals = []
     in_signals = False
     for line in md.splitlines():
-        if "## MONDAY SIGNALS" in line:
+        if "## EXECUTION QUEUE" in line:
             in_signals = True
             continue
         if in_signals and line.startswith("##"):
@@ -104,6 +104,24 @@ def place_bracket_order(ticker: str, shares: int, stop: float, target: float) ->
     except Exception as e:
         print(f"  Order failed for {ticker}: {e}")
         return None
+
+
+def clear_execution_queue(md: str) -> str:
+    """Replace EXECUTION QUEUE table rows with a blank placeholder."""
+    lines = md.splitlines()
+    result = []
+    in_queue = False
+    for line in lines:
+        if "## EXECUTION QUEUE" in line:
+            in_queue = True
+            result.append(line)
+            continue
+        if in_queue and line.startswith("##"):
+            in_queue = False
+        if in_queue and line.startswith("|") and "---" not in line and "Ticker" not in line:
+            continue  # drop data rows
+        result.append(line)
+    return "\n".join(result)
 
 
 def update_active_positions(md: str, new_rows: list[str]) -> str:
@@ -208,13 +226,15 @@ def main():
         else:
             print(f"  {ticker}: order failed.")
 
+    md_out = clear_execution_queue(md)
     if new_rows:
-        md_updated = update_active_positions(md, new_rows)
-        with open("TRADES.md", "w") as f:
-            f.write(md_updated)
-        print(f"\nPlaced {placed} order(s). TRADES.md updated.")
+        md_out = update_active_positions(md_out, new_rows)
+        print(f"\nPlaced {placed} order(s).")
     else:
         print("\nNo new orders placed.")
+    with open("TRADES.md", "w") as f:
+        f.write(md_out)
+    print("TRADES.md updated.")
 
 
 if __name__ == "__main__":

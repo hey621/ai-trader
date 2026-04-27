@@ -1,94 +1,70 @@
-# PennyAlpha_Bot — Monday Aggregation Instructions (8:45 AM EST)
+# PennyAlpha_Bot — Monday Weekly Review (9:45 AM EST)
 
-SIGNAL MODE. Read the full week of research and produce final BUY / SELL / HOLD signals.
-This is the only output Brad acts on. Email signals to hey@bradscanvas.com.
+REVIEW MODE only. Recap last week's performance. No trading decisions — the morning execution scan handles entries.
 
-Credentials:
-- GitHub token: $GITHUB_TOKEN
-- Resend key: $RESEND_KEY
+Credentials: $GITHUB_TOKEN, $RESEND_KEY
 
-## Step 0 — Read Full State
-Run: cat TRADES.md
-Read everything: MONDAY SIGNALS, ACTIVE POSITIONS, WEEKLY RESEARCH LOG, CLOSED TRADES, ARCHIVE LOG.
+## Step 1 — Read State
+Run: `cat TRADES.md`
+Read CLOSED TRADES, ACTIVE POSITIONS, ARCHIVE LOG.
 
-## Step 1 — Review Existing Positions (SELL or HOLD)
-For each ticker in ACTIVE POSITIONS, use WebSearch to find the current price (search "[TICKER] stock price today").
-- SELL if: up >= 20% from entry, down >= 10% from entry (stop loss hit), or original catalyst is resolved/broken.
-- HOLD if: thesis still intact, within stop loss, has not hit target yet.
+## Step 2 — Calculate Weekly P&L
+Find all trades closed last week (Friday's close + any mid-week closes).
+Calculate:
+- Total trades: W wins / L losses
+- Win rate: W/(W+L)%
+- Total realised P&L: $X.XX
+- Best trade: TICKER (+X%)
+- Worst trade: TICKER (−X%)
+- Current active positions: X (list tickers)
+- Capital deployed: $X / $500
 
-Move SELL decisions to CLOSED TRADES with WIN (>= +20%) or LOSS (<= -10%) label.
+## Step 3 — Move Old Research to Archive
+Move all `### YYYY-MM-DD` research log entries older than 14 days from `## WEEKLY RESEARCH LOG` into a `## RESEARCH ARCHIVE` section at the bottom of the file (create it if it doesn't exist). Keep the last 14 days of entries in place.
 
-## Step 2 — Score the Week's Research
-Read all entries in WEEKLY RESEARCH LOG. For each unique ticker, calculate a conviction score:
-
-Base score = Tech Score from screen.py (0–5)
-+1 for each additional scan the ticker appeared in (beyond the first)
-+2 if FDA/PDUFA date is within 14 days
-+1 if insider buying confirmed (Y)
-+1 if flagged SQUEEZE CANDIDATE
--2 if flagged HIGH DILUTION RISK
-Disqualified if in ARCHIVE LOG within 30 days
-
-Rank all candidates by conviction score, highest first.
-
-## Step 3 — Select BUY Candidates
-Budget: $500 total. Max 5 active positions. Size by conviction: HIGH=$150, MED=$100, LOW=$75.
-Count current HOLD positions. Fill remaining open slots with top-ranked candidates.
-
-Sector cap: no more than 3 positions in any single sector (Biotech, AI/Chip, Energy/Defence). If top candidates are all Biotech, skip the 4th Biotech and take the next best non-Biotech candidate instead.
-
-For each BUY candidate, use WebSearch to confirm:
-- Price still $0.50–$5.00
-- Still trading with high volume (RVOL > 2.0)
-- Catalyst still valid
-
-Drop any candidate that no longer passes. Use up to 5 WebSearches to verify SEC catalysts are still valid.
-
-For each BUY, set:
-- Entry Target: current ask price
-- Stop Loss: entry × 0.90 (10% stop)
-- Target: nearest resistance level from research log (use resistance column). If no resistance data, use entry × 1.20.
-
-## Step 4 — Update TRADES.md
-Rewrite the file completely, preserving all sections. Changes:
-
-MONDAY SIGNALS — replace entirely with this week's signals:
-| Ticker | Signal | Entry Target | Stop Loss | Target | Conviction | Catalyst Summary |
-|--------|--------|-------------|-----------|--------|------------|-----------------|
-| TICK | BUY | $X.XX | $X.XX | $X.XX | HIGH/MED/LOW | one sentence |
-| TICK | HOLD | $X.XX (entry) | $X.XX | $X.XX | HIGH/MED/LOW | one sentence |
-| TICK | SELL | — | — | — | — | reason for exit |
-
-ACTIVE POSITIONS — update prices and P&L. Add new BUYs. Remove SELLs.
-
-WEEKLY RESEARCH LOG — move all entries older than 14 days into a ## RESEARCH ARCHIVE section at the bottom of the file (create it if it doesn't exist). Do not delete them. Keep the current week's entries in place.
-
-CLOSED TRADES — append any new SELLs with entry price, exit price, result, date.
-
-ARCHIVE LOG — append any closed tickers with Eligible Again = today + 30 days.
-
-## Step 5 — Commit and Push
+## Step 4 — Commit and Push
+Only commit if TRADES.md changed (research archiving moved content).
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
 git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
-git commit -m "Monday signals YYYY-MM-DD"
+git commit -m "Weekly review + archive YYYY-MM-DD"
 git push
 ```
 
-## Step 6 — Execute Trades
-Run: `python3 trade.py`
+## Step 5 — Email Weekly Summary
+Write /tmp/send_email.py and run it:
 
-This reads the BUY signals you just wrote to TRADES.md and places bracket orders on Alpaca (stop-loss + take-profit attached). It will skip any ticker already held and respect the $500 budget. Check the output — if any order fails, note it.
+```python
+import os, json, urllib.request
 
-## Step 7 — Email Signals to Brad
-Send a clean email to hey@bradscanvas.com containing only the MONDAY SIGNALS table plus a one-line P&L summary.
+subject = "PennyAlpha Weekly Review — Week of YYYY-MM-DD"
+body = """Weekly Review — Week of YYYY-MM-DD
 
-Use curl to call the Resend API:
-- Endpoint: https://api.resend.com/emails
-- Authorization: Bearer $RESEND_KEY
-- From: bot@mail.bradscanvas.com
-- To: hey@bradscanvas.com
-- Subject: PennyAlpha Monday Signals — [DATE]
-- Body: the MONDAY SIGNALS table as plain text, then: "Total deployed: $X / $500 | Unrealised P&L: $X.XX"
+LAST WEEK'S TRADES:
+Ticker | Entry | Exit | Result | P&L%
+[rows, or "No closed trades last week."]
+
+Summary: X trades | X wins | X losses | Win rate X% | P&L $X.XX
+Best: TICKER +X% | Worst: TICKER -X%
+
+CURRENTLY ACTIVE: X positions ($X deployed / $500)
+[list active tickers]
+"""
+
+payload = json.dumps({
+    "from": "bot@mail.bradscanvas.com",
+    "to": "hey@bradscanvas.com",
+    "subject": subject,
+    "text": body,
+}).encode()
+req = urllib.request.Request(
+    "https://api.resend.com/emails",
+    data=payload,
+    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
+    method="POST",
+)
+with urllib.request.urlopen(req) as r:
+    print(r.status, r.read().decode())
+```

@@ -1,83 +1,81 @@
-# PennyAlpha_Bot — Afternoon Research Instructions (3:30 PM EST)
+# PennyAlpha_Bot — Afternoon Watch Scan (4:30 PM EST)
 
-RESEARCH MODE ONLY. Do not produce trading signals. Append findings to TRADES.md.
-Focus on stocks building momentum into close and next-day catalysts.
+WATCH MODE. Find next-day setups. Populate WATCHLIST for tomorrow's morning execution scan.
 
-Credentials:
-- GitHub token: $GITHUB_TOKEN
-- Resend key: $RESEND_KEY
+Credentials: $GITHUB_TOKEN, $RESEND_KEY
 
 ## Step 0 — Read State
-Read TRADES.md. Note tickers in ARCHIVE LOG closed within 30 days — skip these.
-Note tickers already logged in today's Morning Scan — avoid duplicates unless conviction changed significantly.
+Run: `cat TRADES.md`
+Note ACTIVE POSITIONS and ARCHIVE LOG (skip any ticker closed within 30 days).
 
-## Step 1 — Screen for Candidates (max 6 WebSearches)
-Use WebSearch to find afternoon movers and next-day setups:
+## Step 1 — Screen for Next-Day Setups (max 6 WebSearches)
+Search for stocks with catalysts expected tonight or tomorrow, or strong closes:
 
-1. Search: "penny stocks high volume into close today site:finviz.com OR site:barchart.com"
-2. Search: "biotech penny stocks FDA catalyst tomorrow PDUFA after hours"
-3. Search: "AI chip energy defence penny stocks momentum close today"
-4. Search: "penny stocks unusual volume afternoon movers today"
+1. "biotech penny stocks FDA PDUFA catalyst tomorrow OR tonight 2026"
+2. "penny stocks earnings after hours tonight small cap"
+3. "penny stocks high volume close today momentum"
+4. "AI chip energy defence penny stocks catalyst tomorrow premarket"
 
-From results, extract tickers where ALL appear true:
+Criteria (ALL must be true):
 - Price $0.50–$5.00
-- RVOL > 2.0 heading into close
-- Daily dollar volume >= $500k
-- Bid/ask spread <= 3%
-- Price above 20-day moving average
+- Dollar volume ≥ $500k today
+- Catalyst expected tonight/tomorrow OR strong close with RVOL ≥ 1.5 into close
+- Not in ARCHIVE LOG
 
-Discard any ticker in ARCHIVE LOG. Discard Tech Score < 3. Target 15–20 candidates.
-Sector mix: ~70% Biotech / ~20% AI-Infrastructure or Chips / ~10% Energy or Defence/Space.
+Target 5–8 candidates.
 
-Afternoon priority — weight toward:
-- Stocks with after-hours catalyst expected (earnings tonight, FDA tomorrow)
-- Closing near high of day
-- RVOL still accelerating into close
+## Step 2 — Quick Validate (max 10 WebSearches)
+For each candidate:
+a) **Catalyst** — confirm with SEC 8-K or known FDA/earnings date. Drop if unconfirmed.
+b) **Dilution** — drop if HIGH DILUTION RISK.
+c) **Technical** — above SMA20? Closing near high of day?
+d) **Short float** — note SQUEEZE CANDIDATE if > 20%.
 
-## Step 2 — Deep Research (max 19 WebSearches total)
-For each surviving candidate:
+Score each 1–5 (rough: 5 = strong confirmed catalyst + above MA + clean, 1 = weak).
+Drop score < 3.
 
-a) SEC Validation — search "[TICKER] SEC 8-K OR 10-Q OR S-1 2026". Drop if none confirms catalyst.
+## Step 3 — Update WATCHLIST in TRADES.md
+Replace the entire `## WATCHLIST` section with today's candidates:
 
-b) FDA/PDUFA — search "[TICKER] FDA PDUFA date 2026". Flag "TOMORROW CATALYST" if next trading day.
+```
+## WATCHLIST
+_Updated: YYYY-MM-DD afternoon scan_
 
-c) Dilution Check — cash runway from 10-Q. Flag "HIGH DILUTION RISK" if under 4 months.
+| Ticker | Close Price | Catalyst | Expected | Score | Flags |
+|--------|------------|---------|---------|-------|-------|
+| TICK | $X.XX | one line | tonight/tomorrow | X/5 | flags |
+```
 
-d) Short Squeeze — search "[TICKER] short interest float". Flag "SQUEEZE CANDIDATE" if > 20%.
+If nothing qualifies write: `_No watchlist candidates — YYYY-MM-DD_`
 
-e) Insider Activity — search "[TICKER] Form 4 insider buying 2026". Note Y or N.
+## Step 4 — Log to Research Log
+Append `### YYYY-MM-DD Afternoon Scan` under `## WEEKLY RESEARCH LOG` with the standard full table for all candidates reviewed (pass and fail).
 
-f) After-Hours Setup — any earnings or news expected tonight/pre-market tomorrow? Note it.
+## Step 5 — Commit and Push
+Always commit even if watchlist is empty.
+```
+git config user.email bot@pennyalpha.local
+git config user.name PennyAlpha_Bot
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
+git add TRADES.md
+git commit -m "Research: afternoon scan YYYY-MM-DD"
+git push
+```
 
-g) Earnings Date — flag "EARNINGS <7D" if within 7 days.
-
-h) Analyst Activity — upgrades or price target changes in last 14 days? Y or N.
-
-i) Technical levels — note 9-day MA, 200-day MA, VWAP, 52-week high if available.
-
-## Step 3 — Append to WEEKLY RESEARCH LOG
-Only log tickers with Tech Score >= 3. Append only — never overwrite.
-
-### YYYY-MM-DD Afternoon Scan
-| Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
-|--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
-
-## Step 4 — Send Email Summary
-**Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+## Step 6 — Email Brad
+**Always send.** Write /tmp/send_email.py and run it:
 
 ```python
 import os, json, urllib.request
 
-subject = "PennyAlpha Afternoon Scan — YYYY-MM-DD"
-body = """Afternoon Scan Summary — YYYY-MM-DD
+subject = "PennyAlpha Afternoon Watch — YYYY-MM-DD"
+body = """Afternoon Watch — YYYY-MM-DD
 
-Candidates screened: X | Passed filters: X
+WATCHLIST FOR TOMORROW:
+Ticker | Close | Catalyst | Expected | Score
+[rows, or "Nothing queued for tomorrow."]
 
-Ticker | Company | Price | Tech Score | Flags | Catalyst
----------------------------------------------------------
-[one row per qualifying ticker, or "No qualifying candidates today." if none passed]
-
-Screened out: [brief note on any notable rejections]
+These will be reviewed in tomorrow's 10:15 AM execution scan.
 
 Brad reads this on his phone — keep it short.
 """
@@ -96,15 +94,4 @@ req = urllib.request.Request(
 )
 with urllib.request.urlopen(req) as r:
     print(r.status, r.read().decode())
-```
-
-## Step 5 — Commit and Push
-Always append at minimum a one-line `### YYYY-MM-DD Afternoon Scan` header with a "no qualifying candidates" note to TRADES.md so there is always something to commit. Then:
-```
-git config user.email bot@pennyalpha.local
-git config user.name PennyAlpha_Bot
-git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
-git add TRADES.md
-git commit -m "Research: afternoon scan YYYY-MM-DD"
-git push
 ```
