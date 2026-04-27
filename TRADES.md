@@ -12,9 +12,13 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Populated by afternoon/pre-market scans. Reviewed by next morning execution scan._
+_Updated: 2026-04-27 afternoon scan_
 
-_No watchlist candidates._
+| Ticker | Close Price | Catalyst | Expected | Score | Flags |
+|--------|------------|---------|---------|-------|-------|
+| MDAI | ~$1.99 | BARDA $54.9M committed (non-dilutive); FDA De Novo 510(k) submitted (DeepView burn) | FDA De Novo decision pending; earnings 2026-05-12 | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200 |
+| ASTC | ~$3.31 | DHS $1B airport screening initiative; 1st Detect TSA-approved mass-spec device gaining govt adoption | Premarket momentum carry-through; ongoing govt contract news | 3/5 | $30M mixed shelf Jan 2026 (not active raise); ~107x RVOL today; 52W range $1.92–$8.01 |
+| BZAI | ~$2.25 | Nokia AI deal expanded 4/17; NeoTensr $50M deal; Q2 AI platform launch; $130M FY guide | Q2 AI platform launch; continued deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50 |
 
 ---
 
@@ -42,6 +46,16 @@ _Candidates found during daily scans. Aggregated each Monday to produce signals.
 | MDAI | $1.99 | ~2.5x | ~$2M | ~2% | 4/5 | Y | Y | N | Y | $2.50 | N/A | 26% | — | 8-K: BARDA $54.9M committed (non-dilutive); FDA De Novo 510(k) submitted (DeepView burn); new CEO 4/17, CFO eff. 5/4 | N/A | 2026-05-12 | Y (Strong Buy, avg target $5.47) | N (CCO resigned 2/1) |
 
 **Screened out:** TNXP ($12.61 — above $5 ceiling); BBAI ($3.70 below 20-day SMA $4.00, RVOL ~0.68x — note 28.11% short float for future watch); BTAI (going concern warning, SMA20 < SMA60, HIGH DILUTION RISK); UROY (SMA20 < SMA60 bearish trend, short interest 11.13%); GCTS/CELZ (insufficient data within search budget).
+
+### 2026-04-27 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
+|--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
+| ASTC | ~$3.31 | ~107x (2.63M vs avg 24.58K) | ~$8.7M | Y (est.; 52W low $1.92, recovered strongly) | DHS $1B airport screening initiative; 1st Detect TSA-approved mass-spec; ADX 50, Strong Buy 88% conf | $30M mixed shelf Jan 2026 (not yet drawn) | Unknown | 3/5 | **PASS** — added to watchlist |
+| PDYN | $6.12 | N/A | N/A | N/A | Defense AI/drone; Northern Strike 26-2 participation; Northland Outperform initiation | None noted | N/A | — | **FAIL** — above $5.00 ceiling |
+| SIDU | ~$3.20 | N/A | N/A | N/A | $58.5M registered direct offering priced $4.35 on 4/21 (dilution overhang) | HIGH — 13.45M new shares at $4.35 | N/A | — | **FAIL** — HIGH DILUTION RISK |
+| EDIT | ~$2.91 | N/A | N/A | N/A | EDIT-401 preclinical (HoY data); IND filing mid-2026; earnings 2026-05-11 | None noted | N/A | 2/5 | **FAIL** — no confirmed near-term catalyst |
+| CDXS | ~$2.28 | N/A | N/A | N/A | ECOsynthesis commercialisation; $38M Merck licence; Q1 2026 earnings 2026-05-07 | 18.71% share count increase YoY | Unknown | 2/5 | **FAIL** — no near-term catalyst; moderate dilution |
 
 ---
 
