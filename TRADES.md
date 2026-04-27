@@ -17,9 +17,9 @@ _Updated: 2026-04-27 afternoon scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| MDAI | ~$1.99 | BARDA $54.9M committed (non-dilutive); FDA De Novo 510(k) submitted (DeepView burn) | FDA De Novo decision pending; earnings 2026-05-12 | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200 |
-| ASTC | ~$3.31 | DHS $1B airport screening initiative; 1st Detect TSA-approved mass-spec device gaining govt adoption | Premarket momentum carry-through; ongoing govt contract news | 3/5 | $30M mixed shelf Jan 2026 (not active raise); ~107x RVOL today; 52W range $1.92–$8.01 |
-| BZAI | ~$2.25 | Nokia AI deal expanded 4/17; NeoTensr $50M deal; Q2 AI platform launch; $130M FY guide | Q2 AI platform launch; continued deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50 |
+| MDAI | ~$1.84 (Apr 24 close) | BARDA $54.9M committed (non-dilutive); FDA De Novo 510(k) submitted (DeepView burn) | FDA De Novo decision pending; earnings 2026-05-12 | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200 |
+| ASTC | ~$3.41 (Apr 25 close) | DHS $1B airport screening initiative; 1st Detect TSA-approved mass-spec device gaining govt adoption | Ongoing govt contract news; vol normalising after 107x RVOL spike | 3/5 | $30M mixed shelf Jan 2026 (not active raise); 52W range $1.92–$8.01 |
+| BZAI | ~$2.01 (Apr 24 close) | Nokia AI deal expanded 4/17; NeoTensr $50M deal; Q2 AI platform launch; $130M FY guide | Q2 AI platform launch; continued deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; price -10.7% from scan entry $2.25 |
 
 ---
 
