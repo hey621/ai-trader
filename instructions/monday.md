@@ -77,7 +77,12 @@ git commit -m "Monday signals YYYY-MM-DD"
 git push
 ```
 
-## Step 6 — Email Signals to Brad
+## Step 6 — Execute Trades
+Run: `python3 trade.py`
+
+This reads the BUY signals you just wrote to TRADES.md and places bracket orders on Alpaca (stop-loss + take-profit attached). It will skip any ticker already held and respect the $500 budget. Check the output — if any order fails, note it.
+
+## Step 7 — Email Signals to Brad
 Send a clean email to hey@bradscanvas.com containing only the MONDAY SIGNALS table plus a one-line P&L summary.
 
 Use curl to call the Resend API:
