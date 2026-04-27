@@ -57,7 +57,7 @@ Do not modify ACTIVE POSITIONS.
 **Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
 
 ```python
-import os, json, urllib.request
+import json
 
 subject = "PennyAlpha Pre-Market Monday — YYYY-MM-DD"
 body = """Pre-Market Monday Summary — YYYY-MM-DD
@@ -66,27 +66,23 @@ Candidates screened: X | Passed filters: X
 
 TICKER | PM Move% | Direction | Catalyst | SEC Confirmed
 --------------------------------------------------------------
-[one row per passing ticker]
+[one row per passing ticker, or "No qualifying candidates."]
 
 Screened out: [brief note on any notable rejections]
 
 Brad reads this on his phone — keep it short.
 """
 
-payload = json.dumps({
-    "from": "bot@mail.bradscanvas.com",
-    "to": "hey@bradscanvas.com",
-    "subject": subject,
-    "text": body,
-}).encode()
-req = urllib.request.Request(
-    "https://api.resend.com/emails",
-    data=payload,
-    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
-    method="POST",
-)
-with urllib.request.urlopen(req) as r:
-    print(r.status, r.read().decode())
+with open('/tmp/email.json', 'w') as f:
+    json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
+```
+
+Then send with curl:
+```bash
+curl -s -X POST https://api.resend.com/emails \
+  -H "Authorization: Bearer $RESEND_KEY" \
+  -H "Content-Type: application/json" \
+  -d @/tmp/email.json
 ```
 
 ## Step 5 — Commit and Push

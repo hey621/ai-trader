@@ -96,7 +96,7 @@ git push
 **Always send — even if no entries today.** Write /tmp/send_email.py and run it:
 
 ```python
-import os, json, urllib.request
+import json
 
 subject = "PennyAlpha Morning — YYYY-MM-DD"
 body = """Morning Scan — YYYY-MM-DD
@@ -113,18 +113,14 @@ ACTIVE POSITIONS:
 Brad reads this on his phone — keep it short.
 """
 
-payload = json.dumps({
-    "from": "bot@mail.bradscanvas.com",
-    "to": "hey@bradscanvas.com",
-    "subject": subject,
-    "text": body,
-}).encode()
-req = urllib.request.Request(
-    "https://api.resend.com/emails",
-    data=payload,
-    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
-    method="POST",
-)
-with urllib.request.urlopen(req) as r:
-    print(r.status, r.read().decode())
+with open('/tmp/email.json', 'w') as f:
+    json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
+```
+
+Then send with curl:
+```bash
+curl -s -X POST https://api.resend.com/emails \
+  -H "Authorization: Bearer $RESEND_KEY" \
+  -H "Content-Type: application/json" \
+  -d @/tmp/email.json
 ```

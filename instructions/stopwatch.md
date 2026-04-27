@@ -42,9 +42,30 @@ git push
 If neither script changed anything, skip this step.
 
 ## Step 4 — Email Brad (only if positions were closed)
-If close.py closed one or more positions, email hey@bradscanvas.com via Resend API (Bearer $RESEND_KEY):
-- From: bot@mail.bradscanvas.com
-- Subject: ACTION — PennyAlpha Position Closed [DATE]
-- Body: List each closed position clearly: ticker, entry price, exit price, result (WIN/LOSS), P&L%. End with: "Next Monday signal will reflect this close."
+If close.py closed one or more positions, send an email using curl:
+
+```python
+import json
+
+subject = "ACTION — PennyAlpha Position Closed YYYY-MM-DD"
+body = """Position Update — YYYY-MM-DD
+
+CLOSED:
+Ticker | Entry | Exit | Result | P&L%
+[one row per closed position]
+
+Next morning scan will reflect these closes.
+"""
+
+with open('/tmp/email.json', 'w') as f:
+    json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
+```
+
+```bash
+curl -s -X POST https://api.resend.com/emails \
+  -H "Authorization: Bearer $RESEND_KEY" \
+  -H "Content-Type: application/json" \
+  -d @/tmp/email.json
+```
 
 If only stops were trailed (no closes), do NOT email.
