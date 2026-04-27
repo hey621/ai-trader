@@ -62,7 +62,44 @@ Only log tickers with Tech Score >= 3. Append only — never overwrite.
 | Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
 |--------|-------|------|-----------|--------|-----------|-----------|------------|-------------|-----------|-----------|---------|---------|-------|----------------|----------|----------|---------|---------|
 
-## Step 4 — Commit and Push
+## Step 4 — Send Email Summary
+**Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+
+```python
+import os, json, urllib.request
+
+subject = "PennyAlpha Afternoon Scan — YYYY-MM-DD"
+body = """Afternoon Scan Summary — YYYY-MM-DD
+
+Candidates screened: X | Passed filters: X
+
+Ticker | Company | Price | Tech Score | Flags | Catalyst
+---------------------------------------------------------
+[one row per qualifying ticker, or "No qualifying candidates today." if none passed]
+
+Screened out: [brief note on any notable rejections]
+
+Brad reads this on his phone — keep it short.
+"""
+
+payload = json.dumps({
+    "from": "bot@mail.bradscanvas.com",
+    "to": "hey@bradscanvas.com",
+    "subject": subject,
+    "text": body,
+}).encode()
+req = urllib.request.Request(
+    "https://api.resend.com/emails",
+    data=payload,
+    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
+    method="POST",
+)
+with urllib.request.urlopen(req) as r:
+    print(r.status, r.read().decode())
+```
+
+## Step 5 — Commit and Push
+Always append at minimum a one-line `### YYYY-MM-DD Afternoon Scan` header with a "no qualifying candidates" note to TRADES.md so there is always something to commit. Then:
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
