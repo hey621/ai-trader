@@ -8,14 +8,20 @@ Credentials:
 - Resend key: $RESEND_KEY
 
 ## Step 1 — Pre-Market Screen
-```
-python3 premarket.py
-```
+Use WebSearch to find pre-market movers. Run these searches:
 
-This returns JSON lines for stocks with: price $0.50–$5.00, pre-market move >= 5%, previous dollar volume >= $500k, spread <= 3%. Each line includes: ticker, prev_close, pm_price, pm_change_pct, direction (UP/DOWN), spread, rvol, sma20, above_sma20.
+1. Search: "pre-market gainers penny stocks today moving +5% site:finviz.com OR site:marketbeat.com OR site:benzinga.com"
+2. Search: "biotech penny stocks pre-market movers today FDA catalyst"
+3. Search: "penny stocks high pre-market volume movers today"
 
-Focus on UP movers only unless a DOWN mover has a specific short thesis.
+From results, extract tickers where ALL of the following appear true:
+- Price $0.50–$5.00
+- Pre-market move >= 5% (UP movers preferred; DOWN only with specific short thesis)
+- Previous day dollar volume >= $500k
+- Bid/ask spread <= 3%
+
 Cross-reference with ARCHIVE LOG — skip any ticker closed within 30 days.
+Target 4–6 candidates.
 
 ## Step 2 — Quick Catalyst Check (max 8 WebSearches)
 For each surviving candidate (target 4–6), quickly verify:
@@ -38,7 +44,43 @@ Flag any ticker here with a star (*) next to its name in the Monday aggregation 
 
 Do not modify MONDAY SIGNALS or ACTIVE POSITIONS.
 
-## Step 4 — Commit and Push
+## Step 4 — Send Email Summary
+Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+
+```python
+import os, json, urllib.request
+
+subject = "PennyAlpha Pre-Market Monday — YYYY-MM-DD"
+body = """Pre-Market Monday Summary — YYYY-MM-DD
+
+Candidates screened: X | Passed filters: X
+
+TICKER | PM Move% | Direction | Catalyst | SEC Confirmed
+--------------------------------------------------------------
+[one row per passing ticker]
+
+Screened out: [brief note on any notable rejections]
+
+Brad reads this on his phone — keep it short.
+"""
+
+payload = json.dumps({
+    "from": "onboarding@resend.dev",
+    "to": "hey@bradscanvas.com",
+    "subject": subject,
+    "text": body,
+}).encode()
+req = urllib.request.Request(
+    "https://api.resend.com/emails",
+    data=payload,
+    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
+    method="POST",
+)
+with urllib.request.urlopen(req) as r:
+    print(r.status, r.read().decode())
+```
+
+## Step 5 — Commit and Push
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
@@ -47,3 +89,4 @@ git add TRADES.md
 git commit -m "Research: Monday pre-market scan YYYY-MM-DD"
 git push
 ```
+

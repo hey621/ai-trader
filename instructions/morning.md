@@ -65,7 +65,43 @@ Only log tickers with Tech Score >= 3. Append under ## WEEKLY RESEARCH LOG. Neve
 
 Do not modify MONDAY SIGNALS or ACTIVE POSITIONS sections.
 
-## Step 4 — Commit and Push
+## Step 4 — Send Email Summary
+Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+
+```python
+import os, json, urllib.request
+
+subject = "PennyAlpha Morning Scan — YYYY-MM-DD"
+body = """Morning Scan Summary — YYYY-MM-DD
+
+Candidates screened: X | Passed filters: X
+
+Ticker | Company | Price | Tech Score | Flags | Catalyst
+---------------------------------------------------------
+[one row per qualifying ticker]
+
+Screened out: [brief note on any notable rejections]
+
+Brad reads this on his phone — keep it short.
+"""
+
+payload = json.dumps({
+    "from": "onboarding@resend.dev",
+    "to": "hey@bradscanvas.com",
+    "subject": subject,
+    "text": body,
+}).encode()
+req = urllib.request.Request(
+    "https://api.resend.com/emails",
+    data=payload,
+    headers={"Authorization": f"Bearer {os.environ['RESEND_KEY']}", "Content-Type": "application/json"},
+    method="POST",
+)
+with urllib.request.urlopen(req) as r:
+    print(r.status, r.read().decode())
+```
+
+## Step 5 — Commit and Push
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
@@ -74,3 +110,4 @@ git add TRADES.md
 git commit -m "Research: morning scan YYYY-MM-DD"
 git push
 ```
+
