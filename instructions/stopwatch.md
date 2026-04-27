@@ -36,6 +36,6 @@ git push
 ```
 
 Then email hey@bradscanvas.com via Resend API (Bearer $RESEND_KEY):
-- From: onboarding@resend.dev
+- From: bot@mail.bradscanvas.com
 - Subject: ACTION NEEDED — PennyAlpha Alert [DATE]
 - Body: List each alert line clearly. State whether it was a stop loss (LOSS) or target (WIN). End with: "Update your positions — next Monday signal will reflect this close."

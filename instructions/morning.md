@@ -86,7 +86,7 @@ Brad reads this on his phone — keep it short.
 """
 
 payload = json.dumps({
-    "from": "onboarding@resend.dev",
+    "from": "bot@mail.bradscanvas.com",
     "to": "hey@bradscanvas.com",
     "subject": subject,
     "text": body,

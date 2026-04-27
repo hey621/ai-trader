@@ -76,7 +76,7 @@ Send a clean email to hey@bradscanvas.com containing only the MONDAY SIGNALS tab
 Use curl to call the Resend API:
 - Endpoint: https://api.resend.com/emails
 - Authorization: Bearer $RESEND_KEY
-- From: onboarding@resend.dev
+- From: bot@mail.bradscanvas.com
 - To: hey@bradscanvas.com
 - Subject: PennyAlpha Monday Signals — [DATE]
 - Body: the MONDAY SIGNALS table as plain text, then: "Total deployed: $X / $500 | Unrealised P&L: $X.XX"
