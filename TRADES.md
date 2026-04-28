@@ -13,7 +13,7 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-28 afternoon scan_
+_Updated: 2026-04-28 pre-market scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
@@ -37,6 +37,19 @@ _Updated: 2026-04-28 afternoon scan_
 ## WEEKLY RESEARCH LOG
 
 _Candidates found during daily scans. Aggregated each Monday to produce signals._
+
+### 2026-04-28 Pre-Market
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| ATAI | ~$4.93 est. | $4.85 | -1.68% | DOWN | Unknown | Unknown | White House psychedelics EO (prior catalyst); no new catalyst today | No |
+| ABCL | ~$3.66 | ~$3.76 | +2.73% | UP | Unknown | Unknown | Q1 2026 earnings due 2026-05-11; ABCL635 Phase II readout Q3 2026 | No |
+| SLNH | Unknown | ~$1.42 | Unknown | Unknown | Unknown | Unknown | Insufficient data — no confirmed catalyst found | No |
+
+**Passing filter (all 4 criteria):** 0 candidates  
+**Screened out:** ATAI (-1.68% DOWN, no upside catalyst today); ABCL (+2.73%, below 5% threshold, no same-day catalyst); SLNH (PM move% unconfirmed, catalyst not identified); LWLG ($13.97 — above $5 ceiling); SYRE ($64.80 — above $5 ceiling); BBBY (~$5.36-$6.23 — above $5 ceiling)  
+**Market context:** S&P 500 and Nasdaq hit record closes on April 28 (semiconductor earnings strength, Intel/TXN blowouts); no specific penny-stock catalyst identified pre-market today.  
+**WATCHLIST unchanged:** MDAI and BZAI carried forward from April 28 afternoon scan.
 
 ### 2026-04-27 Morning Scan
 
