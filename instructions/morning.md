@@ -22,7 +22,7 @@ Search for stocks moving RIGHT NOW with confirmed volume:
 Also include any tickers from the WATCHLIST section.
 
 Extract tickers where ALL are true:
-- Price $0.50–$5.00
+- Price $0.50–$10.00
 - RVOL ≥ 2.0 (confirmed intraday — if unconfirmed, discard)
 - Dollar volume ≥ $500k
 - Spread ≤ 3%

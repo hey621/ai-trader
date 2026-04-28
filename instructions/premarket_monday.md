@@ -15,7 +15,7 @@ Use WebSearch to find pre-market movers. Run these searches:
 3. Search: "penny stocks high pre-market volume movers today"
 
 From results, extract tickers where ALL of the following appear true:
-- Price $0.50–$5.00
+- Price $0.50–$10.00
 - Pre-market move >= 5% (UP movers preferred; DOWN only with specific short thesis)
 - Previous day dollar volume >= $500k
 - Bid/ask spread <= 3%

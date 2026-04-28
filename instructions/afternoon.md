@@ -17,7 +17,7 @@ Search for stocks with catalysts expected tonight or tomorrow, or strong closes:
 4. "AI chip energy defence penny stocks catalyst tomorrow premarket"
 
 Criteria (ALL must be true):
-- Price $0.50–$5.00
+- Price $0.50–$10.00
 - Dollar volume ≥ $500k today
 - Catalyst expected tonight/tomorrow OR strong close with RVOL ≥ 1.5 into close
 - Not in ARCHIVE LOG
