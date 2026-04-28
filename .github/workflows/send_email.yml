@@ -20,6 +20,7 @@ jobs:
         env:
           RESEND_KEY: ${{ secrets.RESEND_KEY }}
         run: |
+          [ -f outbox.json ] || exit 0
           curl -s -X POST https://api.resend.com/emails \
             -H "Authorization: Bearer $RESEND_KEY" \
             -H "Content-Type: application/json" \
@@ -27,6 +28,7 @@ jobs:
 
       - name: Clear outbox
         run: |
+          [ -f outbox.json ] || exit 0
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
           git rm outbox.json
