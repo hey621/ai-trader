@@ -38,19 +38,6 @@ _Updated: 2026-04-28 pre-market scan_
 
 _Candidates found during daily scans. Aggregated each Monday to produce signals._
 
-### 2026-04-28 Pre-Market
-
-| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
-|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
-| ATAI | ~$4.93 est. | $4.85 | -1.68% | DOWN | Unknown | Unknown | White House psychedelics EO (prior catalyst); no new catalyst today | No |
-| ABCL | ~$3.66 | ~$3.76 | +2.73% | UP | Unknown | Unknown | Q1 2026 earnings due 2026-05-11; ABCL635 Phase II readout Q3 2026 | No |
-| SLNH | Unknown | ~$1.42 | Unknown | Unknown | Unknown | Unknown | Insufficient data — no confirmed catalyst found | No |
-
-**Passing filter (all 4 criteria):** 0 candidates  
-**Screened out:** ATAI (-1.68% DOWN, no upside catalyst today); ABCL (+2.73%, below 5% threshold, no same-day catalyst); SLNH (PM move% unconfirmed, catalyst not identified); LWLG ($13.97 — above $5 ceiling); SYRE ($64.80 — above $5 ceiling); BBBY (~$5.36-$6.23 — above $5 ceiling)  
-**Market context:** S&P 500 and Nasdaq hit record closes on April 28 (semiconductor earnings strength, Intel/TXN blowouts); no specific penny-stock catalyst identified pre-market today.  
-**WATCHLIST unchanged:** MDAI and BZAI carried forward from April 28 afternoon scan.
-
 ### 2026-04-27 Morning Scan
 
 | Ticker | Price | RVOL | Dollar Vol | Spread | Tech Score | Above SMA9 | Above SMA20 | Above SMA200 | Above VWAP | Resistance | 52W High | Upside% | Flags | Catalyst (SEC) | FDA Date | Earnings | Analyst | Insider |
@@ -84,8 +71,13 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | CMPX | $1.79 | ~$1.79 est. | ~0% (unc.) | FLAT/DOWN | Unknown | N (post-crash) | COMPANION-002 trial data Apr 27: treatment-related death; Jefferies maintained Buy $9 PT, called selloff "overreaction"; $30.6M cash + $200M ST investments | Trial data 8-K filed | **FAIL: no confirmed ≥5% PM up move; DOWN catalyst — WATCH: if bounces ≥5% at open, flag for morning scan** |
 | BBAI | ~$3.64 | ~$3.46 | ~-5% | DOWN | Unknown | N (36% YTD loss) | Authorized share doubling approved Apr 22; Q1 earnings May 5; $900M contract opportunity unresolved | 8-K: share authorization | **FAIL: DOWN mover; no confirmed PM catalyst** |
 | DVLT | ~$0.72 | ~$0.73 | ~+1% | FLAT | Unknown | Unknown | Dream Bowl 2026 meme coin airdrop to holders | Unconfirmed | **FAIL: <5% PM move; speculative/unconfirmed catalyst** |
+| ATAI | ~$4.93 est. | ~$4.85 | ~-1.7% | DOWN | Unknown | Unknown | White House psychedelics EO (prior catalyst); no new catalyst today | No | **FAIL: DOWN mover; no new catalyst** |
+| ABCL | ~$3.66 | ~$3.76 | ~+2.7% | UP | Unknown | Unknown | Q1 2026 earnings due 2026-05-11; ABCL635 Phase II readout Q3 2026 | No | **FAIL: <5% PM move; no same-day catalyst** |
+| SLNH | Unknown | ~$1.42 | Unknown | Unknown | Unknown | Unknown | Insufficient data — no confirmed catalyst found | No | **FAIL: insufficient data** |
+| LWLG | ~$13.97 | ~$13.97 | Unknown | Unknown | Unknown | Unknown | — | Unknown | **FAIL: above $5 ceiling** |
+| SYRE | ~$64.80 | ~$64.80 | Unknown | Unknown | Unknown | Unknown | — | Unknown | **FAIL: above $5 ceiling** |
 
-**Screened out summary:** All confirmed UP movers above $5 ceiling. Penny-range tickers either down or sub-5% pre-market. Macro risk-off suppressed small-cap pre-market momentum. CMPX ($1.79) is the notable watch — Jefferies "overreaction" call post-63% crash warrants monitoring at open.
+**Screened out summary (13 tickers screened, 0 passed):** All confirmed UP movers (BBBY +23.9%, ABCL +2.7%) either above $5 ceiling or below 5% threshold. Penny-range tickers either DOWN or sub-5% pre-market. CMPX ($1.79) notable watch — Jefferies "overreaction" call post-63% crash warrants monitoring at open. S&P 500 and Nasdaq hit record closes on Apr 28 (Intel/TXN earnings blowouts; semiconductor strength).
 
 ### 2026-04-28 Afternoon Scan
 
