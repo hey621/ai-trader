@@ -17,8 +17,8 @@ _Updated: 2026-04-28 pre-market scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| MDAI | ~$1.87 (Apr 28 est.) | BARDA $54.9M committed (non-dilutive, part of $150M Project BioShield); FDA De Novo 510(k) submitted (DeepView burn AI); 2025 results positive | Earnings 2026-05-12; FDA De Novo decision pending | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200; low RVOL today (~0.09x) |
-| BZAI | ~$2.115 (Apr 27 close) | Indonesia AI inference MOU (Datacomm); NeoTensr $50M contract; Nokia AI deal expanded 4/17; Q1 rev $2.7M; $130M FY guide | Q2 AI platform launch; continued Asia/enterprise deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; vol 7.3M Apr 27 (~2x avg); -6% from $2.25 scan entry |
+| MDAI | ~$1.87 (Apr 28) | BARDA $54.9M committed (non-dilutive, part of $150M Project BioShield); FDA De Novo 510(k) submitted (DeepView burn AI); 2025 results positive | Earnings 2026-05-12; FDA De Novo decision pending | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200; low RVOL today (~0.09x) |
+| BZAI | ~$2.19 (Apr 28 intraday; Apr 27 close $2.115) | Indonesia AI inference MOU (Datacomm); NeoTensr $50M contract; Nokia AI deal expanded 4/17; Q1 rev $2.7M; $130M FY guide | Q2 AI platform launch; continued Asia/enterprise deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; vol 10.44M Apr 28 (below avg 15.95M); range $1.90–$2.20 Apr 28 |
 
 ---
 
@@ -69,6 +69,23 @@ _Candidates found during daily scans. Aggregated each Monday to produce signals.
 | SIDU | ~$3.20 | N/A | N/A | N/A | $58.5M registered direct offering priced $4.35 on 4/21 (dilution overhang) | HIGH — 13.45M new shares at $4.35 | N/A | — | **FAIL** — HIGH DILUTION RISK |
 | EDIT | ~$2.91 | N/A | N/A | N/A | EDIT-401 preclinical (HoY data); IND filing mid-2026; earnings 2026-05-11 | None noted | N/A | 2/5 | **FAIL** — no confirmed near-term catalyst |
 | CDXS | ~$2.28 | N/A | N/A | N/A | ECOsynthesis commercialisation; $38M Merck licence; Q1 2026 earnings 2026-05-07 | 18.71% share count increase YoY | Unknown | 2/5 | **FAIL** — no near-term catalyst; moderate dilution |
+
+### 2026-04-28 Pre-Market
+
+_Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% — broad risk-off open. Confirmed upward pre-market movers (BBBY +23.9%, OMCL +21%, LendingClub +10%) all priced above $5 ceiling. No penny-range ($0.50–$5.00) stocks confirmed ≥5% UP pre-market. Zero new candidates added to watchlist. Existing MDAI and BZAI remain active._
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| BBBY | ~$4.33 est. | ~$5.36 | +23.9% | UP | Low est. | Unknown | Q1 FY2026 earnings beat; first revenue growth in 19 quarters; $60M cost reduction plan | 8-K pending | **FAIL: PM price above $5 ceiling** |
+| GLND | ~$7.00 est. | ~$6.90 | ~-1.2% | DOWN | Unknown | Unknown | $70M public offering priced at $4.00; Halliburton drilling deal | 8-K: offering filed | **FAIL: above $5; active dilutive offering** |
+| HYMC | ~$38.0 est. | ~$37.60 | ~-1.2% | DOWN | Unknown | Unknown | Q1 10-Q: $189M cash, no debt; 55% resource increase (gold/silver) | 10-Q filed Apr 28 | **FAIL: above $5 ceiling** |
+| ERAS | ~$19.0 est. | ~$11.49 | ~-40% | DOWN | Unknown | Unknown | REVOLUTION Phase 1: treatment-related death (24mg dose, Grade 3 pneumonitis) | Data disclosed | **FAIL: above $5; severe DOWN mover** |
+| VISN | ~$19.6 est. | ~$10.01 | ~-49.7% | DOWN | Unknown | Unknown | $10/share cash dividend ex-date Apr 28 (mechanical DROP) | Dividend 8-K | **FAIL: above $5; ex-dividend DROP** |
+| CMPX | $1.79 | ~$1.79 est. | ~0% (unc.) | FLAT/DOWN | Unknown | N (post-crash) | COMPANION-002 trial data Apr 27: treatment-related death; Jefferies maintained Buy $9 PT, called selloff "overreaction"; $30.6M cash + $200M ST investments | Trial data 8-K filed | **FAIL: no confirmed ≥5% PM up move; DOWN catalyst — WATCH: if bounces ≥5% at open, flag for morning scan** |
+| BBAI | ~$3.64 | ~$3.46 | ~-5% | DOWN | Unknown | N (36% YTD loss) | Authorized share doubling approved Apr 22; Q1 earnings May 5; $900M contract opportunity unresolved | 8-K: share authorization | **FAIL: DOWN mover; no confirmed PM catalyst** |
+| DVLT | ~$0.72 | ~$0.73 | ~+1% | FLAT | Unknown | Unknown | Dream Bowl 2026 meme coin airdrop to holders | Unconfirmed | **FAIL: <5% PM move; speculative/unconfirmed catalyst** |
+
+**Screened out summary:** All confirmed UP movers above $5 ceiling. Penny-range tickers either down or sub-5% pre-market. Macro risk-off suppressed small-cap pre-market momentum. CMPX ($1.79) is the notable watch — Jefferies "overreaction" call post-63% crash warrants monitoring at open.
 
 ### 2026-04-28 Afternoon Scan
 
