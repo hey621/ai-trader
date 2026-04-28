@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-28_
+_Last updated: 2026-04-28 (morning scan)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -14,11 +14,10 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 
 ## WATCHLIST
 _Updated: 2026-04-28 pre-market scan_
+_Reviewed 2026-04-28 morning scan — MDAI RVOL ~0.09x (fail), BZAI RVOL ~0.65x (fail); both dropped. Watchlist cleared._
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| MDAI | ~$1.87 (Apr 28) | BARDA $54.9M committed (non-dilutive, part of $150M Project BioShield); FDA De Novo 510(k) submitted (DeepView burn AI); 2025 results positive | Earnings 2026-05-12; FDA De Novo decision pending | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200; low RVOL today (~0.09x) |
-| BZAI | ~$2.19 (Apr 28 intraday; Apr 27 close $2.115) | Indonesia AI inference MOU (Datacomm); NeoTensr $50M contract; Nokia AI deal expanded 4/17; Q1 rev $2.7M; $130M FY guide | Q2 AI platform launch; continued Asia/enterprise deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; vol 10.44M Apr 28 (below avg 15.95M); range $1.90–$2.20 Apr 28 |
 
 ---
 
@@ -78,6 +77,18 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | SYRE | ~$64.80 | ~$64.80 | Unknown | Unknown | Unknown | Unknown | — | Unknown | **FAIL: above $5 ceiling** |
 
 **Screened out summary (13 tickers screened, 0 passed):** All confirmed UP movers (BBBY +23.9%, ABCL +2.7%) either above $5 ceiling or below 5% threshold. Penny-range tickers either DOWN or sub-5% pre-market. CMPX ($1.79) notable watch — Jefferies "overreaction" call post-63% crash warrants monitoring at open. S&P 500 and Nasdaq hit record closes on Apr 28 (Intel/TXN earnings blowouts; semiconductor strength).
+
+### 2026-04-28 Morning Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Above SMA20 | Catalyst (SEC) | Dilution | Short Float | Tech Score | Conviction | Result |
+|--------|-------|------|-----------|--------|-------------|----------------|---------|------------|-----------|-----------|--------|
+| BZAI | ~$2.19 | ~0.65x (10.44M vs avg 15.95M) | ~$22.9M | ~1.5% est. | Y | 8-K: NeoTensr $50M; Nokia AI expanded; Indonesia MOU | None detected | Unknown | — | — | **FAIL — RVOL 0.65x < 2.0 threshold** |
+| MDAI | ~$1.87 | ~0.09x | ~$120K est. | ~2% est. | Y | 8-K: BARDA $54.9M; FDA De Novo pending | None detected | Unknown | — | — | **FAIL — RVOL 0.09x < 2.0 threshold** |
+| PACB | ~$1.42 | Unconfirmed | Unconfirmed | Unknown | Unknown | Trillion Gene Atlas deal (Anthropic/NVIDIA partnership, Mar 2026); earnings May 7, 2026 | None noted | Unknown | — | — | **FAIL — RVOL unconfirmed; discarded per rules** |
+| CELZ | ~$1.90 | Unconfirmed | Unconfirmed | Unknown | Unknown | Unknown | Unknown | Unknown | — | — | **FAIL — RVOL unconfirmed; discarded per rules** |
+| GCTS | ~$1.18 | Unconfirmed | Unconfirmed | Unknown | Unknown | Unknown | Unknown | Unknown | — | — | **FAIL — RVOL unconfirmed; discarded per rules** |
+
+**Screened out summary (5 tickers screened, 0 passed):** Both watchlist names (BZAI, MDAI) confirmed-fail on RVOL < 2.0. Market-wide search yielded no penny-range tickers with confirmed intraday RVOL ≥ 2.0. Broad screeners showed no live scanner data accessible; PACB/CELZ/GCTS RVOL unconfirmed → discarded. **No entries today.**
 
 ### 2026-04-28 Afternoon Scan
 
