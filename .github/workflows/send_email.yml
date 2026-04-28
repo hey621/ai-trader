@@ -1,0 +1,32 @@
+name: Send Email
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'outbox.json'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Send via Resend
+        env:
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+        run: |
+          curl -s -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer $RESEND_KEY" \
+            -H "Content-Type: application/json" \
+            -d @outbox.json
+
+      - name: Clear outbox
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git rm outbox.json
+          git commit -m "clear email outbox"
+          git push

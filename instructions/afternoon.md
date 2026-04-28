@@ -51,19 +51,8 @@ If nothing qualifies write: `_No watchlist candidates — YYYY-MM-DD_`
 ## Step 4 — Log to Research Log
 Append `### YYYY-MM-DD Afternoon Scan` under `## WEEKLY RESEARCH LOG` with the standard full table for all candidates reviewed (pass and fail).
 
-## Step 5 — Commit and Push
-Always commit even if watchlist is empty.
-```
-git config user.email bot@pennyalpha.local
-git config user.name PennyAlpha_Bot
-git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
-git add TRADES.md
-git commit -m "Research: afternoon scan YYYY-MM-DD"
-git push
-```
-
-## Step 6 — Email Brad
-**Always send.** Write /tmp/send_email.py and run it:
+## Step 5 — Email Brad + Commit and Push
+**Always send.** Write outbox.json then commit it — a GitHub Action will send the email automatically.
 
 ```python
 import json
@@ -80,14 +69,16 @@ These will be reviewed in tomorrow's 10:15 AM execution scan.
 Brad reads this on his phone — keep it short.
 """
 
-with open('/tmp/email.json', 'w') as f:
+with open('outbox.json', 'w') as f:
     json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
 ```
 
-Then send with curl:
-```bash
-curl -s -X POST https://api.resend.com/emails \
-  -H "Authorization: Bearer $RESEND_KEY" \
-  -H "Content-Type: application/json" \
-  -d @/tmp/email.json
+Always commit even if watchlist is empty.
+```
+git config user.email bot@pennyalpha.local
+git config user.name PennyAlpha_Bot
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
+git add TRADES.md outbox.json
+git commit -m "Research: afternoon scan YYYY-MM-DD"
+git push
 ```

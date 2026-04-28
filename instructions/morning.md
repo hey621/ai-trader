@@ -81,19 +81,8 @@ If candidates qualified:
 ## Step 5 — Log to Research Log
 Append `### YYYY-MM-DD Morning Scan` under `## WEEKLY RESEARCH LOG` for all candidates reviewed (pass and fail) using the standard table format. Always append — never overwrite.
 
-## Step 6 — Commit and Push
-Always append at minimum a one-line `### YYYY-MM-DD Morning Scan` header (even if no candidates qualified) so there is always something to commit.
-```
-git config user.email bot@pennyalpha.local
-git config user.name PennyAlpha_Bot
-git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
-git add TRADES.md
-git commit -m "Morning scan + execution YYYY-MM-DD"
-git push
-```
-
-## Step 7 — Email Brad
-**Always send — even if no entries today.** Write /tmp/send_email.py and run it:
+## Step 6 — Email Brad + Commit and Push
+**Always send — even if no entries today.** Write outbox.json then commit it — a GitHub Action will send the email automatically.
 
 ```python
 import json
@@ -113,14 +102,16 @@ ACTIVE POSITIONS:
 Brad reads this on his phone — keep it short.
 """
 
-with open('/tmp/email.json', 'w') as f:
+with open('outbox.json', 'w') as f:
     json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
 ```
 
-Then send with curl:
-```bash
-curl -s -X POST https://api.resend.com/emails \
-  -H "Authorization: Bearer $RESEND_KEY" \
-  -H "Content-Type: application/json" \
-  -d @/tmp/email.json
+Always append at minimum a one-line `### YYYY-MM-DD Morning Scan` header (even if no candidates qualified) so there is always something to commit.
+```
+git config user.email bot@pennyalpha.local
+git config user.name PennyAlpha_Bot
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
+git add TRADES.md outbox.json
+git commit -m "Morning scan + execution YYYY-MM-DD"
+git push
 ```

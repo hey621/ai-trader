@@ -39,7 +39,7 @@ git push
 ```
 
 ## Step 5 — Email Brad
-Write /tmp/send_email.py and run it:
+Write outbox.json then commit it — a GitHub Action will send the email automatically.
 
 ```python
 import json
@@ -57,14 +57,11 @@ Total trades this week: X (X wins, X losses)
 All positions flat for the weekend.
 """
 
-with open('/tmp/email.json', 'w') as f:
+with open('outbox.json', 'w') as f:
     json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
 ```
 
-Then send with curl:
-```bash
-curl -s -X POST https://api.resend.com/emails \
-  -H "Authorization: Bearer $RESEND_KEY" \
-  -H "Content-Type: application/json" \
-  -d @/tmp/email.json
+Add outbox.json to the commit in Step 4:
+```
+git add TRADES.md outbox.json
 ```

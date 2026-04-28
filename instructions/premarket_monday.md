@@ -53,8 +53,8 @@ Also append a `### YYYY-MM-DD Pre-Market` section under `## WEEKLY RESEARCH LOG`
 
 Do not modify ACTIVE POSITIONS.
 
-## Step 4 — Send Email Summary
-**Always send this email — even if zero candidates qualified.** Write the following to /tmp/send_email.py with the actual subject and body filled in, then run it with `python3 /tmp/send_email.py`:
+## Step 4 — Email + Commit and Push
+**Always send this email — even if zero candidates qualified.** Write outbox.json then commit it — a GitHub Action will send the email automatically.
 
 ```python
 import json
@@ -73,24 +73,15 @@ Screened out: [brief note on any notable rejections]
 Brad reads this on his phone — keep it short.
 """
 
-with open('/tmp/email.json', 'w') as f:
+with open('outbox.json', 'w') as f:
     json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
 ```
 
-Then send with curl:
-```bash
-curl -s -X POST https://api.resend.com/emails \
-  -H "Authorization: Bearer $RESEND_KEY" \
-  -H "Content-Type: application/json" \
-  -d @/tmp/email.json
-```
-
-## Step 5 — Commit and Push
 ```
 git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
 git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
-git add TRADES.md
+git add TRADES.md outbox.json
 git commit -m "Research: pre-market scan YYYY-MM-DD"
 git push
 ```

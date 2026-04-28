@@ -28,21 +28,8 @@ Output will be either:
 - `ALL_CLEAR: No positions closed.` — no further action needed except commit if stopwatch trailed any stops
 - One or more closed position lines — requires commit and email
 
-## Step 3 — Commit and Push
-If either script modified TRADES.md (stops trailed or positions closed), commit and push:
-```
-git config user.email bot@pennyalpha.local
-git config user.name PennyAlpha_Bot
-git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
-git add TRADES.md
-git commit -m "Alert: position update YYYY-MM-DD"
-git push
-```
-
-If neither script changed anything, skip this step.
-
-## Step 4 — Email Brad (only if positions were closed)
-If close.py closed one or more positions, send an email using curl:
+## Step 3 — Email (only if positions closed) + Commit and Push
+If close.py closed one or more positions, write outbox.json — a GitHub Action will send the email automatically:
 
 ```python
 import json
@@ -57,15 +44,18 @@ Ticker | Entry | Exit | Result | P&L%
 Next morning scan will reflect these closes.
 """
 
-with open('/tmp/email.json', 'w') as f:
+with open('outbox.json', 'w') as f:
     json.dump({"from": "bot@mail.bradscanvas.com", "to": "hey@bradscanvas.com", "subject": subject, "text": body}, f)
 ```
 
-```bash
-curl -s -X POST https://api.resend.com/emails \
-  -H "Authorization: Bearer $RESEND_KEY" \
-  -H "Content-Type: application/json" \
-  -d @/tmp/email.json
+If either script modified TRADES.md (stops trailed or positions closed), commit and push:
+```
+git config user.email bot@pennyalpha.local
+git config user.name PennyAlpha_Bot
+git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
+git add TRADES.md outbox.json
+git commit -m "Alert: position update YYYY-MM-DD"
+git push
 ```
 
-If only stops were trailed (no closes), do NOT email.
+If neither script changed anything, skip this step. If only stops were trailed (no closes), omit outbox.json from the commit.
