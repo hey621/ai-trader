@@ -67,7 +67,7 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | HYMC | ~$38.0 est. | ~$37.60 | ~-1.2% | DOWN | Unknown | Unknown | Q1 10-Q: $189M cash, no debt; 55% resource increase (gold/silver) | 10-Q filed Apr 28 | **FAIL: above $5 ceiling** |
 | ERAS | ~$19.0 est. | ~$11.49 | ~-40% | DOWN | Unknown | Unknown | REVOLUTION Phase 1: treatment-related death (24mg dose, Grade 3 pneumonitis) | Data disclosed | **FAIL: above $5; severe DOWN mover** |
 | VISN | ~$19.6 est. | ~$10.01 | ~-49.7% | DOWN | Unknown | Unknown | $10/share cash dividend ex-date Apr 28 (mechanical DROP) | Dividend 8-K | **FAIL: above $5; ex-dividend DROP** |
-| CMPX | $1.79 | ~$1.79 est. | ~0% (unc.) | FLAT/DOWN | Unknown | N (post-crash) | COMPANION-002 trial data Apr 27: treatment-related death; Jefferies maintained Buy $9 PT, called selloff "overreaction"; $30.6M cash + $200M ST investments | Trial data 8-K filed | **FAIL: no confirmed ≥5% PM up move; DOWN catalyst — WATCH: if bounces ≥5% at open, flag for morning scan** |
+| CMPX | $1.79 | ~$1.95 est. | ~+9% est. | UP (technical bounce) | Unknown | N (post-crash) | COMPANION-002 death (Apr 27); Jefferies Buy $9 PT "overreaction"; $230M+ liquidity; Apr 28 confirmed range $1.82–$2.18 | Trial data 8-K filed | **FAIL: catalyst negative (treatment death); bounce speculative/technical only; no confirmed positive catalyst** |
 | BBAI | ~$3.64 | ~$3.46 | ~-5% | DOWN | Unknown | N (36% YTD loss) | Authorized share doubling approved Apr 22; Q1 earnings May 5; $900M contract opportunity unresolved | 8-K: share authorization | **FAIL: DOWN mover; no confirmed PM catalyst** |
 | DVLT | ~$0.72 | ~$0.73 | ~+1% | FLAT | Unknown | Unknown | Dream Bowl 2026 meme coin airdrop to holders | Unconfirmed | **FAIL: <5% PM move; speculative/unconfirmed catalyst** |
 | ATAI | ~$4.93 est. | ~$4.85 | ~-1.7% | DOWN | Unknown | Unknown | White House psychedelics EO (prior catalyst); no new catalyst today | No | **FAIL: DOWN mover; no new catalyst** |
@@ -75,8 +75,11 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | SLNH | Unknown | ~$1.42 | Unknown | Unknown | Unknown | Unknown | Insufficient data — no confirmed catalyst found | No | **FAIL: insufficient data** |
 | LWLG | ~$13.97 | ~$13.97 | Unknown | Unknown | Unknown | Unknown | — | Unknown | **FAIL: above $5 ceiling** |
 | SYRE | ~$64.80 | ~$64.80 | Unknown | Unknown | Unknown | Unknown | — | Unknown | **FAIL: above $5 ceiling** |
+| SGMT | ~$5.89 (Apr 27 PM open) | ~$8.00 est. | ~+35% est. | UP | Unknown | Unknown | $175M Series A offering at $6/share (closing Apr 28); Phase 3 denifanstat acne (positive China Phase 3 data) | S-1/prospectus filed | **FAIL: above $5 ceiling (offering $6, trading ~$7–9)** |
+| ORKA | ~$70 est. | ~$93 est. | ~+33% (Apr 28 PM) | UP | Unknown | Unknown | Phase 2a EVERLAST-A: 63.5% PASI 100 at Week 16; once-yearly dosing; Guggenheim PT $200, BTIG PT $151 | Data disclosed (Apr 27) | **FAIL: way above $5 ceiling (~$90+)** |
+| MANE | ~$67.84 (Apr 24 close) | ~$81 est. (Apr 28 open) | ~+19% PM Apr 28 | UP | Unknown | Unknown | Phase 2/3 VDPHL01 oral minoxidil positive pivotal hair loss results; secondary public offering launched Apr 27 | 8-K: data + offering filed | **FAIL: way above $5 ceiling (~$80–$100); active dilutive offering** |
 
-**Screened out summary (13 tickers screened, 0 passed):** All confirmed UP movers (BBBY +23.9%, ABCL +2.7%) either above $5 ceiling or below 5% threshold. Penny-range tickers either DOWN or sub-5% pre-market. CMPX ($1.79) notable watch — Jefferies "overreaction" call post-63% crash warrants monitoring at open. S&P 500 and Nasdaq hit record closes on Apr 28 (Intel/TXN earnings blowouts; semiconductor strength).
+**Screened out summary (16 tickers screened, 0 passed):** All confirmed UP movers (BBBY +23.9%, SGMT ~+35%, ORKA ~+33% PM, MANE ~+19% PM, ABCL +2.7%) either above $5 ceiling or below 5% threshold. CMPX ($1.79 → range $1.82–$2.18; ~+9% technical bounce) in penny range but catalyst negative (treatment death); no confirmed positive catalyst. Apr 28 macro: tech risk-off (OpenAI missed targets; Oracle -7.5%, Nvidia -2–5%); S&P -0.17%, Nasdaq -0.55%. No PDUFA on Apr 28. Apr 27 record closes (Intel/TXN beats) already priced in.
 
 ### 2026-04-28 Morning Scan
 
