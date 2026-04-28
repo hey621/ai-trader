@@ -1,6 +1,6 @@
-# PennyAlpha_Bot — Monday Pre-Market Scan (8:00 AM EST)
+# PennyAlpha_Bot — Daily Pre-Market Scan (9:00 AM EST)
 
-Scan for stocks already moving before the open. Findings feed into the Monday 8:45 AM aggregation.
+Scan for stocks already moving before the open. Findings feed into the 10:15 AM morning execution scan.
 Do NOT produce trading signals. Append to WEEKLY RESEARCH LOG only.
 
 Credentials:
@@ -46,7 +46,7 @@ _Updated: YYYY-MM-DD pre-market scan_
 
 Pre-market movers with confirmed catalysts score +2 conviction in the morning execution scan.
 
-Also append a `### YYYY-MM-DD Pre-Market (Monday)` section under `## WEEKLY RESEARCH LOG` with the full table:
+Also append a `### YYYY-MM-DD Pre-Market` section under `## WEEKLY RESEARCH LOG` with the full table:
 
 | Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
 |--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
@@ -59,8 +59,8 @@ Do not modify ACTIVE POSITIONS.
 ```python
 import json
 
-subject = "PennyAlpha Pre-Market Monday — YYYY-MM-DD"
-body = """Pre-Market Monday Summary — YYYY-MM-DD
+subject = "PennyAlpha Pre-Market — YYYY-MM-DD"
+body = """Pre-Market Summary — YYYY-MM-DD
 
 Candidates screened: X | Passed filters: X
 
@@ -91,7 +91,7 @@ git config user.email bot@pennyalpha.local
 git config user.name PennyAlpha_Bot
 git remote set-url origin https://$GITHUB_TOKEN@github.com/hey621/ai-trader.git
 git add TRADES.md
-git commit -m "Research: Monday pre-market scan YYYY-MM-DD"
+git commit -m "Research: pre-market scan YYYY-MM-DD"
 git push
 ```
 
