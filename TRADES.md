@@ -13,11 +13,9 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-28 pre-market scan_
-_Reviewed 2026-04-28 morning scan — MDAI RVOL ~0.09x (fail), BZAI RVOL ~0.65x (fail); both dropped. Watchlist cleared._
+_Updated: 2026-04-28 afternoon scan_
 
-| Ticker | Close Price | Catalyst | Expected | Score | Flags |
-|--------|------------|---------|---------|-------|-------|
+_No watchlist candidates — 2026-04-28_
 
 ---
 
@@ -97,15 +95,14 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 
 | Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
 |--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
-| MDAI | ~$1.87 | ~0.09x (low today) | ~$120K est. | Y (52W range $1.13–$3.21; holding above recent lows) | BARDA $54.9M non-dilutive; FDA De Novo pending; earnings 2026-05-12 approaching | None detected | Unknown | 4/5 | **PASS — carried forward; May 12 earnings catalyst building** |
-| BZAI | ~$2.115 | ~2.0x (7.3M vol Apr 27, avg ~3.7M) | ~$7.7M Apr 27 | Y (above SMA9/20; 52W range $1.00–$6.76) | Indonesia Datacomm AI MOU; NeoTensr $50M contract; Nokia AI expanded; Q2 platform launch | None detected | Unknown | 3/5 | **PASS — carried forward; new Asia deal adds catalyst layer** |
-| ASTC | ~$3.26–3.76 | Low (~57K intraday) | ~$200K est. | Y | DHS $1B initiative; TSA mass-spec | **HIGH — $32.5M bought deal offering confirmed active (increased from $30M shelf)** | Unknown | — | **FAIL — removed from watchlist; active dilutive offering confirmed** |
-| SCNI | ~$0.74 | Very high (most active Apr 27) | Est. high | Unknown | — | HIGH — $2.61M private placement announced | Unknown | — | **FAIL — HIGH DILUTION RISK; private placement** |
-| ATOM | ~$8.58 | High (38.93% gainer) | High | Y | Synopsys GaN collaboration; semiconductor tech breakout | HIGH — $25M registered direct offering | N/A | — | **FAIL — above $5.00 ceiling; active dilution offering** |
-| REPL | ~$2.x (post-crash) | Very high (post-FDA rejection) | High | N | — | None noted | N/A | — | **FAIL — FDA rejected lead drug RP1 (melanoma BLA); stock down 62–64%** |
-| UAMY | ~$10.27 | ~1.3x avg | ~$108M | N/A | Antimony critical minerals; tariff exposure | None noted | N/A | — | **FAIL — above $5.00 ceiling** |
-| USEG | ~$1.00 | High (premarket mover) | Unknown | Unknown | Oil & gas small cap | HIGH — $8.8M stock offering at $1 | Unknown | — | **FAIL — HIGH DILUTION RISK; offering at current price** |
-| KNSA | ~$43.61 | Normal | High | N/A | Q1 2026 earnings Apr 28 BMO | None noted | N/A | — | **FAIL — above $5.00 ceiling** |
+| MDAI | ~$1.87 | ~0.09x | ~$120K est. | Y | BARDA $54.9M non-dilutive; FDA De Novo pending; earnings 2026-05-12–13 | None detected | Unknown | — | **FAIL — RVOL 0.09x < 1.5; dollar vol $120K < $500K; earnings not tonight/tomorrow** |
+| BZAI | ~$2.19 | ~0.65x (10.44M vs avg 15.95M) | ~$22.9M | Y | Nokia APAC partnership; Indonesia MOU; NeoTensr $50M — all prior, no new catalyst tonight/tomorrow | None detected | Unknown | — | **FAIL — RVOL 0.65x < 1.5; no catalyst tonight/tomorrow confirmed** |
+| OABI | ~$1.53 | ~0.78x (386K vs avg 494K) | ~$590K est. | Unknown (52W $1.22–$3.52; near lows) | OmniUltra platform Dec 2025; earnings 2026-05-07 | Unknown | Unknown | 2/5 | **FAIL — RVOL 0.78x < 1.5; earnings not until May 7** |
+| RZLV | ~$2.58 | Unconfirmed | Unconfirmed | Unknown | 543% H2 2025 revenue growth (Apr 22); $360M FY 2026 guide | Unknown | Unknown | — | **FAIL — RVOL unconfirmed; discarded per rules** |
+| RCAT | ~$11.80 | — | — | — | Drone/defense; Q4 FY2026 revenue surge 2,500%; maritime unmanned systems | — | — | — | **FAIL — above $5.00 ceiling** |
+| LOGC | ~$8.50 | — | — | — | $907.5M US Salt acquisition Feb 2026; $2.9B NOLs | — | — | — | **FAIL — above $5.00 ceiling** |
+
+**Summary (6 screened, 0 passed):** No PDUFA decisions confirmed for April 29 in penny range. Both MDAI and BZAI fail strict RVOL ≥ 1.5 and/or dollar vol ≥ $500K thresholds today; no new catalyst expected tonight/tomorrow. OABI borderline dollar vol but RVOL 0.78x and May 7 earnings too far out. RZLV RVOL unconfirmed. RCAT and LOGC above $5 ceiling. Watchlist set to empty.
 
 ---
 
