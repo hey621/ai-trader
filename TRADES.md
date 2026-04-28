@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-27_
+_Last updated: 2026-04-28_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -13,13 +13,12 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-27 afternoon scan_
+_Updated: 2026-04-28 afternoon scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| MDAI | ~$1.84 (Apr 24 close) | BARDA $54.9M committed (non-dilutive); FDA De Novo 510(k) submitted (DeepView burn) | FDA De Novo decision pending; earnings 2026-05-12 | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200 |
-| ASTC | ~$3.41 (Apr 25 close) | DHS $1B airport screening initiative; 1st Detect TSA-approved mass-spec device gaining govt adoption | Ongoing govt contract news; vol normalising after 107x RVOL spike | 3/5 | $30M mixed shelf Jan 2026 (not active raise); 52W range $1.92–$8.01 |
-| BZAI | ~$2.01 (Apr 24 close) | Nokia AI deal expanded 4/17; NeoTensr $50M deal; Q2 AI platform launch; $130M FY guide | Q2 AI platform launch; continued deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; price -10.7% from scan entry $2.25 |
+| MDAI | ~$1.87 (Apr 28 est.) | BARDA $54.9M committed (non-dilutive, part of $150M Project BioShield); FDA De Novo 510(k) submitted (DeepView burn AI); 2025 results positive | Earnings 2026-05-12; FDA De Novo decision pending | 4/5 | New CEO 4/17; CCO resigned 2/1; below SMA200; low RVOL today (~0.09x) |
+| BZAI | ~$2.115 (Apr 27 close) | Indonesia AI inference MOU (Datacomm); NeoTensr $50M contract; Nokia AI deal expanded 4/17; Q1 rev $2.7M; $130M FY guide | Q2 AI platform launch; continued Asia/enterprise deal momentum | 3/5 | CEO holds 5.7M shares; analyst Strong Buy, target $5.50; vol 7.3M Apr 27 (~2x avg); -6% from $2.25 scan entry |
 
 ---
 
@@ -57,6 +56,20 @@ _Candidates found during daily scans. Aggregated each Monday to produce signals.
 | SIDU | ~$3.20 | N/A | N/A | N/A | $58.5M registered direct offering priced $4.35 on 4/21 (dilution overhang) | HIGH — 13.45M new shares at $4.35 | N/A | — | **FAIL** — HIGH DILUTION RISK |
 | EDIT | ~$2.91 | N/A | N/A | N/A | EDIT-401 preclinical (HoY data); IND filing mid-2026; earnings 2026-05-11 | None noted | N/A | 2/5 | **FAIL** — no confirmed near-term catalyst |
 | CDXS | ~$2.28 | N/A | N/A | N/A | ECOsynthesis commercialisation; $38M Merck licence; Q1 2026 earnings 2026-05-07 | 18.71% share count increase YoY | Unknown | 2/5 | **FAIL** — no near-term catalyst; moderate dilution |
+
+### 2026-04-28 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
+|--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
+| MDAI | ~$1.87 | ~0.09x (low today) | ~$120K est. | Y (52W range $1.13–$3.21; holding above recent lows) | BARDA $54.9M non-dilutive; FDA De Novo pending; earnings 2026-05-12 approaching | None detected | Unknown | 4/5 | **PASS — carried forward; May 12 earnings catalyst building** |
+| BZAI | ~$2.115 | ~2.0x (7.3M vol Apr 27, avg ~3.7M) | ~$7.7M Apr 27 | Y (above SMA9/20; 52W range $1.00–$6.76) | Indonesia Datacomm AI MOU; NeoTensr $50M contract; Nokia AI expanded; Q2 platform launch | None detected | Unknown | 3/5 | **PASS — carried forward; new Asia deal adds catalyst layer** |
+| ASTC | ~$3.26–3.76 | Low (~57K intraday) | ~$200K est. | Y | DHS $1B initiative; TSA mass-spec | **HIGH — $32.5M bought deal offering confirmed active (increased from $30M shelf)** | Unknown | — | **FAIL — removed from watchlist; active dilutive offering confirmed** |
+| SCNI | ~$0.74 | Very high (most active Apr 27) | Est. high | Unknown | — | HIGH — $2.61M private placement announced | Unknown | — | **FAIL — HIGH DILUTION RISK; private placement** |
+| ATOM | ~$8.58 | High (38.93% gainer) | High | Y | Synopsys GaN collaboration; semiconductor tech breakout | HIGH — $25M registered direct offering | N/A | — | **FAIL — above $5.00 ceiling; active dilution offering** |
+| REPL | ~$2.x (post-crash) | Very high (post-FDA rejection) | High | N | — | None noted | N/A | — | **FAIL — FDA rejected lead drug RP1 (melanoma BLA); stock down 62–64%** |
+| UAMY | ~$10.27 | ~1.3x avg | ~$108M | N/A | Antimony critical minerals; tariff exposure | None noted | N/A | — | **FAIL — above $5.00 ceiling** |
+| USEG | ~$1.00 | High (premarket mover) | Unknown | Unknown | Oil & gas small cap | HIGH — $8.8M stock offering at $1 | Unknown | — | **FAIL — HIGH DILUTION RISK; offering at current price** |
+| KNSA | ~$43.61 | Normal | High | N/A | Q1 2026 earnings Apr 28 BMO | None noted | N/A | — | **FAIL — above $5.00 ceiling** |
 
 ---
 
