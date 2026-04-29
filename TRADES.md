@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-29 (afternoon scan)_
+_Last updated: 2026-04-29 (Monday Pre-Market Scan)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -34,6 +34,34 @@ _No watchlist candidates — 2026-04-29_
 ## WEEKLY RESEARCH LOG
 
 _Candidates found during daily scans. Aggregated each Monday to produce signals._
+
+### 2026-04-29 Pre-Market (Monday)
+
+_Scan time: 8:00 AM EST | Criteria: price $0.50–$5.00, PM move ≥5% UP, prev dollar vol ≥$500K, spread ≤3%_
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| — | — | — | — | — | — | — | — | — |
+
+**⚠️ SCAN NOTE — API UNAVAILABLE:** `premarket.py` failed with HTTP 403 (POLYGON_KEY not configured). Manual web scan performed (8 searches, per 8-search maximum). No specific penny stock in the $0.50–$5.00 range with PM move ≥5%, prev dollar vol ≥$500K, and spread ≤3% was identified from available public sources.
+
+**Market context (8:00 AM EST):** Futures flat (S&P 500 +0.07%, Nasdaq 100 +0.39%, Dow +0.02%, Russell 2000 +0.30%). Primary catalysts today/week: Fed rate decision; Big Tech earnings after close (GOOG, MSFT, AMZN, META); Apple Q2-2026 earnings Thursday. Notable large-cap movers: NXPI +19% (Q1 earnings beat + strong outlook); HOOD −10.8% (Q1 miss, crypto revenue −47%); ENPH −7.2% (weak Q2 guidance). No penny stock ($0.50–$5.00) candidates surfaced with confirmed ≥5% premarket move.
+
+**PDUFA check (Apr-29-26):** Sanofi (SNY) PDUFA for Tzield — large-cap, price disqualified. No penny stock PDUFA dates on Apr-29 confirmed.
+
+**Dilution / SEC 8-K check:** No 8-K filings for prior tracked tickers (CDXS, IFRX, ABCL, ATNM, BTAI) found from Apr-28/29-26 searches.
+
+**Notable status updates from prior scan entries (as of premarket Apr-29-26):**
+
+- **CDXS:** Price now ~$1.82 (+4.6% on last session per search data) — significant decline from Apr-24 close range of ~$2.40–$2.62. PM move below 5% threshold; did not qualify for this scan. Earnings confirmed May-7-26 after close; 200-day MA cross from Apr-22 may have reversed given steep price decline. Monitor intraday for RVOL and MA position vs. prior scan baselines.
+- **IFRX:** No new catalyst confirmed from Apr-28/29 searches. Earnings window May-6–11-26 approaching. Nasdaq deficiency cure deadline Sep-8-26 unchanged. RVOL ~2.3x was Apr-22 confirmed; re-verify intraday today.
+- **ABCL:** No new data from searches. Earnings May-11-26 unchanged. RVOL unconfirmed above 2.0 premarket.
+- **ATNM:** No update. RVOL ~0.25 last confirmed Apr-24; earnings May-8-26 unchanged.
+- **BTAI:** No update. RVOL ~0.77 last confirmed Apr-24. PDUFA Nov-14-26 unchanged.
+
+**Premarket scan conclusion:** Zero qualifying UP movers cleared all filters (API unavailable; manual web search found no penny stock ≥5% PM move in $0.50–$5.00 range with sufficient liquidity). No tickers starred (*) for Monday aggregation +2 conviction bonus.
+
+---
 
 ### 2026-04-27 Morning Scan
 
