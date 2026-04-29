@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-29 (Monday Pre-Market Scan)_
+_Last updated: 2026-04-29 (Morning Execution Scan 10:15 AM EST)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -16,6 +16,7 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 _Updated: 2026-04-29 afternoon scan_
 
 _No watchlist candidates — 2026-04-29_
+_Reviewed 2026-04-29 Morning Scan — no candidates to carry forward._
 
 ---
 
@@ -144,6 +145,25 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | ASBP | ~$0.25 | High (WallStreetZen most-active Apr 28) | Unknown | Unknown | No confirmed positive catalyst found | Unknown — micro-cap | Unknown | 1/5 | **FAIL — price below $0.50 floor; no confirmed catalyst** |
 
 **Summary (6 screened, 0 passed):** No PDUFA decisions on Apr 30 in penny range (AXSM at ~$189 is sole Apr 30 PDUFA — far above ceiling). No penny-range confirmed earnings beats after close tonight. RZLV meets price/dollar-vol but RVOL 0.82x and catalyst already priced in from Apr 22; prior PP dilution risk. CDXS in uptrend but RVOL ~1.0x and earnings not until May 7. MNDR dollar volume below $500K threshold. KOPN no near-term catalyst. ASBP below $0.50 floor. Macro note: Meta Platforms reporting Q1 2026 earnings after close tonight — could drive broad sentiment shift for tomorrow; watch penny-range AI/tech names in tomorrow's pre-market scan if Meta beats. **Watchlist set to empty.**
+
+---
+
+### 2026-04-29 Morning Scan
+
+_Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 2.0 confirmed intraday, dollar vol ≥ $500K, spread ≤ 3%, above 20-day MA, confirmed SEC 8-K catalyst_
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Above SMA20 | Catalyst (SEC) | Dilution | Short Float | Tech Score | Conviction | Result |
+|--------|-------|------|-----------|--------|-------------|----------------|---------|------------|-----------|-----------|--------|
+| ASTC | ~$2.85–$3.10 | Unconfirmed today (Apr 27: ~107x) | Unconfirmed | ~2% est. | Y (historical) | 8-K: Q2 FY2026 earnings Feb 13 (R&D −25%); DHS $1B initiative Dec 2025 — no new Apr 2026 8-K | $30M mixed shelf Jan 2026 (not drawn) | 960K short (+3,233% from Mar 15); 0.1 DTC | 3/5 | — | **FAIL — RVOL unconfirmed today; no new April 2026 catalyst; Apr 27 spike not sustained** |
+| GEVO | ~$1.81–$1.89 | Unconfirmed | ~$5.4M avg/day | ~1.5% est. | Unknown | 8-K: DOE financing withdrawal Apr 16 (NEGATIVE); CEO consulting Apr 22 | None detected | Unknown | 1/5 | — | **FAIL — Negative DOE withdrawal catalyst; CEO transition; no confirmed positive 8-K** |
+| CELZ | ~$2.28–$2.47 | 0.40x (40K vs 102K avg) | ~$95K est. | Unknown | Unknown | No confirmed April 2026 8-K | Unknown | Unknown | 1/5 | — | **FAIL — RVOL 0.40x < 2.0; dollar vol ~$95K far below $500K** |
+| GCTS | ~$1.20–$1.37 | Unconfirmed today (Apr 6: ~1.25x) | Unconfirmed | Unknown | Unknown | No recent 8-K confirmed (5G/4G LTE semiconductor) | Unknown | Unknown | 2/5 | — | **FAIL — RVOL unconfirmed today; stale data from Apr 6** |
+| IFRX | ~$1.69 | 0.73x (855K vs 1.17M avg) | ~$1.44M | Unknown | Y (Nasdaq compliance met) | 6-K: Nasdaq bid price compliance regained Apr 27 | Unknown | Unknown | 2/5 | — | **FAIL — RVOL 0.73x < 2.0; compliance regain is minor catalyst, not strong 8-K** |
+| BZAI | ~$1.70–$1.90 | Unconfirmed | Unconfirmed | ~1.5% est. | Y | 8-K: NeoTensr $50M; Nokia AI — all prior; down −13.43% Apr 28; no new Apr 29 catalyst | None detected | Unknown | 2/5 | — | **FAIL — RVOL unconfirmed; price declining; no new catalyst** |
+| MDAI | ~$1.96 | 0.93x (413K vs 444K avg) | ~$813K | ~2% est. | Y | BARDA $54.9M; FDA De Novo pending — all prior catalysts; Q1 earnings May 12 | None detected | Unknown | 3/5 | — | **FAIL — RVOL 0.93x < 2.0; no new catalyst today** |
+| PACB | ~$1.52–$1.65 | Unconfirmed today (Apr 27: ~1.69x) | Unconfirmed | Unknown | Unknown | Trillion Gene Atlas (Basecamp Research, Mar 2026 — already priced in) | None noted | Unknown | 2/5 | — | **FAIL — RVOL unconfirmed today; catalyst already priced in from Mar 2026** |
+
+**Screened out summary (8 tickers screened, 0 passed):** No tickers met the combined threshold of confirmed RVOL ≥ 2.0 + confirmed positive SEC 8-K catalyst. Market context: Big Tech Q1 earnings after close today (GOOG, MSFT, AMZN, META) creating risk-off tone in small/micro caps. ASTC Apr 27 RVOL spike (107x) was event-specific and not confirmed as repeating today. GEVO DOE withdrawal is a negative catalyst. CELZ dollar vol far below minimum. GCTS data stale. IFRX, BZAI, MDAI all sub-1.0x RVOL. PACB catalyst already priced in. **No entries today.**
 
 ---
 
