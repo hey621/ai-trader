@@ -198,7 +198,7 @@ def main():
         ask = get_ask_price(ticker)
         if ask is None:
             continue
-        if not (0.50 <= ask <= 5.00):
+        if not (0.50 <= ask <= 10.00):
             print(f"  {ticker}: ask ${ask:.2f} out of range, skipping.")
             continue
 
