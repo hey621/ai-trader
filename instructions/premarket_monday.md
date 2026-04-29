@@ -17,7 +17,7 @@ Use WebSearch to find pre-market movers. Run these searches:
 From results, extract tickers where ALL of the following appear true:
 - Price $0.50–$10.00
 - Pre-market move >= 5% (UP movers preferred; DOWN only with specific short thesis)
-- Previous day dollar volume >= $500k
+- Previous day dollar volume >= $250k
 - Bid/ask spread <= 3%
 
 Cross-reference with ARCHIVE LOG — skip any ticker closed within 30 days.

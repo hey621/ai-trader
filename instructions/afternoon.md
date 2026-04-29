@@ -18,8 +18,8 @@ Search for stocks with catalysts expected tonight or tomorrow, or strong closes:
 
 Criteria (ALL must be true):
 - Price $0.50–$10.00
-- Dollar volume ≥ $500k today
-- Catalyst expected tonight/tomorrow OR strong close with RVOL ≥ 1.5 into close
+- Dollar volume ≥ $250k today
+- Catalyst expected this week OR strong close with RVOL ≥ 1.5 into close
 - Not in ARCHIVE LOG
 
 Target 5–8 candidates.

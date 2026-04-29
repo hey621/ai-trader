@@ -24,7 +24,7 @@ Also include any tickers from the WATCHLIST section.
 Extract tickers where ALL are true:
 - Price $0.50–$10.00
 - RVOL ≥ 1.5 (confirmed intraday — if unconfirmed, discard)
-- Dollar volume ≥ $500k
+- Dollar volume ≥ $250k
 - Spread ≤ 3%
 - Price above 20-day MA
 - Not in ARCHIVE LOG
