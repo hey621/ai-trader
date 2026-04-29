@@ -16,7 +16,6 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 _Updated: 2026-04-29 afternoon scan_
 
 _No watchlist candidates — 2026-04-29_
-_Reviewed 2026-04-29 Morning Scan — no candidates to carry forward._
 
 ---
 
@@ -144,7 +143,11 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | AXSM | ~$189 | — | — | — | PDUFA Apr 30 for AXS-05 (Alzheimer's Agitation) — Priority Review | None noted | — | — | **FAIL — far above $5.00 ceiling (~$189)** |
 | ASBP | ~$0.25 | High (WallStreetZen most-active Apr 28) | Unknown | Unknown | No confirmed positive catalyst found | Unknown — micro-cap | Unknown | 1/5 | **FAIL — price below $0.50 floor; no confirmed catalyst** |
 
-**Summary (6 screened, 0 passed):** No PDUFA decisions on Apr 30 in penny range (AXSM at ~$189 is sole Apr 30 PDUFA — far above ceiling). No penny-range confirmed earnings beats after close tonight. RZLV meets price/dollar-vol but RVOL 0.82x and catalyst already priced in from Apr 22; prior PP dilution risk. CDXS in uptrend but RVOL ~1.0x and earnings not until May 7. MNDR dollar volume below $500K threshold. KOPN no near-term catalyst. ASBP below $0.50 floor. Macro note: Meta Platforms reporting Q1 2026 earnings after close tonight — could drive broad sentiment shift for tomorrow; watch penny-range AI/tech names in tomorrow's pre-market scan if Meta beats. **Watchlist set to empty.**
+| FDMT | ~$9.45 | — | — | — | PRISM 2-yr readout May 1 2026; avg analyst PT $31.25 | None noted | — | — | **FAIL — above $5.00 ceiling (~$9.45)** |
+| LOGC | ~$8.50 | — | — | — | $2.7B NOL carryforwards; strategic alternatives; no near-term catalyst | None noted | — | — | **FAIL — above $5.00 ceiling (~$8.50); formerly WISH, ticker changed** |
+| ASTC | ~$2.85–$3.10 | Unconfirmed (Apr 27: 107x; stale) | Unconfirmed | Y (historical) | No confirmed new catalyst Apr 29/30; Dec 2025 DHS $1B initiative already priced in; RSI ~85 overbought | $30M mixed shelf Jan 2026 (not drawn) | Unknown | 2/5 | **FAIL — no confirmed new catalyst today; RVOL unconfirmed; overbought RSI** |
+
+**Summary (9 screened, 0 passed):** No PDUFA decisions on Apr 30 in penny range (AXSM at ~$189 is sole Apr 30 PDUFA — far above ceiling). No penny-range confirmed earnings beats after close tonight. RZLV meets price/dollar-vol but RVOL 0.82x and catalyst already priced in from Apr 22; prior PP dilution risk. CDXS in uptrend but RVOL ~1.0x and earnings not until May 7. MNDR dollar volume below $500K threshold. KOPN no near-term catalyst. ASBP below $0.50 floor. FDMT ($9.45) and LOGC ($8.50) above ceiling. ASTC no confirmed new catalyst and stale RVOL data. Macro note: Meta Q1 2026 earnings due after close tonight — watch penny-range AI/tech names in tomorrow's pre-market scan if Meta beats. **Watchlist set to empty.**
 
 ---
 
