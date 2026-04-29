@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-28 (morning scan)_
+_Last updated: 2026-04-29 (afternoon scan)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -13,9 +13,9 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-28 afternoon scan_
+_Updated: 2026-04-29 afternoon scan_
 
-_No watchlist candidates — 2026-04-28_
+_No watchlist candidates — 2026-04-29_
 
 ---
 
@@ -103,6 +103,19 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | LOGC | ~$8.50 | — | — | — | $907.5M US Salt acquisition Feb 2026; $2.9B NOLs | — | — | — | **FAIL — above $5.00 ceiling** |
 
 **Summary (6 screened, 0 passed):** No PDUFA decisions confirmed for April 29 in penny range. Both MDAI and BZAI fail strict RVOL ≥ 1.5 and/or dollar vol ≥ $500K thresholds today; no new catalyst expected tonight/tomorrow. OABI borderline dollar vol but RVOL 0.78x and May 7 earnings too far out. RZLV RVOL unconfirmed. RCAT and LOGC above $5 ceiling. Watchlist set to empty.
+
+### 2026-04-29 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
+|--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
+| RZLV | ~$2.53 | ~0.82x (18M vs avg 22M) | ~$57M est. | Unknown (52W $1.90–$8.45; price ~$2.53 near low end) | 2025 blowout results + $360M FY2026 guide (announced Apr 22 — already priced in); no new catalyst tonight/tomorrow confirmed | Prior QII private placement at $5.40/share — dilution risk | Unknown | 2/5 | **FAIL — RVOL 0.82x < 1.5; catalyst already priced in (Apr 22); dilution risk from prior PP** |
+| CDXS | ~$2.56–$2.65 | ~1.0x (1.51M vs ~1.5M avg) | ~$4M est. | Y (price risen from ~$1.08 in Mar to ~$2.65 Apr — strong uptrend) | Q1 2026 earnings May 7 after close (not tonight/tomorrow); $38M Merck licence prior catalyst | 18.71% share count increase YoY — moderate dilution | Unknown | 2/5 | **FAIL — RVOL ~1.0x < 1.5; catalyst (earnings) not until May 7; moderate dilution** |
+| MNDR | ~$0.73 | Unknown | ~$187K est. (avg 256K shares × $0.73) | Unknown | $126M AI data center campus announcement (phased 60MW); prior catalyst Mar/Apr | Market cap only ~$3–4M; tiny float — HIGH DILUTION/LIQUIDITY RISK | Unknown | 1/5 | **FAIL — dollar vol ~$187K far below $500K threshold; micro-cap liquidity risk** |
+| KOPN | ~$2.25 | ~0.87x (MSN confirms Apr 29 close ~$2.25, -2.63%) | Unknown | Unknown | Earnings May 12, 2026 — not tonight/tomorrow; defense microdisplays/optical | None noted | Unknown | 2/5 | **FAIL — no catalyst tonight/tomorrow; earnings May 12 too far out; RVOL below threshold** |
+| AXSM | ~$189 | — | — | — | PDUFA Apr 30 for AXS-05 (Alzheimer's Agitation) — Priority Review | None noted | — | — | **FAIL — far above $5.00 ceiling (~$189)** |
+| ASBP | ~$0.25 | High (WallStreetZen most-active Apr 28) | Unknown | Unknown | No confirmed positive catalyst found | Unknown — micro-cap | Unknown | 1/5 | **FAIL — price below $0.50 floor; no confirmed catalyst** |
+
+**Summary (6 screened, 0 passed):** No PDUFA decisions on Apr 30 in penny range (AXSM at ~$189 is sole Apr 30 PDUFA — far above ceiling). No penny-range confirmed earnings beats after close tonight. RZLV meets price/dollar-vol but RVOL 0.82x and catalyst already priced in from Apr 22; prior PP dilution risk. CDXS in uptrend but RVOL ~1.0x and earnings not until May 7. MNDR dollar volume below $500K threshold. KOPN no near-term catalyst. ASBP below $0.50 floor. Macro note: Meta Platforms reporting Q1 2026 earnings after close tonight — could drive broad sentiment shift for tomorrow; watch penny-range AI/tech names in tomorrow's pre-market scan if Meta beats. **Watchlist set to empty.**
 
 ---
 
