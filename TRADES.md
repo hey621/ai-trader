@@ -13,9 +13,11 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-29 afternoon scan_
+_Updated: 2026-04-30 afternoon scan_
 
-_No watchlist candidates — 2026-04-29_
+| Ticker | Close Price | Catalyst | Expected | Score | Flags |
+|--------|------------|---------|---------|-------|-------|
+| BYND | $0.99 | Army plant-based rations inquiry (Apr 30); $23.5M pea protein supply deal (8-K); Q1 earnings AH May 6 | Earnings AH May 6 | 3/5 | SQUEEZE CANDIDATE (31.09% short float); SMA20 borderline/unconfirmed; COO resignation; Nasdaq compliance recently cured; weak fundamentals |
 
 ---
 
@@ -164,6 +166,21 @@ _Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 1.5 confirme
 | ASTC | ~$3.46 +2.4% | ~1.4x est. (34.3K vs ~24.6K avg) | ~$118K | ~2% est. | Y (historical) | Q2 FY2026 earnings (Feb 13); DHS $1B initiative (Dec 2025) — no new April 2026 catalyst | $30M mixed shelf (not drawn) | Very low | —/5 | — | **FAIL** — dollar vol $118K far below $500K; RVOL barely above 1.0; no new catalyst |
 
 **Screened out summary (5 tickers screened, 0 passed):** Macro context: Meta Q1 2026 beat (reported Apr 29 after close) — broad market positive tone but no penny-range derivative catalyst. BZAI (41%) has the largest move and best conviction score estimate (~6–7) but fails the SMA20 unconfirmed rule; heavy dilution overhang (25–45% projected); no new April 30 8-K. FATN (38%) has confirmed insider buying and minimal dilution but lacks a confirmed April 8-K and April 29 dollar vol was $351K (below $500K threshold). TURB (32%) has confirmed 6-K catalysts but conviction < 4 and massive dilution overhang ($100M F-3 shelf vs $21.6M mkt cap). HWH (34%) lacks any confirmed SEC catalyst. ASTC volume negligible ($118K). **No entries today.**
+
+---
+
+### 2026-04-30 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
+|--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
+| BYND | $0.99 (+21.9%) | >1.5x est. (~35.87M avg vol; +22% close at HOD) | ~$30M+ est. | Y est. (price in $0.65–$0.80 range prior 20 days; $0.99 close likely above SMA20; at HOD) | Army plant-based rations inquiry (Apr 30 — Military Times; not 8-K); $23.5M pea protein supply deal (8-K confirmed); Nasdaq compliance cured (8-K); Q1 earnings May 6 AH (confirmed) | No new equity offering confirmed; COO Nelson resigning May 2026 (8-K) | 31.09% → SQUEEZE CANDIDATE | 3/5 | **PASS** — added to watchlist |
+| GEVO | ~$1.65 | Unconfirmed | ~$5.4M avg/day | Unknown | DOE LPO withdrawal Apr 15 (negative 8-K); CEO consulting deal; Q1 earnings May 7 | None detected | Unknown | 1/5 | **FAIL** — negative prior catalyst (DOE withdrawal); no confirmed new positive catalyst today |
+| OPAL | $2.17 | Unconfirmed | Unknown | Unknown | Q1 earnings May 7 — not tonight/tomorrow; momentum per screener (+14% past week) | Unknown | Unknown | 2/5 | **FAIL** — RVOL unconfirmed; no catalyst tonight/tomorrow; earnings May 7 too far |
+| PLUG | ~$3.41 (Apr 29) | ~elevated Apr 29 | Unconfirmed Apr 30 | Unknown | Analyst PT hike Apr 29; Q1 earnings May 11 | None noted | Unknown | 2/5 | **FAIL** — Apr 30 data unconfirmed; earnings May 11 too far out; Apr 29 catalyst already priced in |
+| CDXS | $2.86 (+3%) | ~0.37x (477K vs 1.31M avg) | ~$1.37M | Y (historical) | Q1 earnings May 7 — not tonight/tomorrow | None noted | Unknown | 2/5 | **FAIL** — RVOL 0.37x far below 1.5; no tonight/tomorrow catalyst |
+| MGRT | ~$135 | — | — | — | Leadership overhaul Jan 2026; meme stock dynamics | Unknown | Unknown | — | **FAIL** — far above $10 ceiling; meme stock characteristics; no confirmed fundamental catalyst |
+
+**Summary (6 screened, 1 passed):** BYND qualifies on strong-close criterion: +21.9% close at HOD with estimated RVOL >1.5, dollar vol ~$30M+, 31.09% short float (SQUEEZE CANDIDATE), confirmed Q1 earnings May 6 AH, $23.5M pea protein supply deal (8-K) and Nasdaq compliance cured (8-K). SMA20 estimated above given prior 20-day range ~$0.65–$0.80 vs $0.99 close; flagged as unconfirmed. No confirmed high dilution offering. GEVO rejected on negative DOE catalyst. OPAL/PLUG/CDXS fail RVOL or timing thresholds. MGRT far above ceiling.
 
 ---
 
