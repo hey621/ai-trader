@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-29 (Morning Execution Scan 10:15 AM EST)_
+_Last updated: 2026-04-30 (Morning Execution Scan 10:15 AM EST)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -148,6 +148,22 @@ _Macro context: Nasdaq 100 -1.2% pre-market; S&P 500 -0.6%; Russell 2000 -0.8% �
 | ASTC | ~$2.85–$3.10 | Unconfirmed (Apr 27: 107x; stale) | Unconfirmed | Y (historical) | No confirmed new catalyst Apr 29/30; Dec 2025 DHS $1B initiative already priced in; RSI ~85 overbought | $30M mixed shelf Jan 2026 (not drawn) | Unknown | 2/5 | **FAIL — no confirmed new catalyst today; RVOL unconfirmed; overbought RSI** |
 
 **Summary (9 screened, 0 passed):** No PDUFA decisions on Apr 30 in penny range (AXSM at ~$189 is sole Apr 30 PDUFA — far above ceiling). No penny-range confirmed earnings beats after close tonight. RZLV meets price/dollar-vol but RVOL 0.82x and catalyst already priced in from Apr 22; prior PP dilution risk. CDXS in uptrend but RVOL ~1.0x and earnings not until May 7. MNDR dollar volume below $500K threshold. KOPN no near-term catalyst. ASBP below $0.50 floor. FDMT ($9.45) and LOGC ($8.50) above ceiling. ASTC no confirmed new catalyst and stale RVOL data. Macro note: Meta Q1 2026 earnings due after close tonight — watch penny-range AI/tech names in tomorrow's pre-market scan if Meta beats. **Watchlist set to empty.**
+
+---
+
+### 2026-04-30 Morning Scan
+
+_Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 1.5 confirmed intraday, dollar vol ≥ $500K, spread ≤ 3%, above 20-day MA, confirmed SEC 8-K catalyst_
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Above SMA20 | Catalyst (SEC) | Dilution | Short Float | Tech Score | Conviction | Result |
+|--------|-------|------|-----------|--------|-------------|----------------|---------|------------|-----------|-----------|--------|
+| BZAI | ~$1.75 +41% | ~1.89x (est: 30.3M vs ~16M avg) | ~$53M | ~1.5% est. | **UNCONFIRMED** (3-day decline $2.25→~$1.24 before today's bounce; SMA20 borderline) | NeoTensr $50M (Apr 14); Datacomm MOU (Apr 21); Stockholder rights plan (Apr 22) — no new Apr 30 filing | $30M PP @$3.20 (above-mkt); 25–45% projected dilution; cash $45.8M, burn $16.5M/qtr → ~8mo runway | Unknown | 1–2/5 | 6–7 (tech 1–2 + 5 prior appearances) | **FAIL** — SMA20 unconfirmed; per rules "if unconfirmed, discard"; dilution 25–45% projected concerning |
+| FATN | ~$2.38 +38% est. | ~70x (est: 4.55M vs ~65K avg) — April 30 data unconfirmed | ~$10.8M est. (April 30 unconfirmed; April 29 confirmed vol $351K < $500K) | Unknown | Uncertain (above SMA20 as of Apr 21; recent dip to ~$1.73 then bounce) | Apr 28: VeloCloud Replacement Program; Apr 29: NASA SEWP / Equalis expansion — both **press releases only**, NOT confirmed 8-K filings (last confirmed 8-K: Mar 25, 2026) | Minimal (~6.9% share count increase since IPO); $6.2M cash; positive adj. EBITDA $0.59M | 2.5% float; 152.6K shares short (+172% recent period) | 2–3/5 | 2–3 (no prior appearances) | **FAIL** — no confirmed April 8-K; April 29 dollar vol $351K < $500K threshold; April 30 RVOL/vol data unconfirmed |
+| HWH | ~$1.76 +34% | Unknown | ~$2.4M est. (1.39M shares × $1.76) | Unknown | Unknown | No confirmed SEC 8-K catalyst found for April 2026 (lifestyle/marketplace business: Hapi Cafe, Hapi Travel, Hapi Wealth Builder) | Confirmed ~$1.76M public offering at $0.40/share (highly dilutive vs current price) | <10K shares short by Mar 13 (very low) | —/5 | — | **FAIL** — no confirmed SEC catalyst; recent dilutive offering at $0.40 |
+| TURB | ~$1.96 +32% | ~18x est. (9.35M vs ~500K avg est.) | ~$18.3M | Unknown | Uncertain | Apr 28: 6-K — AI-driven energy storage deployed in international military ops; Apr 27: 6-K — EGM shareholders authorize board to raise capital / issue convertible securities (dilution signal); Apr 9: patent; Apr 20: Hithium partnership; Mar 30: 130–140% revenue growth 6-K | $100M F-3 shelf (Nov 2025); Apr 27 EGM authorized additional capital raises; Mar 2026 $3.25M registered direct offering @$3.25 ADS | 743.3K shares short; 1.0 DTC (~3.4% float) | 2–3/5 | 2–3 (no prior appearances) | **FAIL** — conviction < 4; Danelfin AI score 1/10 (Strong Sell); April 27 capital authorization is dilution signal; F-3 $100M shelf vs $21.6M market cap |
+| ASTC | ~$3.46 +2.4% | ~1.4x est. (34.3K vs ~24.6K avg) | ~$118K | ~2% est. | Y (historical) | Q2 FY2026 earnings (Feb 13); DHS $1B initiative (Dec 2025) — no new April 2026 catalyst | $30M mixed shelf (not drawn) | Very low | —/5 | — | **FAIL** — dollar vol $118K far below $500K; RVOL barely above 1.0; no new catalyst |
+
+**Screened out summary (5 tickers screened, 0 passed):** Macro context: Meta Q1 2026 beat (reported Apr 29 after close) — broad market positive tone but no penny-range derivative catalyst. BZAI (41%) has the largest move and best conviction score estimate (~6–7) but fails the SMA20 unconfirmed rule; heavy dilution overhang (25–45% projected); no new April 30 8-K. FATN (38%) has confirmed insider buying and minimal dilution but lacks a confirmed April 8-K and April 29 dollar vol was $351K (below $500K threshold). TURB (32%) has confirmed 6-K catalysts but conviction < 4 and massive dilution overhang ($100M F-3 shelf vs $21.6M mkt cap). HWH (34%) lacks any confirmed SEC catalyst. ASTC volume negligible ($118K). **No entries today.**
 
 ---
 
