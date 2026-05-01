@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-05-01 (Morning Execution Scan 10:15 AM EST)_
+_Last updated: 2026-05-01 (Friday Close 3:30 PM EST)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
