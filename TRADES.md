@@ -1,5 +1,5 @@
 # TRADES.md — PennyAlpha_Bot Workspace
-_Last updated: 2026-04-30 (Morning Execution Scan 10:15 AM EST)_
+_Last updated: 2026-05-01 (Morning Execution Scan 10:15 AM EST)_
 _Last reviewed: 2026-04-27 (Weekly Review — Week of 2026-04-21)_
 
 ---
@@ -14,10 +14,10 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 
 ## WATCHLIST
 _Updated: 2026-05-01 pre-market scan_
+_Reviewed 2026-05-01 (Morning Execution Scan — all watchlist entries assessed; BYND cleared below)_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| BYND | $0.99 | Army plant-based rations inquiry (Apr 30); $23.5M pea protein supply deal (8-K); Q1 earnings AH May 6 | Earnings AH May 6 | 3/5 | SQUEEZE CANDIDATE (31.09% short float); SMA20 borderline/unconfirmed; COO resignation; Nasdaq compliance recently cured; weak fundamentals |
 
 ---
 
@@ -227,6 +227,22 @@ _Scan time: ~9:00 AM EST | Criteria: price $0.50–$10.00, PM move ≥5% UP, pre
 **Pre-market scan conclusion:** Zero qualifying UP movers cleared all filters. CUE was the week's largest penny-adjacent biotech catalyst but closed at $14.74 (above $10 ceiling) and is a DOWN mover pre-market today. BYND +1.44% far below 5% threshold. FDMT released positive PRISM data but is a DOWN pre-market mover. CDXS down sharply with no catalyst. No new tickers receive +2 conviction bonus for the 10:15 AM morning execution scan.
 
 **BYND carries forward** on WATCHLIST from Apr 30 afternoon scan (3/5 score; Q1 earnings May 6 AH; 31.09% short float SQUEEZE CANDIDATE).
+
+---
+
+### 2026-05-01 Morning Scan
+
+_Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 1.5 confirmed intraday, dollar vol ≥ $500K, spread ≤ 3%, above 20-day MA, confirmed SEC 8-K catalyst_
+
+| Ticker | Price | RVOL | Dollar Vol | Spread | Above SMA20 | Catalyst (SEC) | Dilution | Short Float | Tech Score | Conviction | Result |
+|--------|-------|------|-----------|--------|-------------|----------------|---------|------------|-----------|-----------|--------|
+| BYND | $1.10 | ~0.51x (13.85M vs ~27M avg) | ~$15.2M | Low est. | Y est. | 8-K: $23.5M pea protein supply deal (Mar 28); Nasdaq compliance cured; COO resignation 8-K (Apr 20); Q1 earnings May 6 AH | HIGH DILUTION — ATM exhausted $151.7M; shares outstanding +496.1%; S-3 shelf 9.55M selling shares | 31.09% — SQUEEZE CANDIDATE; borrow fee 47.90%; DTC ~5.25 days | —/5 | — | **FAIL** — RVOL 0.51x < 1.5; HIGH DILUTION RISK (shares +496.1%); insider selling (CLO sold 29,978 shares Apr 20 via 10b5-1) |
+| BBAI | ~$4.00 | ~1.5–1.8x est. (50–70M vs ~38M avg) | ~$200–280M est. | Unknown | Y (20.2% above SMA20 confirmed) | 8-K: Apr 21 authorized shares doubled 500M→1B (DILUTION signal); no positive catalyst 8-K in 2026; pre-earnings positioning only (Q1 May 5 AH) | Authorized shares doubled (500M→1B); balance sheet healthy ($611M equity); Ask Sage $250M acquisition Dec 31 | ~28.11% — SQUEEZE CANDIDATE | 1/5 | 4 | **FAIL** — no confirmed positive SEC 8-K catalyst; only 2026 8-K is dilution (authorized share doubling); all 4 insider transactions = selling; pre-earnings speculation only |
+| BZAI | ~$1.90 | ~0.53x (Apr 30 data; May 1 unconfirmed) | N/A | ~1.5% est. | Y | 8-K: NeoTensr $50M; Nokia AI (prior Apr catalysts); no new May 2026 filing | $30M PP @$3.20 above-market; 25–45% projected dilution | Unknown | —/5 | — | **FAIL** — RVOL unconfirmed May 1; last confirmed data (Apr 30): 0.53x < 1.5 |
+| MDAI | ~$2.09 | ~0.91x (327K vs 359K avg) | ~$683K | ~2% est. | Y | BARDA $54.9M (prior); FDA De Novo pending (prior); Q1 earnings May 12 — no new catalyst | None detected | Unknown | —/5 | — | **FAIL** — RVOL 0.91x < 1.5; no new catalyst today; Q1 earnings May 12 too far |
+| PDYN | ~$5–6 est. | Unconfirmed | Unknown | Unknown | Unknown | AFRL HANGTIME contract (prior, already priced in); Q1 earnings May 13 | None noted | Unknown | —/5 | — | **FAIL** — RVOL unconfirmed; prior catalyst already priced in; earnings May 13 too far |
+
+**Screened out summary (5 tickers screened, 0 passed):** No tickers met the combined threshold of confirmed RVOL ≥ 1.5 + confirmed positive SEC 8-K catalyst. Market context: May Day holiday in many global markets; U.S. markets open; macro broadly positive (S&P 500 +0.36% futures per pre-market). BYND (watchlist) failed RVOL 0.51x and carries HIGH DILUTION RISK (ATM exhausted; shares +496.1%). BBAI (+10% today, ~$4.00) is the day's most interesting candidate but lacks a confirmed positive 8-K — only 2026 8-K is dilution-negative (authorized share doubling Apr 21); all 4 insider transactions = selling. BZAI May 1 RVOL unconfirmed; Apr 30 data showed 0.53x. MDAI and PDYN both below RVOL threshold or unconfirmed. **No entries today.**
 
 ---
 
