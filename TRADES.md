@@ -13,11 +13,9 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-05-01 pre-market scan_
-_Reviewed 2026-05-01 (Morning Execution Scan — all watchlist entries assessed; BYND cleared below)_
+_Updated: 2026-05-01 afternoon scan_
 
-| Ticker | Close Price | Catalyst | Expected | Score | Flags |
-|--------|------------|---------|---------|-------|-------|
+_No watchlist candidates — 2026-05-01_
 
 ---
 
@@ -243,6 +241,20 @@ _Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 1.5 confirme
 | PDYN | ~$5–6 est. | Unconfirmed | Unknown | Unknown | Unknown | AFRL HANGTIME contract (prior, already priced in); Q1 earnings May 13 | None noted | Unknown | —/5 | — | **FAIL** — RVOL unconfirmed; prior catalyst already priced in; earnings May 13 too far |
 
 **Screened out summary (5 tickers screened, 0 passed):** No tickers met the combined threshold of confirmed RVOL ≥ 1.5 + confirmed positive SEC 8-K catalyst. Market context: May Day holiday in many global markets; U.S. markets open; macro broadly positive (S&P 500 +0.36% futures per pre-market). BYND (watchlist) failed RVOL 0.51x and carries HIGH DILUTION RISK (ATM exhausted; shares +496.1%). BBAI (+10% today, ~$4.00) is the day's most interesting candidate but lacks a confirmed positive 8-K — only 2026 8-K is dilution-negative (authorized share doubling Apr 21); all 4 insider transactions = selling. BZAI May 1 RVOL unconfirmed; Apr 30 data showed 0.53x. MDAI and PDYN both below RVOL threshold or unconfirmed. **No entries today.**
+
+---
+
+### 2026-05-01 Afternoon Scan
+
+| Ticker | Price | RVOL | Dollar Vol | Above SMA20 | Catalyst | Dilution | Short Float | Score | Result |
+|--------|-------|------|-----------|-------------|---------|---------|------------|-------|--------|
+| BBAI | $4.08 (+6.7%) | ~1.3–1.8x (unconfirmed ≥1.5) | ~$204–286M | Y (20.2% above) | Q1 earnings May 5 AH; only 2026 8-K is authorized share doubling Apr 21 (DILUTION signal) | HIGH — shares +200% over 3 yrs; authorized shares doubled 500M→1B; all insider tx = selling | 26.29–29.08% — SQUEEZE CANDIDATE | 2/5 | **FAIL** — HIGH DILUTION RISK; no confirmed positive 8-K catalyst; earnings May 5 AH not tonight/tomorrow; RVOL unconfirmed ≥1.5 |
+| BYND | ~$1.09 (+~11%) | Unconfirmed ≥1.5 | ~$30M+ est. | Y est. | Big Geyser deal (Apr 16 — already priced in); Q1 earnings May 6 AH | HIGH — ATM exhausted $151.7M; shares +496.1%; S-3 shelf 9.55M selling shares; CLO sold Apr 20 | 31.09% — SQUEEZE CANDIDATE | 2/5 | **FAIL** — HIGH DILUTION RISK; Big Geyser catalyst stale (Apr 16); RVOL unconfirmed ≥1.5 |
+| CDXS | ~$2.86 | ~0.37x | ~$1.37M | Y (historical) | Q1 earnings May 7 AH — too far out | 18.71% YoY share count increase (moderate) | Unknown | 2/5 | **FAIL** — RVOL 0.37x far below 1.5; no catalyst tonight/tomorrow; earnings May 7 too far out |
+| MDAI | ~$2.09 | ~0.91x | ~$683K | Y | BARDA $54.9M (prior); FDA De Novo pending (prior); Q1 earnings May 12 | None detected | Unknown | 1/5 | **FAIL** — RVOL 0.91x below 1.5; no catalyst tonight/tomorrow; earnings May 12 too far out |
+| ASTC | ~$3.10 est. | Unconfirmed | Unconfirmed | Y (historical) | DHS $1B initiative (Dec 2025 — priced in); no new catalyst confirmed | $30M mixed shelf (not drawn) | Very low | 2/5 | **FAIL** — no confirmed new catalyst; RVOL unconfirmed; prior overbought RSI |
+
+**Summary (5 screened, 0 passed):** S&P 500 +0.29%, Nasdaq +0.89% (all-time high) on May Day; positive macro but no penny-range catalysts tonight or for Monday. No PDUFA dates in penny range ($0.50–$10) confirmed for May 4, 2026. No confirmed penny-range AH earnings tonight (Friday May 1). BBAI (+6.7% to $4.08) has near-term earnings catalyst (May 5 AH) and ~28–29% short float (SQUEEZE CANDIDATE) but carries HIGH DILUTION RISK (shares +200% over 3 yrs; authorized shares doubled Apr 21); RVOL unconfirmed ≥1.5; all insiders selling. BYND (+~11%) has strong short float (31.09%) but HIGH DILUTION RISK (shares +496.1%; ATM exhausted). CDXS/MDAI below RVOL threshold. ASTC no confirmed new catalyst. **Watchlist set to empty.**
 
 ---
 
