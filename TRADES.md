@@ -13,7 +13,7 @@ _Populated by morning execution scan. Consumed and cleared by trade.py._
 ---
 
 ## WATCHLIST
-_Updated: 2026-04-30 afternoon scan_
+_Updated: 2026-05-01 pre-market scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
@@ -200,6 +200,33 @@ _Scan time: 10:15 AM EST | Criteria: price $0.50–$10.00, RVOL ≥ 2.0 confirme
 | PACB | ~$1.52–$1.65 | Unconfirmed today (Apr 27: ~1.69x) | Unconfirmed | Unknown | Unknown | Trillion Gene Atlas (Basecamp Research, Mar 2026 — already priced in) | None noted | Unknown | 2/5 | — | **FAIL — RVOL unconfirmed today; catalyst already priced in from Mar 2026** |
 
 **Screened out summary (8 tickers screened, 0 passed):** No tickers met the combined threshold of confirmed RVOL ≥ 2.0 + confirmed positive SEC 8-K catalyst. Market context: Big Tech Q1 earnings after close today (GOOG, MSFT, AMZN, META) creating risk-off tone in small/micro caps. ASTC Apr 27 RVOL spike (107x) was event-specific and not confirmed as repeating today. GEVO DOE withdrawal is a negative catalyst. CELZ dollar vol far below minimum. GCTS data stale. IFRX, BZAI, MDAI all sub-1.0x RVOL. PACB catalyst already priced in. **No entries today.**
+
+---
+
+### 2026-05-01 Pre-Market
+
+_Scan time: ~9:00 AM EST | Criteria: price $0.50–$10.00, PM move ≥5% UP, prev dollar vol ≥$500K, spread ≤3%_
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| — | — | — | — | — | — | — | — | — |
+
+**Market context (pre-market ~9:00 AM EST):** Futures broadly positive: S&P 500 +0.36%, Nasdaq 100 +0.16%, Dow Jones +0.40%, Russell 2000 +0.18%. Large-cap movers: TEAM +23% (Q1 32% revenue beat — above $10 ceiling); RBLX −24.8% (lowered annual growth outlook — above $10 ceiling). CUE Biopharma surged +77.8% overnight (Apr 29→Apr 30) on $30M PIPE and Ascendant-221 Phase 2 anti-IgE antibody license (8-K filed Apr 30); however Apr 30 close was ~$14.74 and pre-market May 1 is ~$12.70 (−2.27%) — **price far above $10 ceiling; today a DOWN pre-market mover**.
+
+**PDUFA check (May-1-26):** No PDUFA decisions confirmed in penny range ($0.50–$10.00) for today. FDMT (4D Molecular Therapeutics) released PRISM 2-yr Phase 1/2 wet AMD readout (positive long-term data, 94% fewer injections in Phase 2b subgroup); however FDMT pre-market ~$9.11 is DOWN −2.36% — **DOWN mover; positive data partially priced in from Nov 2025 interim readout**.
+
+**Screened candidates (4 tickers examined, 0 passed all filters):**
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| CUE | ~$8.51 est. (Apr 29 close) | ~$12.70 | N/A — surge was Apr 29→Apr 30 | DOWN (−2.27% from Apr 30 close $14.74) | Unknown | Unknown | $30M PIPE + Ascendant-221 anti-IgE Phase 2 license + new CEO | 8-K: PIPE + license (Apr 30) | **FAIL: Apr 30 close $14.74 — far above $10 ceiling; pre-market May 1 is a DOWN mover** |
+| BYND | $0.9841 | ~$1.00 est. | +1.44% | UP | Low est. | Y est. | Q1 earnings May 6 AH; Army protein inquiry; Nasdaq compliance cured; Big Geyser Beyond Immerse deal | 8-K: pea protein supply deal + Nasdaq cure | **FAIL: PM move +1.44% — far below 5% threshold; remains on watchlist from Apr 30 afternoon scan** |
+| FDMT | ~$9.45 est. | ~$9.11 | −2.36% | DOWN | Unknown | Unknown | PRISM 2-yr wet AMD readout (positive: 94% fewer injections in Phase 2b subgroup) — move DOWN (profit-taking; data partially priced in Nov 2025) | Data disclosed; no new 8-K confirmed | **FAIL: DOWN mover; catalyst partially priced in; price borderline near $10 ceiling** |
+| CDXS | ~$2.86 | ~$2.24 | −6.67% | DOWN | Unknown | Y (historical) | Q1 2026 earnings May 7 AH — no new May 1 catalyst identified | None | **FAIL: DOWN mover; no catalyst; earnings not until May 7** |
+
+**Pre-market scan conclusion:** Zero qualifying UP movers cleared all filters. CUE was the week's largest penny-adjacent biotech catalyst but closed at $14.74 (above $10 ceiling) and is a DOWN mover pre-market today. BYND +1.44% far below 5% threshold. FDMT released positive PRISM data but is a DOWN pre-market mover. CDXS down sharply with no catalyst. No new tickers receive +2 conviction bonus for the 10:15 AM morning execution scan.
+
+**BYND carries forward** on WATCHLIST from Apr 30 afternoon scan (3/5 score; Q1 earnings May 6 AH; 31.09% short float SQUEEZE CANDIDATE).
 
 ---
 
