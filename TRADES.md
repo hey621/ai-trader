@@ -9,9 +9,6 @@ _Last updated: 2026-05-04 (Midday Scan — 12:30 PM EST)_
 | Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|-------|------|----------|--------|------|------|--------|------|--------|
 | BB | $5.88 | 2026-05-04 | $100 | 17 | -$4.34 | -4.3% | Active 🔄 | $5.29 | $7.06 |
-| FATN | $2.38 | 2026-05-05 | $98 | 41 | +$30.34 | +31.1% | Active 🟢 | $2.14 | $2.86 |
-| ABSI | $5.22 | 2026-05-04 | $100 | 19 | — | — | Active 🆕 | $4.70 | $6.26 |
-| ABUS | $4.04 | 2026-05-04 | $100 | 24 | — | — | Active 🆕 | $3.64 | $4.85 |
 
 _P&L updated: BB current $5.625 (May 4 midday); FATN last close $3.12 (May 1); ABSI and ABUS entered from execution queue. BZAI re-entry stopped out today at $2.39 (see closed trades). XRX stop hit today. BBAI target hit today._
 
@@ -30,6 +27,9 @@ _Updated: 2026-05-04 Midday Scan_
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
+| ABUS | $4.04 | $4.39 | LOSS | 2026-05-04 | 2026-06-03 |
+| ABSI | $5.22 | $5.62 | LOSS | 2026-05-04 | 2026-06-03 |
+| FATN | $2.38 | $3.04 | WIN | 2026-05-04 | 2026-06-03 |
 | BBAI | $4.26 | $4.30 | 2026-05-04 | WIN ✅ | +$0.92 | +0.9% | Q1 Earnings / Short Squeeze | MED | 2026-05-05 Morning | Target hit $4.30 |
 | BZAI (re-entry) | $2.46 | $2.39 | 2026-05-04 | LOSS ❌ | -$4.20 | -2.8% | $50M NeoTensr contract (momentum continuation) | MED | 2026-05-04 Midday re-entry | Stop hit $2.39 (×0.90 of $2.46 = ~$2.21; partial fill at $2.39 suggests bracket stop triggered) |
 | XRX | $2.97 | $2.68 | 2026-05-04 | LOSS ❌ | -$9.57 | -9.8% | Q1 Earnings Beat / AI ITaaS | MED | 2026-05-04 Pre-Market | Stop hit $2.68 (stop was $2.67) |
