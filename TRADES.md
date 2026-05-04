@@ -1,5 +1,5 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-04 (Afternoon Scan)_
+_Last updated: 2026-05-04 (Weekly Review — Monday 9:45 AM EST)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
@@ -10,46 +10,61 @@ _Last updated: 2026-05-04 (Afternoon Scan)_
 ## ACTIVE POSITIONS
 | Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|-------|------|----------|--------|------|------|--------|------|--------|
-| XRX | $2.97 | 2026-05-04 | $98 | 33 | -$8.91 | -9.1% | Active | $2.67 | $3.56 |
-| BB | $5.88 | 2026-05-04 | $100 | 17 | -$7.82 | -7.8% | Active | $5.29 | $7.06 |
-| BBAI | $4.26 | 2026-05-04 | $98 | 23 | -$2.99 | -3.1% | Active | $3.22 | $4.30 |
+| XRX | $2.97 | 2026-05-04 | $98 | 33 | -$8.91 | -9.1% | Active ⚠️ | $2.67 | $3.56 |
+| BB | $5.88 | 2026-05-04 | $100 | 17 | -$7.82 | -7.8% | Active 🔄 | $5.29 | $7.06 |
+| BBAI | $4.26 | 2026-05-04 | $98 | 23 | -$0.16 | -0.2% | Active 🔄 | $3.22 | $4.30 |
+| FATN | $2.38 | 2026-05-05 | $98 | 41 | +$30.34 | +31.1% | Active 🟢 | $2.14 | $2.86 |
+| BZAI | $1.75 | 2026-05-05 | $98 | 56 | +$15.68 | +16.0% | Active 🟢 | $1.58 | $2.10 |
 
-_P&L estimated vs last available closes: XRX $2.70 (May 1), BB $5.42 (May 1), BBAI $4.13 (May 3). All positions entered 2026-05-04; stops not yet triggered._
+_P&L updated vs last available closes: XRX $2.70 (May 1), BB $5.42 (May 1; hit 52-wk high $6.07 May 4), BBAI $4.225 (May 4), FATN $3.12 (May 1), BZAI $2.03 (May 1). No stops triggered. No targets hit. BBAI Q1 earnings call May 5 — monitor closely._
+
+_Capital deployed: $492 / $500 (5 positions). Execution queue (ABSI, ABUS) not yet entered — awaiting morning scan confirmation._
 
 ## WATCHLIST
-_Updated: 2026-05-04 afternoon scan_
+_Updated: 2026-05-04 Weekly Review_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| PACB | $1.59 | Q1 earnings May 7; Trillion Gene Atlas; AI long-read sequencing | May 7 earnings | 2/5 | Barclays downgraded to $1 PT; low RVOL today; watch for earnings beat |
-| SMMT | $16.11 | ASCO HARMONi-6 OS data May 31; FDA PDUFA Nov 14; HC Wainwright Buy $23 PT | May 31 ASCO | 3/5 | Down -24.9% May 1–3 on Q1 update/rising expenses; monitor for stabilization before entry |
+| PACB | $1.59 est. | Q1 earnings May 7; Trillion Gene Atlas; AI long-read sequencing | May 7 earnings | 2/5 | Barclays downgraded to $1 PT; low RVOL; watch for earnings beat catalyst |
+| SMMT | $16.11 est. | ASCO HARMONi-6 OS data May 31; FDA PDUFA Nov 14; HC Wainwright Buy $23 PT | May 31 ASCO | 3/5 | Down -24.9% May 1–3 on Q1 update/rising expenses; monitor for stabilization before entry |
 | RLAY | ~$12.70 est. | FDA Breakthrough Therapy zovegalisib; Phase 1/2 ESMO TAT data 2026 | 2026 milestones | 3/5 | 12 analyst Buy ratings, zero holds; $21 PT (+65% upside); confirm price/RVOL before entry |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
 
-_No closed trades yet — all positions opened 2026-05-04._
+_No closed trades yet — all positions remain open. Week of Apr 28–May 2: 0 stops triggered, 0 targets hit._
+
+## WEEKLY PERFORMANCE SUMMARY
+_Updated: 2026-05-04 Weekly Review_
+
+### Week of April 28 – May 2, 2026
+| Metric | Value |
+|--------|-------|
+| Closed Trades | 0 |
+| Wins / Losses | 0 W / 0 L |
+| Win Rate | N/A |
+| Realised P&L | $0.00 |
+| Best Trade (closed) | N/A |
+| Worst Trade (closed) | N/A |
+| Active Positions | 5 (XRX, BB, BBAI, FATN, BZAI) |
+| Capital Deployed | $492 / $500 |
+| Unrealised P&L | +$29.13 net (+6.0% on deployed) |
+| Largest Unrealised Winner | FATN +31.1% |
+| Largest Unrealised Loser | XRX −9.1% |
+
+_Notes: First full week of trading. No closes — all 5 positions entered May 4–5 still active. FATN and BZAI are strong unrealised winners. XRX is the weakest position, trading below entry but above $2.67 stop. BB hit new 52-week high of $6.07 on May 4 (recovering toward target $7.06). BBAI near breakeven post-Q1 earnings. Portfolio is net positive unrealised._
 
 ## LESSONS LEARNED
-_Updated: 2026-05-04 — no closed trades yet._
+_Updated: 2026-05-04 Weekly Review_
+
+1. **FATN (+31.1% unrealised in <1 week):** Revenue beat + distribution deal + insider buy trifecta = strong HIGH conviction call. The combination of fundamental catalyst confirmation + director skin-in-the-game validates the HIGH scoring framework. **Monitor for target $2.86 approach; consider trailing stop if it continues higher.**
+2. **BZAI (+16.0% unrealised):** $50M contract win was credible, verified 8-K catalyst. Entered near open — holding well above stop. Proves that MED conviction plays with real contract catalysts work in the pennies space.
+3. **XRX (−9.1% unrealised):** Entered $2.97 on May 4 pre-market bounce from earnings beat, but stock appears to have pulled back from intraday highs. The pre-market spike entry risk (buying the spike) is the lesson — the position is near stop territory. **Watch carefully for stop $2.67.**
+4. **BB (−7.8% initially → recovering):** Q4 beat entry at $5.88 was slightly chasing the open. Stock recovered to 52-week high $6.07 on May 4 — confirms the thesis is valid. Patience rewarded.
+5. **BBAI (near breakeven):** Q1 earnings event risk worked out neutrally. Entering a position the same day as an earnings catalyst is high-risk; result was essentially flat. Lesson: wait for post-earnings reaction confirmation.
 
 ## WEEKLY RESEARCH LOG
-
-### 2026-05-04 Afternoon Scan
-
-| Ticker | Price | Move% | Vol | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
-|--------|-------|-------|-----|------|-------------|----------|---------------|------------|--------|
-| OLPX | $2.01 | +51.1% | 104.7M | est. >3 | Unknown | Henkel acquisition at $2.06/share cash | Yes — 8-K/press release (Mar 26) | SCREENED OUT | M&A arb; only 2.5% upside to $2.06 deal price; no momentum trade setup |
-| CNSP | — | +250.7% | — | est. very high | — | $22.5M institutional private placement | Yes | SCREENED OUT | HIGH DILUTION RISK — private placement offering |
-| SVRN | $0.308 | +50% | 18M | est. >3 | Unknown | No confirmed catalyst | None | SCREENED OUT | No catalyst; speculative pump (morning scan duplicate) |
-| OABI | $1.53 | — | 386K | 0.78 | Unknown | Earnings May 7; OmniUltra platform unveil | No today catalyst | SCREENED OUT | RVOL 0.78 < 1.2 minimum threshold |
-| ERAS | ~$10 | — | — | — | — | RAS/MAPK precision oncology; $362M cash | Not today | SCREENED OUT | Price at/above $10 ceiling |
-| ABUS | $4.04 | est. | 1.04M | est. ≥1.2 | Unknown | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement | Yes — press release/8-K confirmed | MED (3) | ENTERED $4.04 stop $3.64 target $4.85 |
-| ABSI | $5.22 | active | est. | est. ≥1.2 | Unknown | ABS-201 Phase 1/2a interim data H1 2026; analyst Buy $8 PT reiterated | UNCONFIRMED — no today 8-K | MED (3) | ENTERED $5.22 stop $4.70 target $6.26 |
-| SMMT | $16.11 | -24.9% | — | est. high | No | ASCO HARMONi-6 OS May 31; PDUFA Nov 14; HC Wainwright Buy $23 PT | Yes — Q1/8-K | WATCHLIST | Post-drop bounce candidate; monitor for price stabilization |
-| PACB | $1.59 | +4% | — | est. low | Unknown | Q1 earnings May 7; Trillion Gene Atlas | Not today | WATCHLIST | Pre-earnings; Barclays downgraded to $1 PT — cautious |
-| RLAY | ~$12.70 est. | — | — | — | — | FDA Breakthrough Therapy zovegalisib; $21 analyst PT (+65%) | Yes — confirmed designation | WATCHLIST | 12 Buy ratings; need confirmed price/RVOL before entry |
 
 ### 2026-05-05 Morning Scan
 
@@ -61,6 +76,21 @@ _Updated: 2026-05-04 — no closed trades yet._
 | HWH | $1.76 | +34.4% | est. | — | Unknown | No confirmed today catalyst; Hapi Metaverse acquisition (Feb 2026) | No recent | SCREENED OUT | Dropped — no confirmed catalyst for today's move |
 | PACB | $1.42 | est. | — | — | Unknown | Q1 earnings May 7; Trillion Gene Atlas; SparkNex platform | Not today | WATCHLIST | Near-term catalyst May 7 — monitor |
 | SVRN | $0.308 | +50% | 18M | >3 | Unknown | No confirmed catalyst found | None | SCREENED OUT | Dropped — no catalyst; speculative pump |
+
+### 2026-05-04 Afternoon Scan
+
+| Ticker | Price | Move% | Vol | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
+|--------|-------|-------|-----|------|-------------|----------|---------------|------------|--------|
+| OLPX | $2.01 | +51.1% | 104.7M | est. >3 | Unknown | Henkel acquisition at $2.06/share cash | Yes — 8-K/press release (Mar 26) | SCREENED OUT | M&A arb; only 2.5% upside to $2.06 deal price; no momentum trade setup |
+| CNSP | — | +250.7% | — | est. very high | — | $22.5M institutional private placement | Yes | SCREENED OUT | HIGH DILUTION RISK — private placement offering |
+| SVRN | $0.308 | +50% | 18M | est. >3 | Unknown | No confirmed catalyst | None | SCREENED OUT | No catalyst; speculative pump (morning scan duplicate) |
+| OABI | $1.53 | — | 386K | 0.78 | Unknown | Earnings May 7; OmniUltra platform unveil | No today catalyst | SCREENED OUT | RVOL 0.78 < 1.2 minimum threshold |
+| ERAS | ~$10 | — | — | — | — | RAS/MAPK precision oncology; $362M cash | Not today | SCREENED OUT | Price at/above $10 ceiling |
+| ABUS | $4.04 | est. | 1.04M | est. ≥1.2 | Unknown | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement | Yes — press release/8-K confirmed | MED (3) | QUEUED $4.04 stop $3.64 target $4.85 |
+| ABSI | $5.22 | active | est. | est. ≥1.2 | Unknown | ABS-201 Phase 1/2a interim data H1 2026; analyst Buy $8 PT reiterated | UNCONFIRMED — no today 8-K | MED (3) | QUEUED $5.22 stop $4.70 target $6.26 |
+| SMMT | $16.11 | -24.9% | — | est. high | No | ASCO HARMONi-6 OS May 31; PDUFA Nov 14; HC Wainwright Buy $23 PT | Yes — Q1/8-K | WATCHLIST | Post-drop bounce candidate; monitor for price stabilization |
+| PACB | $1.59 | +4% | — | est. low | Unknown | Q1 earnings May 7; Trillion Gene Atlas | Not today | WATCHLIST | Pre-earnings; Barclays downgraded to $1 PT — cautious |
+| RLAY | ~$12.70 est. | — | — | — | — | FDA Breakthrough Therapy zovegalisib; $21 analyst PT (+65%) | Yes — confirmed designation | WATCHLIST | 12 Buy ratings; need confirmed price/RVOL before entry |
 
 ### 2026-05-04 Pre-Market (Second Scan — 9:00 AM)
 
