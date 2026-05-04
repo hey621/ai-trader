@@ -132,7 +132,8 @@ jobs:
         run: |
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
-          git add TRADES.md outbox.json
+          git add TRADES.md
+          [ -f outbox.json ] && git add outbox.json || true
           git diff --cached --quiet || git commit -m "Morning scan + execution $(date -u +%Y-%m-%d)"
           git push
 
@@ -171,7 +172,8 @@ jobs:
         run: |
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
-          git add TRADES.md outbox.json
+          git add TRADES.md
+          [ -f outbox.json ] && git add outbox.json || true
           git diff --cached --quiet || git commit -m "Midday scan + execution $(date -u +%Y-%m-%d)"
           git push
 
@@ -210,6 +212,7 @@ jobs:
         run: |
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
-          git add TRADES.md outbox.json
+          git add TRADES.md
+          [ -f outbox.json ] && git add outbox.json || true
           git diff --cached --quiet || git commit -m "Afternoon scan + execution $(date -u +%Y-%m-%d)"
           git push
