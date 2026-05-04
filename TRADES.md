@@ -1,4 +1,5 @@
-# test
+# PennyAlpha Trading Log
+_Last updated: 2026-05-04 (Weekly Review)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
@@ -7,10 +8,11 @@
 ## ACTIVE POSITIONS
 | Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|-------|------|----------|--------|------|------|--------|------|--------|
+| XRX | $2.97 | 2026-05-04 | $98 | 33 | -$8.91 | -9.1% | Active | $2.67 | $3.56 |
+| BB | $5.88 | 2026-05-04 | $100 | 17 | -$7.82 | -7.8% | Active | $5.29 | $7.06 |
+| BBAI | $4.26 | 2026-05-04 | $98 | 23 | -$2.99 | -3.1% | Active | $3.22 | $4.30 |
 
-| XRX | $2.97 | 2026-05-04 | $98 | 33 | — | — | Active | $2.67 | $3.56 |
-| BB | $5.88 | 2026-05-04 | $100 | 17 | — | — | Active | $5.29 | $7.06 |
-| BBAI | $4.26 | 2026-05-04 | $98 | 23 | — | — | Active | $3.22 | $4.30 |
+_P&L estimated vs last available closes: XRX $2.70 (May 1), BB $5.42 (May 1), BBAI $4.13 (May 3). All positions entered 2026-05-04; stops not yet triggered._
 
 ## WATCHLIST
 _Updated: 2026-05-04 pre-market scan_
@@ -26,21 +28,12 @@ _Reviewed 2026-05-05 — XRX and BB already in ACTIVE POSITIONS; no residual wat
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
 
+_No closed trades yet — all positions opened 2026-05-04._
+
 ## LESSONS LEARNED
 _Updated: 2026-05-04 — no closed trades yet._
 
 ## WEEKLY RESEARCH LOG
-
-### 2026-05-04 Pre-Market
-
-| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
-|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
-| XRX | $2.70 | $3.16 | +17.1% | UP | ~1% est. | Yes | Q1 2026 earnings beat (EPS $0.43 vs $0.27 est); AI ITaaS platform launch; guidance reaffirmed; $56M+ prev-day dollar volume | Yes — 8-K/earnings filed 2026-04-30 |
-| BB | $5.42 | $6.11 | +12.7% | UP | ~1% est. | Yes | Q4 FY2026 beat; 23% adj EBITDA margin; $950M QNX backlog; Nvidia partnership expanded; $90M+ prev-day dollar volume | Yes — Q4 FY2026 earnings report |
-| EBAY | >$10 | — | +11.8% | — | — | — | SCREENED OUT: price too high (large-cap) | — |
-| CELC | >$10 | $147.56 | +17.4% | — | — | — | SCREENED OUT: price too high ($147) | — |
-| LNAI | $0.32 | $0.36 | +13.4% | — | — | — | SCREENED OUT: below $0.50 floor | — |
-| CABA | $2.90 | — | — | DOWN | — | — | SCREENED OUT: dilution event — $150M equity offering priced 2026-05-04 | Yes — 8-K 2026-05-04 |
 
 ### 2026-05-05 Morning Scan
 
@@ -63,3 +56,19 @@ _Updated: 2026-05-04 — no closed trades yet._
 | CNSP | $8.40 | $10.22 | +21.7% | — | — | — | SCREENED OUT: PM price above $10.00 ceiling | — |
 | NIVF | $1.71 | ~$1.17 | -31.6% | DOWN | — | — | SCREENED OUT: down move; no confirmed short thesis found | — |
 | RLYB | $8.98 | $9.41 | +4.8% | — | — | — | SCREENED OUT: prev-day volume ~70K shares × ~$9 = ~$630K dollar volume passes; but PM move <5% threshold; also near $10 ceiling | — |
+
+### 2026-05-04 Pre-Market
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| XRX | $2.70 | $3.16 | +17.1% | UP | ~1% est. | Yes | Q1 2026 earnings beat (EPS $0.43 vs $0.27 est); AI ITaaS platform launch; guidance reaffirmed; $56M+ prev-day dollar volume | Yes — 8-K/earnings filed 2026-04-30 |
+| BB | $5.42 | $6.11 | +12.7% | UP | ~1% est. | Yes | Q4 FY2026 beat; 23% adj EBITDA margin; $950M QNX backlog; Nvidia partnership expanded; $90M+ prev-day dollar volume | Yes — Q4 FY2026 earnings report |
+| EBAY | >$10 | — | +11.8% | — | — | — | SCREENED OUT: price too high (large-cap) | — |
+| CELC | >$10 | $147.56 | +17.4% | — | — | — | SCREENED OUT: price too high ($147) | — |
+| LNAI | $0.32 | $0.36 | +13.4% | — | — | — | SCREENED OUT: below $0.50 floor | — |
+| CABA | $2.90 | — | — | DOWN | — | — | SCREENED OUT: dilution event — $150M equity offering priced 2026-05-04 | Yes — 8-K 2026-05-04 |
+
+## RESEARCH ARCHIVE
+_Entries older than 14 days from the current review date are moved here._
+
+_Nothing archived yet — all research log entries are within the 14-day window as of 2026-05-04._
