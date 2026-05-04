@@ -1,9 +1,11 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-04 (Weekly Review)_
+_Last updated: 2026-05-04 (Afternoon Scan)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
+| ABSI | BUY | $5.22 | $4.70 | $6.26 | MED | ABS-201 Phase 1/2a interim data H1 2026; analyst reiterate Buy $8 PT (Apr 28); UNCONFIRMED today catalyst |
+| ABUS | BUY | $4.04 | $3.64 | $4.85 | MED | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement ($950M cash July 2026) |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
@@ -15,14 +17,13 @@ _Last updated: 2026-05-04 (Weekly Review)_
 _P&L estimated vs last available closes: XRX $2.70 (May 1), BB $5.42 (May 1), BBAI $4.13 (May 3). All positions entered 2026-05-04; stops not yet triggered._
 
 ## WATCHLIST
-_Updated: 2026-05-04 pre-market scan_
-_Reviewed 2026-05-05 — XRX and BB already in ACTIVE POSITIONS; no residual watchlist items._
+_Updated: 2026-05-04 afternoon scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| XRX | $2.70 | Q1 2026 earnings beat + AI ITaaS pivot; reaffirmed guidance | pre-market today | 4/5 | SEC confirmed (8-K/earnings 4/30); running since 4/30; above SMA20; no dilution |
-| BB | $5.42 | Q4 FY2026 beat (8th consecutive profitable qtr) + Nvidia partnership expanded | pre-market today | 3/5 | SEC confirmed (Q4 earnings); above 52-wk high; no recent S-1/ATM |
-| CLNN | $6.14 | NDA accelerated approval filing for ALS drug CNM-Au8 (Q3 2026); FDA Type C meeting success; NfL biomarker endorsed | pre-market today | 3/5 | Press release confirmed (Globe Newswire 2026-05-04); prior dilution history (Nov 2025 offering, Feb 2026 securities sale); monitor for 8-K |
+| PACB | $1.59 | Q1 earnings May 7; Trillion Gene Atlas; AI long-read sequencing | May 7 earnings | 2/5 | Barclays downgraded to $1 PT; low RVOL today; watch for earnings beat |
+| SMMT | $16.11 | ASCO HARMONi-6 OS data May 31; FDA PDUFA Nov 14; HC Wainwright Buy $23 PT | May 31 ASCO | 3/5 | Down -24.9% May 1–3 on Q1 update/rising expenses; monitor for stabilization before entry |
+| RLAY | ~$12.70 est. | FDA Breakthrough Therapy zovegalisib; Phase 1/2 ESMO TAT data 2026 | 2026 milestones | 3/5 | 12 analyst Buy ratings, zero holds; $21 PT (+65% upside); confirm price/RVOL before entry |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
@@ -34,6 +35,21 @@ _No closed trades yet — all positions opened 2026-05-04._
 _Updated: 2026-05-04 — no closed trades yet._
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-04 Afternoon Scan
+
+| Ticker | Price | Move% | Vol | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
+|--------|-------|-------|-----|------|-------------|----------|---------------|------------|--------|
+| OLPX | $2.01 | +51.1% | 104.7M | est. >3 | Unknown | Henkel acquisition at $2.06/share cash | Yes — 8-K/press release (Mar 26) | SCREENED OUT | M&A arb; only 2.5% upside to $2.06 deal price; no momentum trade setup |
+| CNSP | — | +250.7% | — | est. very high | — | $22.5M institutional private placement | Yes | SCREENED OUT | HIGH DILUTION RISK — private placement offering |
+| SVRN | $0.308 | +50% | 18M | est. >3 | Unknown | No confirmed catalyst | None | SCREENED OUT | No catalyst; speculative pump (morning scan duplicate) |
+| OABI | $1.53 | — | 386K | 0.78 | Unknown | Earnings May 7; OmniUltra platform unveil | No today catalyst | SCREENED OUT | RVOL 0.78 < 1.2 minimum threshold |
+| ERAS | ~$10 | — | — | — | — | RAS/MAPK precision oncology; $362M cash | Not today | SCREENED OUT | Price at/above $10 ceiling |
+| ABUS | $4.04 | est. | 1.04M | est. ≥1.2 | Unknown | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement | Yes — press release/8-K confirmed | MED (3) | ENTERED $4.04 stop $3.64 target $4.85 |
+| ABSI | $5.22 | active | est. | est. ≥1.2 | Unknown | ABS-201 Phase 1/2a interim data H1 2026; analyst Buy $8 PT reiterated | UNCONFIRMED — no today 8-K | MED (3) | ENTERED $5.22 stop $4.70 target $6.26 |
+| SMMT | $16.11 | -24.9% | — | est. high | No | ASCO HARMONi-6 OS May 31; PDUFA Nov 14; HC Wainwright Buy $23 PT | Yes — Q1/8-K | WATCHLIST | Post-drop bounce candidate; monitor for price stabilization |
+| PACB | $1.59 | +4% | — | est. low | Unknown | Q1 earnings May 7; Trillion Gene Atlas | Not today | WATCHLIST | Pre-earnings; Barclays downgraded to $1 PT — cautious |
+| RLAY | ~$12.70 est. | — | — | — | — | FDA Breakthrough Therapy zovegalisib; $21 analyst PT (+65%) | Yes — confirmed designation | WATCHLIST | 12 Buy ratings; need confirmed price/RVOL before entry |
 
 ### 2026-05-05 Morning Scan
 
