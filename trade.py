@@ -197,7 +197,11 @@ def main():
 
         ask = get_ask_price(ticker)
         if ask is None:
-            continue
+            if sig["entry_target"]:
+                ask = sig["entry_target"]
+                print(f"  {ticker}: live quote unavailable, using researched entry ${ask:.2f}")
+            else:
+                continue
         if not (0.25 <= ask <= 25.00):
             print(f"  {ticker}: ask ${ask:.2f} out of range, skipping.")
             continue
