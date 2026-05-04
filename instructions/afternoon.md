@@ -52,7 +52,7 @@ For each selected entry set:
 | Ticker | BUY | $X.XX | $X.XX | $X.XX | HIGH/MED/LOW | one-line catalyst |
 ```
 
-2. Run: `python3 trade.py`
+NOTE: Do NOT attempt to call the Alpaca API or run any scripts. The workflow will execute trade.py automatically after this agent finishes.
 
 3. Update the `## WATCHLIST` section with any promising tickers NOT yet entered, for tomorrow:
 ```

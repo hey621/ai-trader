@@ -52,7 +52,7 @@ For each selected entry:
 | Ticker | BUY | $X.XX | $X.XX | $X.XX | HIGH/MED/LOW | one-line catalyst |
 ```
 
-2. Run: `python3 trade.py`
+NOTE: Do NOT attempt to call the Alpaca API or run any scripts. The workflow will execute trade.py automatically after this agent finishes.
 
 ## Step 4 — Log to Research Log
 Append `### YYYY-MM-DD Midday Scan` under `## WEEKLY RESEARCH LOG` for all candidates reviewed.

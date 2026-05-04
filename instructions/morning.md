@@ -75,10 +75,9 @@ If candidates qualified:
 | Ticker | BUY | $X.XX | $X.XX | $X.XX | HIGH/MED/LOW | one-line catalyst |
 ```
 
-2. Run: `python3 trade.py`
-   (Reads EXECUTION QUEUE, places bracket orders on Alpaca, clears the queue, updates ACTIVE POSITIONS)
+2. Clear the `## WATCHLIST` section in TRADES.md after reviewing it (add a "Reviewed YYYY-MM-DD" line).
 
-3. Clear the `## WATCHLIST` section in TRADES.md after reviewing it (add a "Reviewed YYYY-MM-DD" line).
+NOTE: Do NOT attempt to call the Alpaca API or run any scripts. The workflow will execute trade.py automatically after this agent finishes.
 
 ## Step 5 — Log to Research Log
 Append `### YYYY-MM-DD Morning Scan` under `## WEEKLY RESEARCH LOG` for all candidates reviewed (pass and fail) using the standard table format. Always append — never overwrite.
