@@ -18,6 +18,13 @@ _Updated: 2026-05-04 pre-market scan_
 | XRX | $2.70 | Q1 2026 earnings beat + AI ITaaS pivot; reaffirmed guidance | pre-market today | 4/5 | SEC confirmed (8-K/earnings 4/30); running since 4/30; above SMA20; no dilution |
 | BB | $5.42 | Q4 FY2026 beat (8th consecutive profitable qtr) + Nvidia partnership expanded | pre-market today | 3/5 | SEC confirmed (Q4 earnings); above 52-wk high; no recent S-1/ATM |
 
+## CLOSED TRADES
+| Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
+|--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
+
+## LESSONS LEARNED
+_Updated: 2026-05-04 — no closed trades yet._
+
 ## WEEKLY RESEARCH LOG
 
 ### 2026-05-04 Pre-Market

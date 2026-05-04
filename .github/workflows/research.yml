@@ -20,6 +20,8 @@ on:
     # Afternoon Execution: 2:30 PM ET (19:30 UTC) + backup 3:30 PM ET (20:30 UTC) Mon–Fri
     - cron: "30 19 * * 1-5"
     - cron: "30 20 * * 1-5"
+    # EOD Review: 4:30 PM ET (21:30 UTC) Mon–Fri
+    - cron: "30 21 * * 1-5"
   workflow_dispatch:
     inputs:
       task:
@@ -31,6 +33,7 @@ on:
           - morning
           - midday
           - afternoon
+          - eod
           - monday_premarket
           - monday
 
@@ -215,4 +218,38 @@ jobs:
           git add TRADES.md
           [ -f outbox.json ] && git add outbox.json || true
           git diff --cached --quiet || git commit -m "Afternoon scan + execution $(date -u +%Y-%m-%d)"
+          git push
+
+  eod:
+    name: EOD Review
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'eod' ||
+      github.event_name == 'schedule' && github.event.schedule == '30 21 * * 1-5'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run EOD review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python agent.py eod
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md
+          [ -f outbox.json ] && git add outbox.json || true
+          git diff --cached --quiet || git commit -m "EOD review $(date -u +%Y-%m-%d)"
           git push

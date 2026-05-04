@@ -5,9 +5,11 @@ import sys
 import json
 import time
 import requests
-from datetime import datetime
+from datetime import datetime, date
 
 import anthropic
+from alpaca.trading.client import TradingClient
+from alpaca.trading.enums import QueryOrderStatus
 
 RESEND_KEY = os.environ.get("RESEND_KEY", "")
 TAVILY_KEY = os.environ.get("TAVILY_API_KEY", "")
@@ -36,6 +38,37 @@ def write_trades_md(content: str) -> str:
     with open("TRADES.md", "w") as f:
         f.write(content)
     return "TRADES.md written."
+
+
+def check_alpaca_orders() -> str:
+    api_key = os.environ.get("ALPACA_API_KEY", "")
+    secret_key = os.environ.get("ALPACA_SECRET_KEY", "")
+    paper = os.environ.get("ALPACA_PAPER", "true").lower() != "false"
+    if not api_key or not secret_key:
+        return "ALPACA credentials not set."
+    try:
+        client = TradingClient(api_key, secret_key, paper=paper)
+        from alpaca.trading.requests import GetOrdersRequest
+        req = GetOrdersRequest(status=QueryOrderStatus.CLOSED, limit=50, after=f"{date.today().isoformat()}T00:00:00Z")
+        orders = client.get_orders(req)
+        if not orders:
+            return "No closed orders today."
+        rows = []
+        for o in orders:
+            rows.append({
+                "id": str(o.id),
+                "symbol": o.symbol,
+                "side": str(o.side),
+                "qty": str(o.qty),
+                "filled_avg_price": str(o.filled_avg_price),
+                "status": str(o.status),
+                "filled_at": str(o.filled_at),
+            })
+        positions = client.get_all_positions()
+        pos_rows = [{"symbol": p.symbol, "qty": str(p.qty), "avg_entry": str(p.avg_entry_price), "current_price": str(p.current_price), "unrealized_pl": str(p.unrealized_pl)} for p in positions]
+        return json.dumps({"closed_orders_today": rows, "open_positions": pos_rows}, indent=2)
+    except Exception as e:
+        return f"Error checking Alpaca: {e}"
 
 
 def send_email(subject: str, body: str) -> str:
@@ -87,6 +120,14 @@ TOOLS = [
         },
     },
     {
+        "name": "check_alpaca_orders",
+        "description": (
+            "Check today's closed Alpaca orders and all open positions. "
+            "Use this in the EOD review to find which bracket orders filled today (stop hit or target hit)."
+        ),
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
         "name": "send_email",
         "description": "Send an email to hey@bradscanvas.com via Resend.",
         "input_schema": {
@@ -104,6 +145,7 @@ TASK_FILES = {
     "morning": "instructions/morning.md",
     "midday": "instructions/midday.md",
     "afternoon": "instructions/afternoon.md",
+    "eod": "instructions/eod_review.md",
     "monday_premarket": "instructions/premarket_monday.md",
     "monday": "instructions/monday.md",
 }
@@ -112,6 +154,7 @@ ALREADY_RAN_MARKERS = {
     "morning": lambda d: f"### {d} Morning Scan",
     "midday": lambda d: f"### {d} Midday Scan",
     "afternoon": lambda d: f"### {d} Afternoon Scan",
+    "eod": lambda d: f"### {d} EOD Review",
     "monday_premarket": lambda d: f"### {d} Pre-Market (Monday)",
     "monday": lambda d: f"Week of {d}",
 }
@@ -136,7 +179,7 @@ def run(task: str) -> None:
 
     trades = read_trades_md()
 
-    scan_label = {"morning": "Morning", "midday": "Midday", "afternoon": "Afternoon"}.get(task)
+    scan_label = {"morning": "Morning", "midday": "Midday", "afternoon": "Afternoon", "eod": "EOD Review"}.get(task)
     email_instruction = ""
     if scan_label:
         email_instruction = (
@@ -205,6 +248,8 @@ def run(task: str) -> None:
                         out = f"Search limit reached ({MAX_SEARCHES}). Stop searching and call write_trades_md with your findings now."
                     else:
                         out = tavily_search(inp["query"])
+                elif block.name == "check_alpaca_orders":
+                    out = check_alpaca_orders()
                 elif block.name == "read_trades_md":
                     out = read_trades_md()
                 elif block.name == "write_trades_md":
