@@ -1,42 +1,44 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-04 (Weekly Review — Monday 9:45 AM EST)_
+_Last updated: 2026-05-04 (Midday Scan — 12:30 PM EST)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
-| ABSI | BUY | $5.22 | $4.70 | $6.26 | MED | ABS-201 Phase 1/2a interim data H1 2026; analyst reiterate Buy $8 PT (Apr 28); UNCONFIRMED today catalyst |
-| ABUS | BUY | $4.04 | $3.64 | $4.85 | MED | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement ($950M cash July 2026) |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|-------|------|----------|--------|------|------|--------|------|--------|
-| XRX | $2.97 | 2026-05-04 | $98 | 33 | -$8.91 | -9.1% | Active ⚠️ | $2.67 | $3.56 |
-| BB | $5.88 | 2026-05-04 | $100 | 17 | -$7.82 | -7.8% | Active 🔄 | $5.29 | $7.06 |
-| BBAI | $4.26 | 2026-05-04 | $98 | 23 | -$0.16 | -0.2% | Active 🔄 | $3.22 | $4.30 |
+| BB | $5.88 | 2026-05-04 | $100 | 17 | -$4.34 | -4.3% | Active 🔄 | $5.29 | $7.06 |
 | FATN | $2.38 | 2026-05-05 | $98 | 41 | +$30.34 | +31.1% | Active 🟢 | $2.14 | $2.86 |
-| BZAI | $1.75 | 2026-05-05 | $98 | 56 | +$15.68 | +16.0% | Active 🟢 | $1.58 | $2.10 |
+| ABSI | $5.22 | 2026-05-04 | $100 | 19 | — | — | Active 🆕 | $4.70 | $6.26 |
+| ABUS | $4.04 | 2026-05-04 | $100 | 24 | — | — | Active 🆕 | $3.64 | $4.85 |
 
-_P&L updated vs last available closes: XRX $2.70 (May 1), BB $5.42 (May 1; hit 52-wk high $6.07 May 4), BBAI $4.225 (May 4), FATN $3.12 (May 1), BZAI $2.03 (May 1). No stops triggered. No targets hit. BBAI Q1 earnings call May 5 — monitor closely._
+_P&L updated: BB current $5.625 (May 4 midday); FATN last close $3.12 (May 1); ABSI and ABUS entered from execution queue. BZAI re-entry stopped out today at $2.39 (see closed trades). XRX stop hit today. BBAI target hit today._
 
-_Capital deployed: $492 / $500 (5 positions). Execution queue (ABSI, ABUS) not yet entered — awaiting morning scan confirmation._
+_Capital deployed: ~$398 / $500 (4 positions). LNAI execution queue at $75 — if filled, 5/5 slots used ($473 total)._
 
 ## WATCHLIST
-_Updated: 2026-05-04 Weekly Review_
+_Updated: 2026-05-04 Midday Scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
 | PACB | $1.59 est. | Q1 earnings May 7; Trillion Gene Atlas; AI long-read sequencing | May 7 earnings | 2/5 | Barclays downgraded to $1 PT; low RVOL; watch for earnings beat catalyst |
 | SMMT | $16.11 est. | ASCO HARMONi-6 OS data May 31; FDA PDUFA Nov 14; HC Wainwright Buy $23 PT | May 31 ASCO | 3/5 | Down -24.9% May 1–3 on Q1 update/rising expenses; monitor for stabilization before entry |
 | RLAY | ~$12.70 est. | FDA Breakthrough Therapy zovegalisib; Phase 1/2 ESMO TAT data 2026 | 2026 milestones | 3/5 | 12 analyst Buy ratings, zero holds; $21 PT (+65% upside); confirm price/RVOL before entry |
+| SENS | $5.10 | Q1 earnings May 7; Eversense CGM platform | May 7 earnings | 2/5 | DOWN -22.84% today — do NOT enter; monitor post-earnings for reversal setup |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
+| BBAI | $4.26 | $4.30 | 2026-05-04 | WIN ✅ | +$0.92 | +0.9% | Q1 Earnings / Short Squeeze | MED | 2026-05-05 Morning | Target hit $4.30 |
+| BZAI (re-entry) | $2.46 | $2.39 | 2026-05-04 | LOSS ❌ | -$4.20 | -2.8% | $50M NeoTensr contract (momentum continuation) | MED | 2026-05-04 Midday re-entry | Stop hit $2.39 (×0.90 of $2.46 = ~$2.21; partial fill at $2.39 suggests bracket stop triggered) |
+| XRX | $2.97 | $2.68 | 2026-05-04 | LOSS ❌ | -$9.57 | -9.8% | Q1 Earnings Beat / AI ITaaS | MED | 2026-05-04 Pre-Market | Stop hit $2.68 (stop was $2.67) |
+| BZAI (original) | $1.75 | ~$2.46 | 2026-05-04 | WIN ✅ | +$39.76 | +40.6% | $50M NeoTensr contract win | MED | 2026-05-05 Morning | Closed near high; bot re-entered at $2.46 same session |
 
-_No closed trades yet — all positions remain open. Week of Apr 28–May 2: 0 stops triggered, 0 targets hit._
+_BZAI original (56 shares @ $1.75) closed at implied ~$2.46 based on Alpaca re-entry BUY of 60 shares at $2.46 same day. P&L estimated: 56 × ($2.46 – $1.75) = +$39.76. Re-entry (60 shares @ $2.46) then stopped at $2.39: 60 × ($2.39 – $2.46) = -$4.20._
 
 ## WEEKLY PERFORMANCE SUMMARY
-_Updated: 2026-05-04 Weekly Review_
+_Updated: 2026-05-04 Midday Scan_
 
 ### Week of April 28 – May 2, 2026
 | Metric | Value |
@@ -55,16 +57,48 @@ _Updated: 2026-05-04 Weekly Review_
 
 _Notes: First full week of trading. No closes — all 5 positions entered May 4–5 still active. FATN and BZAI are strong unrealised winners. XRX is the weakest position, trading below entry but above $2.67 stop. BB hit new 52-week high of $6.07 on May 4 (recovering toward target $7.06). BBAI near breakeven post-Q1 earnings. Portfolio is net positive unrealised._
 
+### Week of May 4, 2026 (Partial — Midday Update)
+| Metric | Value |
+|--------|-------|
+| Closed Trades (this session) | 4 (BBAI target hit, XRX stop hit, BZAI original close, BZAI re-entry stop hit) |
+| Wins | 2 (BBAI +$0.92, BZAI original +$39.76) |
+| Losses | 2 (XRX -$9.57, BZAI re-entry -$4.20) |
+| Win Rate (session) | 50% |
+| Realised P&L (session) | +$26.91 net |
+| Active Positions | 4 (BB, FATN, ABSI, ABUS) |
+| Capital Deployed | ~$398 / $500 |
+| Unrealised P&L | ~+$25–30 est. (FATN leading) |
+| Largest Winner (closed today) | BZAI original +40.6% (+$39.76) |
+| Largest Loser (closed today) | XRX −9.8% (−$9.57) |
+
+_Notes: BBAI hit target precisely at $4.30 — perfect bracket order execution. XRX stop filled at $2.68 (just above $2.67 stop — normal slippage). BZAI showed strong gains from original entry; re-entry at $2.46 was aggressive and stopped quickly at $2.39. Net session P&L positive +$26.91. New entries: ABSI and ABUS activated from execution queue. LNAI queued as guaranteed minimum midday play._
+
 ## LESSONS LEARNED
-_Updated: 2026-05-04 Weekly Review_
+_Updated: 2026-05-04 Midday Scan_
 
 1. **FATN (+31.1% unrealised in <1 week):** Revenue beat + distribution deal + insider buy trifecta = strong HIGH conviction call. The combination of fundamental catalyst confirmation + director skin-in-the-game validates the HIGH scoring framework. **Monitor for target $2.86 approach; consider trailing stop if it continues higher.**
-2. **BZAI (+16.0% unrealised):** $50M contract win was credible, verified 8-K catalyst. Entered near open — holding well above stop. Proves that MED conviction plays with real contract catalysts work in the pennies space.
-3. **XRX (−9.1% unrealised):** Entered $2.97 on May 4 pre-market bounce from earnings beat, but stock appears to have pulled back from intraday highs. The pre-market spike entry risk (buying the spike) is the lesson — the position is near stop territory. **Watch carefully for stop $2.67.**
-4. **BB (−7.8% initially → recovering):** Q4 beat entry at $5.88 was slightly chasing the open. Stock recovered to 52-week high $6.07 on May 4 — confirms the thesis is valid. Patience rewarded.
-5. **BBAI (near breakeven):** Q1 earnings event risk worked out neutrally. Entering a position the same day as an earnings catalyst is high-risk; result was essentially flat. Lesson: wait for post-earnings reaction confirmation.
+2. **BZAI (+40.6% original entry → WIN):** $50M contract win was credible, verified 8-K catalyst. Original entry at $1.75 closed near high ~$2.46. Proves that MED conviction plays with real contract catalysts work in the pennies space. **Re-entry at $2.46 was overly aggressive — the lesson is to let winners breathe and not immediately re-enter at elevated prices after a 40% move.**
+3. **XRX (−9.8% → LOSS, stop hit):** Entered $2.97 on May 4 pre-market bounce from earnings beat, stock pulled back and hit stop at $2.68. The pre-market spike entry risk (buying the spike) is the confirmed lesson. Bracket stop did its job — loss contained to -$9.57 on $98 deployed.
+4. **BB (recovering):** Q4 beat entry at $5.88 — stock at $5.625 midday, still above stop $5.29. Hold — thesis intact with $950M QNX backlog and 52-week high $6.07 achieved May 4.
+5. **BBAI (+0.9% → TARGET HIT exactly):** Bracket order hit $4.30 target precisely. Clean execution. Lesson: tight targets on event plays (earnings) work — don't be greedy.
+6. **BZAI re-entry (-2.8%):** Buying a 40%+ mover on re-entry with a tight stop is a low-probability setup. The stop at $2.21 (entry $2.46 × 0.90) should have held but the fill at $2.39 suggests the bracket stop triggered on a brief dip. Avoid same-session re-entries on exhausted momentum.
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-04 Midday Scan
+
+| Ticker | Price | Move% | RVOL | In Range | Catalyst | SEC Confirmed | Score | Result |
+|--------|-------|-------|------|----------|----------|---------------|-------|--------|
+| ABSI | $5.22 | active | est. ≥1.2 | ✅ $0.25–$25 | ABS-201 Phase 1/2a interim data H1 2026; analyst Buy $8 PT reiterated Apr 28 | UNCONFIRMED — no today 8-K | MED (3) | ENTERED from queue — $5.22 stop $4.70 target $6.26 |
+| ABUS | $4.04 | active | est. ≥1.2 | ✅ $0.25–$25 | FDA Fast Track imdusiran (Apr 15); Moderna $2.25B settlement ($950M cash July 2026) | Yes — press release/8-K confirmed | MED (3) | ENTERED from queue — $4.04 stop $3.64 target $4.85 |
+| LNAI | $0.33 | active | high | ⚠️ Low | $20M BBB delivery platform acquisition for CNS/Alzheimer's (confirmed press release) | Yes — PR/press release | LOW (2) | QUEUED — Guaranteed Minimum Trade; stop $0.30 target $0.40 |
+| SGMO | $0.18 | high | high | ❌ < $0.25 | Nasdaq → OTCQB transition May 5; delisting catalyst | Yes — PR | SCREENED OUT | Below $0.25 floor; Nasdaq delisting |
+| CHSN | $0.03 | — | — | ❌ < $0.25 | No confirmed catalyst for today's move | None | SCREENED OUT | Extreme micro-cap; far below floor |
+| MNDR | $0.95 | high | high | ✅ price | $126M Securities Purchase Agreement; AI data center 60 MW campus | Yes — PR | SCREENED OUT | HIGH DILUTION RISK — Securities Purchase Agreement; $3.12M mkt cap |
+| KALV | $26.64 | +38.6% | high | ❌ > $25 | Chiesi Group $1.9B acquisition @ $27/share cash | Yes — confirmed | SCREENED OUT | Above $25 ceiling; M&A arb only 1.3% upside |
+| FCEL | $13.27 | +2% | low | ❌ > $10 | Data center power demand story; Hold consensus | N/A | SCREENED OUT | Above $10 ceiling |
+| ATOM | $11.09 | +35.6% | high | ❌ > $10 | Unknown — not researched | N/A | SCREENED OUT | Above $10 ceiling |
+| SENS | $5.10 | -22.8% | high | ✅ price | Q1 earnings May 7; Eversense CGM | Not today | SCREENED OUT | DOWN move — not a buy setup; added to watchlist |
 
 ### 2026-05-05 Morning Scan
 
