@@ -11,6 +11,7 @@
 | XRX | $2.97 | 2026-05-04 | $98 | 33 | — | — | Active | $2.67 | $3.56 |
 | BB | $5.88 | 2026-05-04 | $100 | 17 | — | — | Active | $5.29 | $7.06 |
 | BBAI | $4.26 | 2026-05-04 | $98 | 23 | — | — | Active | $3.22 | $4.30 |
+
 ## WATCHLIST
 _Updated: 2026-05-04 pre-market scan_
 _Reviewed 2026-05-05 — XRX and BB already in ACTIVE POSITIONS; no residual watchlist items._
@@ -19,6 +20,7 @@ _Reviewed 2026-05-05 — XRX and BB already in ACTIVE POSITIONS; no residual wat
 |--------|------------|---------|---------|-------|-------|
 | XRX | $2.70 | Q1 2026 earnings beat + AI ITaaS pivot; reaffirmed guidance | pre-market today | 4/5 | SEC confirmed (8-K/earnings 4/30); running since 4/30; above SMA20; no dilution |
 | BB | $5.42 | Q4 FY2026 beat (8th consecutive profitable qtr) + Nvidia partnership expanded | pre-market today | 3/5 | SEC confirmed (Q4 earnings); above 52-wk high; no recent S-1/ATM |
+| CLNN | $6.14 | NDA accelerated approval filing for ALS drug CNM-Au8 (Q3 2026); FDA Type C meeting success; NfL biomarker endorsed | pre-market today | 3/5 | Press release confirmed (Globe Newswire 2026-05-04); prior dilution history (Nov 2025 offering, Feb 2026 securities sale); monitor for 8-K |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
@@ -50,3 +52,14 @@ _Updated: 2026-05-04 — no closed trades yet._
 | HWH | $1.76 | +34.4% | est. | — | Unknown | No confirmed today catalyst; Hapi Metaverse acquisition (Feb 2026) | No recent | SCREENED OUT | Dropped — no confirmed catalyst for today's move |
 | PACB | $1.42 | est. | — | — | Unknown | Q1 earnings May 7; Trillion Gene Atlas; SparkNex platform | Not today | WATCHLIST | Near-term catalyst May 7 — monitor |
 | SVRN | $0.308 | +50% | 18M | >3 | Unknown | No confirmed catalyst found | None | SCREENED OUT | Dropped — no catalyst; speculative pump |
+
+### 2026-05-04 Pre-Market (Second Scan — 9:00 AM)
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| CLNN | $6.14 | $7.56 | +23.1% | UP | ~2% est. (bid $6.78 ask $6.93) | Yes (post-move) | NDA for ALS drug CNM-Au8 filing planned Q3 2026; FDA Type C meeting success; FDA endorsed NfL biomarker as "reasonably likely surrogate endpoint" for accelerated approval pathway | Yes — Globe Newswire press release 2026-05-04; prior 8-K trail (Jan 13 2026 drug application update) |
+| CRE | $2.41 | $2.80 | +16.2% | UP | ~2% est. | Unknown | "Rose West Drilling expands lithium footprint" — lithium pivot story for Hong Kong financial printing company | UNCONFIRMED — no 8-K found; catalyst appears speculative/incongruent with core business |
+| MNDR | $0.95 | $1.48 | +55.8% | UP | Unknown | $126M Securities Purchase Agreement to build 60 MW AI data center campus | Announcement confirmed (press release); but SCREENED OUT — extreme micro-cap ($3.12M mkt cap); Securities Purchase Agreement = high dilution risk; prior close $0.95 borderline |
+| CNSP | $8.40 | $10.22 | +21.7% | — | — | — | SCREENED OUT: PM price above $10.00 ceiling | — |
+| NIVF | $1.71 | ~$1.17 | -31.6% | DOWN | — | — | SCREENED OUT: down move; no confirmed short thesis found | — |
+| RLYB | $8.98 | $9.41 | +4.8% | — | — | — | SCREENED OUT: prev-day volume ~70K shares × ~$9 = ~$630K dollar volume passes; but PM move <5% threshold; also near $10 ceiling | — |
