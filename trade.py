@@ -215,6 +215,14 @@ def main():
         stop = sig["stop_loss"] or round(ask * (1 - STOP_PCT), 2)
         target = sig["target"] or round(ask * (1 + DEFAULT_TARGET_PCT), 2)
 
+        if ask >= target:
+            print(f"  {ticker}: ask ${ask:.2f} already at or past target ${target:.2f} — signal stale, skipping.")
+            continue
+
+        if ask <= stop:
+            print(f"  {ticker}: ask ${ask:.2f} already at or below stop ${stop:.2f} — signal stale, skipping.")
+            continue
+
         deployed = round(shares * ask, 2)
         print(f"  Placing {shares} shares of {ticker} @ ~${ask:.2f} "
               f"(${deployed:.0f}, {sig['conviction']}) | stop=${stop:.2f} target=${target:.2f}")

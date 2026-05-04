@@ -10,9 +10,7 @@
 
 | XRX | $2.97 | 2026-05-04 | $98 | 33 | — | — | Active | $2.67 | $3.56 |
 | BB | $5.88 | 2026-05-04 | $100 | 17 | — | — | Active | $5.29 | $7.06 |
-| FATN | $2.38 | 2026-05-05 | $150 | 63 | — | — | Active | $2.14 | $2.86 |
-| BZAI | $1.75 | 2026-05-05 | $100 | 57 | — | — | Active | $1.58 | $2.10 |
-| BBAI | $3.58 | 2026-05-05 | $97 | 27 | — | — | Active | $3.22 | $4.30 |
+| BBAI | $4.26 | 2026-05-04 | $98 | 23 | — | — | Active | $3.22 | $4.30 |
 ## WATCHLIST
 _Updated: 2026-05-04 pre-market scan_
 _Reviewed 2026-05-05 — XRX and BB already in ACTIVE POSITIONS; no residual watchlist items._
