@@ -102,6 +102,7 @@ TOOLS = [
 
 TASK_FILES = {
     "morning": "instructions/morning.md",
+    "midday": "instructions/midday.md",
     "afternoon": "instructions/afternoon.md",
     "monday_premarket": "instructions/premarket_monday.md",
     "monday": "instructions/monday.md",
@@ -109,6 +110,7 @@ TASK_FILES = {
 
 ALREADY_RAN_MARKERS = {
     "morning": lambda d: f"### {d} Morning Scan",
+    "midday": lambda d: f"### {d} Midday Scan",
     "afternoon": lambda d: f"### {d} Afternoon Scan",
     "monday_premarket": lambda d: f"### {d} Pre-Market (Monday)",
     "monday": lambda d: f"Week of {d}",
@@ -134,12 +136,12 @@ def run(task: str) -> None:
 
     trades = read_trades_md()
 
-    scan_label = {"morning": "Morning", "afternoon": "Afternoon"}.get(task)
+    scan_label = {"morning": "Morning", "midday": "Midday", "afternoon": "Afternoon"}.get(task)
     email_instruction = ""
     if scan_label:
         email_instruction = (
             f"\nAfter calling write_trades_md, send a summary email using send_email with:\n"
-            f"  subject: PennyAlpha {scan_label} Scan — {today}\n"
+            f"  subject: PennyAlpha {scan_label} — {today}\n"
             f"  body: A plain-text summary including:\n"
             f"    - Number of candidates screened and how many passed\n"
             f"    - A table of all tickers logged to the research log (Ticker | Company Name | Price | Tech Score | Flags | Catalyst)\n"
@@ -164,6 +166,8 @@ def run(task: str) -> None:
     ]
 
     client = anthropic.Anthropic()
+    search_count = 0
+    MAX_SEARCHES = 15
 
     for _ in range(60):
         for attempt in range(4):
@@ -176,11 +180,12 @@ def run(task: str) -> None:
                     messages=messages,
                 )
                 break
-            except anthropic.RateLimitError:
+            except (anthropic.RateLimitError, anthropic.InternalServerError) as e:
                 if attempt == 3:
                     raise
                 wait = 60 * (attempt + 1)
-                print(f"Rate limited — waiting {wait}s before retry {attempt + 2}/4", flush=True)
+                label = "Rate limited" if isinstance(e, anthropic.RateLimitError) else "Server error (500)"
+                print(f"{label} — waiting {wait}s before retry {attempt + 2}/4", flush=True)
                 time.sleep(wait)
         messages.append({"role": "assistant", "content": resp.content})
 
@@ -195,11 +200,19 @@ def run(task: str) -> None:
             print(f"[tool] {block.name} | {str(inp)[:100]}", flush=True)
             try:
                 if block.name == "web_search":
-                    out = tavily_search(inp["query"])
+                    search_count += 1
+                    if search_count > MAX_SEARCHES:
+                        out = f"Search limit reached ({MAX_SEARCHES}). Stop searching and call write_trades_md with your findings now."
+                    else:
+                        out = tavily_search(inp["query"])
                 elif block.name == "read_trades_md":
                     out = read_trades_md()
                 elif block.name == "write_trades_md":
-                    out = write_trades_md(inp["content"])
+                    content = inp.get("content", "")
+                    if not content or not content.strip():
+                        out = "Error: content is empty. You must pass the complete TRADES.md text as the content argument."
+                    else:
+                        out = write_trades_md(content)
                 elif block.name == "send_email":
                     out = send_email(inp["subject"], inp["body"])
                 else:

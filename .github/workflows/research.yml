@@ -11,12 +11,15 @@ on:
     # Monday Aggregation: 8:45 AM ET (13:45 UTC) + backup 9:45 AM ET (14:45 UTC)
     - cron: "45 13 * * 1"
     - cron: "45 14 * * 1"
-    # Morning Research: 9:15 AM ET (14:15 UTC) + backup 10:15 AM ET (15:15 UTC) Mon–Fri
+    # Morning Execution: 9:15 AM ET (14:15 UTC) + backup 10:15 AM ET (15:15 UTC) Mon–Fri
     - cron: "15 14 * * 1-5"
     - cron: "15 15 * * 1-5"
-    # Afternoon Research: 3:30 PM ET (20:30 UTC) + backup 4:30 PM ET (21:30 UTC) Mon–Fri
+    # Midday Execution: 12:30 PM ET (17:30 UTC) + backup 1:30 PM ET (18:30 UTC) Mon–Fri
+    - cron: "30 17 * * 1-5"
+    - cron: "30 18 * * 1-5"
+    # Afternoon Execution: 2:30 PM ET (19:30 UTC) + backup 3:30 PM ET (20:30 UTC) Mon–Fri
+    - cron: "30 19 * * 1-5"
     - cron: "30 20 * * 1-5"
-    - cron: "30 21 * * 1-5"
   workflow_dispatch:
     inputs:
       task:
@@ -26,6 +29,7 @@ on:
         type: choice
         options:
           - morning
+          - midday
           - afternoon
           - monday_premarket
           - monday
@@ -114,22 +118,57 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           RESEND_KEY: ${{ secrets.RESEND_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python agent.py morning
 
       - name: Commit results
         run: |
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
-          git add TRADES.md
-          git diff --cached --quiet || git commit -m "Research: morning scan $(date -u +%Y-%m-%d)"
+          git add TRADES.md outbox.json
+          git diff --cached --quiet || git commit -m "Morning scan + execution $(date -u +%Y-%m-%d)"
+          git push
+
+  midday:
+    name: Midday Execution
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'midday' ||
+      github.event_name == 'schedule' && (github.event.schedule == '30 17 * * 1-5' || github.event.schedule == '30 18 * * 1-5')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run midday scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python agent.py midday
+
+      - name: Commit results
+        run: |
+          git config user.email bot@pennyalpha.local
+          git config user.name PennyAlpha_Bot
+          git add TRADES.md outbox.json
+          git diff --cached --quiet || git commit -m "Midday scan + execution $(date -u +%Y-%m-%d)"
           git push
 
   afternoon:
-    name: Afternoon Research
+    name: Afternoon Execution
     runs-on: ubuntu-latest
     if: >
       github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'afternoon' ||
-      github.event_name == 'schedule' && (github.event.schedule == '30 20 * * 1-5' || github.event.schedule == '30 21 * * 1-5')
+      github.event_name == 'schedule' && (github.event.schedule == '30 19 * * 1-5' || github.event.schedule == '30 20 * * 1-5')
     steps:
       - uses: actions/checkout@v4
 
@@ -145,12 +184,14 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           RESEND_KEY: ${{ secrets.RESEND_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python agent.py afternoon
 
       - name: Commit results
         run: |
           git config user.email bot@pennyalpha.local
           git config user.name PennyAlpha_Bot
-          git add TRADES.md
-          git diff --cached --quiet || git commit -m "Research: afternoon scan $(date -u +%Y-%m-%d)"
+          git add TRADES.md outbox.json
+          git diff --cached --quiet || git commit -m "Afternoon scan + execution $(date -u +%Y-%m-%d)"
           git push

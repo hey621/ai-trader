@@ -24,7 +24,7 @@ STOP_PCT = 0.10
 DEFAULT_TARGET_PCT = 0.20
 MAX_POSITIONS = 5
 
-trading = TradingClient(API_KEY, SECRET_KEY, paper=True)
+trading = TradingClient(API_KEY, SECRET_KEY, paper=False)
 data = StockHistoricalDataClient(API_KEY, SECRET_KEY)
 
 
@@ -198,7 +198,7 @@ def main():
         ask = get_ask_price(ticker)
         if ask is None:
             continue
-        if not (0.50 <= ask <= 10.00):
+        if not (0.25 <= ask <= 25.00):
             print(f"  {ticker}: ask ${ask:.2f} out of range, skipping.")
             continue
 

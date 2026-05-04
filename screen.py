@@ -27,7 +27,7 @@ def screen():
         rvol = day_vol / prev_vol
         dollar_vol = price * day_vol
         spread = (ask - bid) / ask * 100 if ask > 0 else 99
-        if 0.50 <= price <= 10.00 and rvol >= 1.5 and dollar_vol >= 250_000 and spread <= 3.0:
+        if 0.25 <= price <= 25.00 and rvol >= 1.2 and dollar_vol >= 100_000 and spread <= 5.0:
             candidates.append({
                 "ticker": t["ticker"],
                 "price": round(price, 2),

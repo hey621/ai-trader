@@ -1,6 +1,6 @@
 # PennyAlpha_Bot — Morning Execution Scan (10:15 AM EST)
 
-EXECUTION MODE. Screen, score, and place bracket orders for qualifying candidates today.
+EXECUTION MODE. You MUST place at least 1 trade today. Screen, score, and place bracket orders.
 
 Credentials: $GITHUB_TOKEN, $RESEND_KEY, $ALPACA_API_KEY, $ALPACA_SECRET_KEY
 
@@ -22,11 +22,10 @@ Search for stocks moving RIGHT NOW with confirmed volume:
 Also include any tickers from the WATCHLIST section.
 
 Extract tickers where ALL are true:
-- Price $0.50–$10.00
-- RVOL ≥ 1.5 (confirmed intraday — if unconfirmed, discard)
-- Dollar volume ≥ $250k
-- Spread ≤ 3%
-- Price above 20-day MA
+- Price $0.25–$25.00
+- RVOL ≥ 1.2 (confirmed intraday)
+- Dollar volume ≥ $100k
+- Spread ≤ 5%
 - Not in ARCHIVE LOG
 
 Target 10–15 candidates.
@@ -34,8 +33,8 @@ Target 10–15 candidates.
 ## Step 2 — Score Each Candidate (max 15 WebSearches)
 For each candidate:
 
-a) **Catalyst** — search "[TICKER] SEC 8-K 2026". Must have a confirmed SEC filing. Drop if none.
-b) **Dilution** — search "[TICKER] S-1 OR offering OR ATM 2026". Drop if HIGH DILUTION RISK (runway < 4 months).
+a) **Catalyst** — search "[TICKER] news OR SEC 8-K 2026". No confirmed catalyst = flag UNCONFIRMED, do NOT drop.
+b) **Dilution** — search "[TICKER] S-1 OR offering OR ATM 2026". Drop ONLY if HIGH DILUTION RISK (runway < 4 months).
 c) **Technicals** — above SMA9, SMA20, SMA200? Above VWAP? Note resistance and 52W high.
 d) **Short float** — search "[TICKER] short interest". Flag SQUEEZE CANDIDATE if > 20%.
 e) **Insider** — search "[TICKER] Form 4 insider buying 2026". Note Y/N.
@@ -51,10 +50,13 @@ Base = Tech Score
 +1 if insider buying confirmed
 +1 if SQUEEZE CANDIDATE
 -2 if HIGH DILUTION RISK
++1 if confirmed SEC catalyst
 
-**Drop if conviction score < 4 or no confirmed SEC catalyst.**
+**Drop only if conviction score < 2 or HIGH DILUTION RISK.**
 
-Conviction tier: score ≥ 7 = HIGH ($150) | 5–6 = MED ($100) | 4 = LOW ($75)
+Conviction tier: score ≥ 5 = HIGH ($150) | 3–4 = MED ($100) | 1–2 = LOW ($75)
+
+**GUARANTEED MINIMUM TRADE RULE:** If no candidates reach conviction score 2, take the single highest RVOL / strongest-momentum stock found regardless of score and assign conviction LOW. You must always have at least 1 candidate to execute.
 
 ## Step 3 — Select Entries
 Rank by conviction score. Fill available slots (max 5 total across all active positions).
