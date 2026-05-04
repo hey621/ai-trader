@@ -24,7 +24,7 @@ STOP_PCT = 0.10
 DEFAULT_TARGET_PCT = 0.20
 MAX_POSITIONS = 5
 
-trading = TradingClient(API_KEY, SECRET_KEY, paper=False)
+trading = TradingClient(API_KEY, SECRET_KEY, paper=True)
 data = StockHistoricalDataClient(API_KEY, SECRET_KEY)
 
 

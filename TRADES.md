@@ -1,5 +1,15 @@
 # test
 
+## EXECUTION QUEUE
+| Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
+|--------|--------|-------|------|--------|------------|-------|
+
+## ACTIVE POSITIONS
+| Ticker | Entry | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
+|--------|-------|------|----------|--------|------|------|--------|------|--------|
+
+| XRX | $2.97 | 2026-05-04 | $98 | 33 | — | — | Active | $2.67 | $3.56 |
+| BB | $5.88 | 2026-05-04 | $100 | 17 | — | — | Active | $5.29 | $7.06 |
 ## WATCHLIST
 _Updated: 2026-05-04 pre-market scan_
 
