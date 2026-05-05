@@ -10,7 +10,6 @@ _Last updated: 2026-05-05 (Midday Scan — 12:30 PM EST)_
 |--------|---------|------|----------|--------|------|------|--------|------|--------|
 | BB | $5.88 | 2026-05-04 | $100 | 17 | -$4.93 | -4.9% | Active 🔄 | $5.29 | $7.06 |
 | SMMT | $17.10 | 2026-05-05 | $137 | 8 | +$2.64 | +1.9% | Active 🔄 | $15.39 | $20.52 |
-| RLAY | $14.80 | 2026-05-05 | $89 | 6 | — | — | Active | $11.88 | $15.84 |
 
 _P&L updated: BB current ~$5.59 (Alpaca confirmed); SMMT filled at $17.10 (Alpaca confirmed 13:30:14 UTC), current $17.43. Stops updated: SMMT stop $15.39 (= $17.10 × 0.90), target $20.52 (= $17.10 × 1.20). SMMT SELL bracket expired (OrderStatus.EXPIRED) — bracket not yet re-placed; needs manual bracket or re-queue._
 
@@ -33,6 +32,7 @@ _Reviewed 2026-05-05 Midday Scan_
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
+| RLAY | $14.80 | $12.99 | LOSS | 2026-05-05 | 2026-06-04 |
 | BZAI (original) | $1.75 | $2.46 | 2026-05-04 | WIN ✅ | +$39.76 | +40.6% | MOMENTUM | MED | Morning | MANUAL — closed near high; re-entered same session |
 | BBAI | $4.26 | $4.30 | 2026-05-04 | WIN ✅ | +$0.92 | +0.9% | EARNINGS | MED | Morning | TARGET HIT |
 | XRX | $2.97 | $2.68 | 2026-05-04 | LOSS ❌ | -$9.57 | -9.8% | EARNINGS | MED | Pre-Market | STOP HIT |
