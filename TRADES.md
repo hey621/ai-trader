@@ -18,7 +18,7 @@ _P&L updated: BB ~$5.63 est. (May 4 close per Google Finance); FATN ~$3.12 est. 
 _Capital deployed: ~$400 / $500 (4 positions)._
 
 ## WATCHLIST
-_Updated: 2026-05-04 Midday Scan_
+_Updated: 2026-05-05 Pre-Market Scan — No new candidates qualified (zero passed all filters)_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
@@ -99,6 +99,19 @@ _Overall: 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original +40.6% (+$39
 - **FATN (unrealised +31.1%) is already past its $2.86 target.** This is a HIGH conviction call that has outperformed. The lesson from watching it run: when a HIGH conviction trade clears its target, either manually raise the stop to lock in gains or close partial position. Do not let a winner turn into a loss by holding too long without a trailing stop.
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-05 Pre-Market
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| INHD | ~$1.76 | $2.14 | +21.6% | UP | est. ~2% | No | Post-1-for-20 reverse stock split (May 4); no confirmed bullish catalyst for move | No new bullish 8-K | SCREENED OUT — reverse split noise; EPS -$26.30; no tradeable catalyst |
+| AMOD | ~$0.23 | $0.27 | +15.6% | UP | Unknown | Unknown | No confirmed catalyst | None | SCREENED OUT — below $0.50 price floor |
+| DVLT | ~$0.56 | $0.63 | +12.5% | UP | est. ~3% | Unknown | $60M registered direct offering at $0.55/share (25% discount to prior close); quantum GPU edge network buildout | Yes — press release | SCREENED OUT — HIGH DILUTION RISK; discounted offering closes May 5; Nasdaq $1 bid price compliance issue |
+| STRL | >$10 | — | +22.5% | UP | — | Yes | Q1 2026 EPS beat ($3.59 vs $2.01 est.); FY26 guidance raised | Yes — earnings 8-K | SCREENED OUT — above $10 ceiling |
+| EVER | >$10 | ~$17.10 | +17% | UP | — | Yes | Q1 revenue beat; Q2 guidance above analyst estimates | Yes — earnings | SCREENED OUT — above $10 ceiling |
+| PINS | >$10 | ~$24.41 | +17% | UP | — | Yes | Q1 earnings beat; strong Q2 revenue outlook | Yes — earnings | SCREENED OUT — above $10 ceiling |
+
+Zero candidates passed all filters today. All confirmed-catalyst movers (STRL, EVER, PINS) were above the $10 ceiling. In-range movers (INHD, DVLT, AMOD) failed on dilution, reverse-split noise, or price-floor violations. No FDA PDUFA decisions on May 5, 2026. Market context: S&P 500 +0.34%, Nasdaq +0.57%, Russell 2000 +0.46% pre-market. Active positions ABSI (Q1 earnings May 7 after close) and ABUS remain primary monitoring focus this week.
 
 ### 2026-05-05 EOD Review
 Closed today: 0 positions (0 wins, 0 losses) | P&L: $0.00
