@@ -1,9 +1,10 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-05 (EOD Review — 4:30 PM EST)_
+_Last updated: 2026-05-05 (Morning Scan — 10:15 AM EST)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
+| SMMT | BUY | $16.20 | $14.58 | $19.44 | MED | ASCO HARMONi-6 OS data May 31; ivonescimab Phase III PFS HR 0.52 confirmed; recovering on elevated RVOL 2.78 after -24.9% drop; ATM offering active (runway ~8.5mo) |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
@@ -18,15 +19,13 @@ _P&L updated: BB ~$5.63 est. (May 4 close per Google Finance); FATN ~$3.12 est. 
 _Capital deployed: ~$400 / $500 (4 positions)._
 
 ## WATCHLIST
-_Updated: 2026-05-05 Pre-Market Scan — No new candidates qualified (zero passed all filters)_
+_Reviewed 2026-05-05 Morning Scan — prior entries cleared; SMMT entered; fresh queue below_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| PACB | $1.59 est. | Q1 earnings May 7; Trillion Gene Atlas; AI long-read sequencing | May 7 earnings | 2/5 | Barclays downgraded to $1 PT; low RVOL; watch for earnings beat catalyst |
-| SMMT | $16.11 est. | ASCO HARMONi-6 OS data May 31; FDA PDUFA Nov 14; HC Wainwright Buy $23 PT | May 31 ASCO | 3/5 | Down -24.9% May 1–3 on Q1 update/rising expenses; monitor for stabilization before entry |
-| RLAY | ~$12.70 est. | FDA Breakthrough Therapy zovegalisib; Phase 1/2 ESMO TAT data 2026 | 2026 milestones | 3/5 | 12 analyst Buy ratings, zero holds; $21 PT (+65% upside); confirm price/RVOL before entry |
-| SENS | $5.10 | Q1 earnings May 7; Eversense CGM platform | May 7 earnings | 2/5 | DOWN -22.84% May 4 — do NOT enter; monitor post-earnings for reversal setup |
-| ABSI | $4.92 est. | Q1 earnings May 7 post-market; ABS-201 Phase 1/2a data H1 2026 | May 7 earnings | 3/5 | Already in active position; earnings catalyst approaching — watch for stop/target action |
+| RLAY | ~$13.00 est. | Q1 earnings today (May 5) after close; FDA Breakthrough Therapy zovegalisib; ISSVA World Congress data May 2026 | May 5 earnings | 4/5 | RVOL 0.90 today (below 1.2 threshold); 12 analyst Buy ratings, $21 PT (+61%); $554M cash — no dilution risk; if earnings positive and RVOL crosses 1.2 tomorrow, strong entry candidate |
+| PACB | $1.59 est. | Q1 earnings May 6 post-market; SparkNex launch; Trillion Gene Atlas | May 6 earnings | 3/5 | RVOL unconfirmed today; Barclays $1 PT but 4 analysts Buy, avg PT $2.50 (+57%); watch for earnings-day volume |
+| RCAT | $11.11 est. | Q1 earnings May 7 post-market; defense drone sector; government contracts | May 7 earnings | 2/5 | RVOL today unconfirmed; analyst consensus Buy $19.80 PT (+76% upside); pre-earnings volume may build May 6-7 |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
@@ -180,6 +179,20 @@ Notes: No Alpaca orders closed on 2026-05-05. FATN materially past target ($3.12
 | CELC | >$10 | $147.56 | +17.4% | — | — | — | SCREENED OUT: price too high ($147) | — |
 | LNAI | $0.32 | $0.36 | +13.4% | — | — | — | SCREENED OUT: below $0.50 floor | — |
 | CABA | $2.90 | — | — | DOWN | — | — | SCREENED OUT: dilution event — $150M equity offering priced 2026-05-04 | Yes — 8-K 2026-05-04 |
+
+### 2026-05-05 Morning Scan
+
+| Ticker | Price | Move% | Vol | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
+|--------|-------|-------|-----|------|-------------|----------|---------------|------------|--------|
+| SMMT | $16.20 est. | recovering from -24.9% (May 1–3) | 18.12M | 2.78 | No (recovering from drop) | ASCO HARMONi-6 OS data May 31; ivonescimab Phase III PFS HR 0.52 confirmed; potential US approval late 2026 | Yes — 424B5 ATM + Phase III 8-K filings | MED (4) | ENTERED $16.20 stop $14.58 target $19.44 — 1 open slot filled; slots now 5/5 |
+| RLAY | $13.00 est. | 90d: +66.1%; 7d: -15.9% | 2.91M | 0.90 | Unclear | Q1 earnings today (May 5) after close; FDA Breakthrough Therapy zovegalisib confirmed; ISSVA World Congress data May 2026 | Yes — FDA designation 8-K | MED (4) | SCREENED OUT — RVOL 0.90 < 1.2 threshold; move to WATCHLIST; $21 PT (+61%); $554M cash; no dilution risk |
+| PACB | $1.59 | flat/+4% | unconfirmed | unconfirmed | Unclear | Q1 earnings May 6 after close; SparkNex chemistry; Trillion Gene Atlas partnership | Yes — prior 8-K | MED (3) | SCREENED OUT — RVOL not confirmed ≥ 1.2; WATCHLIST for May 6 earnings |
+| RCAT | $11.11 | -1.07% | ~6M (Apr 30) | unconfirmed today | Unclear | Q1 earnings May 7 after close; defense drone/robotics sector; $19.80 analyst PT | Upcoming 8-K | LOW (2) | SCREENED OUT — RVOL today unconfirmed; WATCHLIST for May 7 earnings |
+| SENS | $5.10 | -22.84% (May 4) | ~304K | 1.01 | No | Q1 earnings May 7 after close; Eversense CGM | Yes — earnings release | LOW (1) | SCREENED OUT — RVOL 1.01 < 1.2; still in downtrend post May 4 crash |
+| OABI | $1.42 | flat | 368K | 0.62 | Unknown | OmniUltra platform; strong 2026 event calendar | No today catalyst | LOW (1) | SCREENED OUT — RVOL 0.62 < 1.2 |
+| CELZ | $2.28 | flat | 1.71K | ~0.03 | Unknown | Phase 2 enrollment complete; chronic lower back pain | No today 8-K | LOW (1) | SCREENED OUT — RVOL 0.03; negligible volume |
+
+Market context: 1 slot open (4/5 positions active). Filled with SMMT (RVOL 2.78, ASCO May 31 catalyst). Slots now 5/5. RLAY, PACB, RCAT moved to watchlist for upcoming earnings catalysts May 5–7.
 
 ## RESEARCH ARCHIVE
 _Entries older than 14 days from the current review date are moved here._
