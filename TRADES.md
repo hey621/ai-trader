@@ -4,8 +4,6 @@ _Last updated: 2026-05-07 (Morning Scan — 10:15 AM EST)_
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
-| ~~RLAY~~ | ~~BUY~~ | ~~$13.20~~ | ~~$11.88~~ | ~~$15.84~~ | ~~MED~~ | ~~REMOVED 2026-05-06~~ — Q1 EPS MISS (actual -$0.62 vs est. -$0.36, missed by $0.06 per MarketBeat alt. estimate); stock closed $12.98 on May 5 (-1.69% on earnings day); no Alpaca fill confirmed; thesis weakened. Removed from queue. |
-| EVC | BUY | $3.98 | $3.58 | $4.78 | HIGH | Q1 2026 rev +114% to $197M; ATS +204%; net income turnaround +$12.36M; SEC 8-K confirmed May 5; no dilution; RVOL 19x avg on May 6 |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
