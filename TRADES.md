@@ -1,10 +1,11 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-06 (EOD Review — 4:30 PM EST)_
+_Last updated: 2026-05-07 (Morning Scan — 10:15 AM EST)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
 | ~~RLAY~~ | ~~BUY~~ | ~~$13.20~~ | ~~$11.88~~ | ~~$15.84~~ | ~~MED~~ | ~~REMOVED 2026-05-06~~ — Q1 EPS MISS (actual -$0.62 vs est. -$0.36, missed by $0.06 per MarketBeat alt. estimate); stock closed $12.98 on May 5 (-1.69% on earnings day); no Alpaca fill confirmed; thesis weakened. Removed from queue. |
+| EVC | BUY | $3.98 | $3.58 | $4.78 | HIGH | Q1 2026 rev +114% to $197M; ATS +204%; net income turnaround +$12.36M; SEC 8-K confirmed May 5; no dilution; RVOL 19x avg on May 6 |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
@@ -19,17 +20,14 @@ _NOTE: FATN, ABSI, ABUS are NOT confirmed Alpaca positions. They are retained in
 _Capital deployed (Alpaca confirmed): ~$237 / $500 (2 confirmed positions). 3 slots available._
 
 ## WATCHLIST
-_Updated: 2026-05-06 pre-market scan_
+_Reviewed 2026-05-07 — morning scan complete. Re-populate from afternoon scan or pre-market May 8._
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| EVC | $3.97 (May 5 close) | Q1 2026 revenue +114% to $197M; ATS segment +204%; net income turnaround to +$12.36M from -$47.97M; EPS $0.13 vs prior loss $0.53 | pre-market today | 4/5 | +74.2% PM on 1.6M shares; 8-K confirmed May 5; no dilution risk; gap-fill risk after 74% surge; +2 conviction for morning execution scan |
-| RLAY | $12.98 (May 5 close) | Q1 EPS missed by $0.06; revenue beat; pipeline advancing (zovegalisib Phase 3, breast cancer). ISSVA World Congress data still pending May 2026. | Ongoing pipeline | 2/5 | EPS miss weakens near-term momentum; 12 Buy ratings still intact, $21 avg PT; watch for ISSVA data catalyst re-entry |
-| PACB | $1.535 est. | Q1 earnings May 7 post-market; SparkNex launch; Trillion Gene Atlas | May 7 earnings | 3/5 | Watch for May 7 volume surge — re-evaluate pre-market May 8 |
-| RCAT | $11.11 est. | Q1 earnings May 7 post-market; defense drone sector; government contracts | May 7 earnings | 2/5 | Price above $10 ceiling — monitor for post-earnings pullback into range |
-| FATN | $3.25 est. | Prelim Q4 rev +79% YoY; TD SYNNEX global deal; Earnings call May 18 | May 18 earnings | 3/5 | NOT confirmed Alpaca fill; watch for May 18 earnings re-entry |
-| ABSI | $5.59 est. | ABS-201 Phase 1/2a interim data H1 2026; Q1 earnings May 7 after close | May 7 earnings | 2/5 | NOT confirmed Alpaca fill; Q1 earnings event risk May 7 |
-| ABUS | $4.37 est. | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | Ongoing | 2/5 | NOT confirmed Alpaca fill; thesis intact; no new catalyst today |
+| PACB | $1.535 est. | Q1 earnings May 7 after close; SparkNex launch; Trillion Gene Atlas | May 8 pre-market | 3/5 | Reporting tonight — re-evaluate pre-market May 8 |
+| ABSI | $5.59 est. | ABS-201 Phase 1/2a interim data H1 2026; Q1 earnings May 7 after close | May 8 pre-market | 2/5 | Reporting tonight — re-evaluate pre-market May 8; $400M shelf exists (watch dilution) |
+| RCAT | $11.11 est. | Q1 earnings May 7 after close; defense drone sector | May 8 pre-market | 2/5 | Price above $10 ceiling — only actionable if post-earnings pullback brings it under $10 |
+| ABUS | $4.37 est. | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | Ongoing | 2/5 | Thesis intact; no fresh catalyst today; re-enter on confirmed RVOL spike |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
@@ -109,6 +107,21 @@ _Overall (confirmed): 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original 
 - **SMMT bracket order discipline is a recurring gap.** The SELL bracket expired on entry day (May 5) and was still unprotected as of May 6 EOD. SMMT is currently +3.0% unrealised; the position is unprotected at $20.52 target and $15.39 stop. Re-placing the bracket is the highest-priority action for tomorrow morning.
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-07 Morning Scan
+
+| Ticker | Price | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
+|--------|-------|------|-------------|----------|---------------|------------|--------|
+| EVC | $3.98 (May 6 close) | 19.2x avg (6M vs 313K on May 6); est. elevated today | YES | Q1 2026 rev +114% to $197M; ATS +204%; net income turnaround +$12.36M; EPS $0.13 vs prior loss $0.53; no dilution (cash $71M+); short float 0.8%; no insider buying confirmed | YES — 8-K filed May 5, 2026 | HIGH (7) | **ENTERED — $3.98 stop $3.58 target $4.78** |
+| FATN | ~$2.48–3.14 | 0.12x avg (615K vs 5.34M avg) | UNKNOWN (downtrend –74% YoY) | VeloCloud Replacement Program (Apr 28); earnings now June 3 (not May 18 as previously noted) | YES — prior 8-K | LOW | SCREENED OUT — RVOL 0.12 far below 1.2 minimum; no fresh catalyst today |
+| PACB | ~$1.535 est. | Unconfirmed | Unknown | Q1 earnings May 7 after close (est. EPS –$0.17, rev $39.95M) | YES — call scheduled | MED (3) | SCREENED OUT — earnings event risk tonight; re-evaluate pre-market May 8 |
+| ABSI | ~$5.59 est. | Unconfirmed | Unknown | Q1 earnings May 7 after close (est. EPS –$0.20); ABS-201 Phase 1/2a data H1 2026 | YES — scheduled | LOW (2) | SCREENED OUT — earnings event risk tonight; $400M shelf filing (watch dilution); re-evaluate May 8 |
+| RCAT | ~$11.11 est. | Unconfirmed | Unknown | Q1 earnings May 7 after close; defense drone sector; $167.9M cash | YES — upcoming | LOW (2) | SCREENED OUT — price above $10 ceiling; re-evaluate if post-earnings pullback into range |
+| RGTI | $18.69 | ~1.05x (24.6M vs 23.3M avg) | Unknown | Quantum computing 99.5% two-qubit fidelity; earnings May 18 | YES — prior 8-K | LOW (1) | SCREENED OUT — RVOL 1.05 below 1.2 minimum; no fresh catalyst today |
+| ABUS | ~$4.37 est. | Unconfirmed | Unknown | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | YES — press release | LOW (2) | SCREENED OUT — no fresh catalyst today; RVOL unconfirmed; WATCHLIST |
+| AVTX | PM +53.7% | Very high | Unknown | $375M public offering to fund pipeline | YES | HIGH DILUTION RISK | SCREENED OUT — HIGH DILUTION RISK ($375M offering) |
+
+_Market context: May 7, 2026 morning. Heavy earnings day (PACB, ABSI, RCAT all reporting after close). Only 1 qualifying candidate found (EVC — post-earnings continuation). FATN screened on RVOL (0.12x) and stale catalyst. No biotech FDA PDUFA for today. 3 slots available (5 max – 2 active BB/SMMT). EVC fills 1 slot; PACB/ABSI/RCAT retained in watchlist for May 8 pre-market re-evaluation post-earnings._
 
 ### 2026-05-06 Pre-Market
 
