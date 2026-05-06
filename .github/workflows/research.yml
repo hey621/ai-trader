@@ -1,27 +1,11 @@
 name: PennyAlpha Research
 
+# PAUSED - re-enable by removing the `if: false` conditions on each job
+
 permissions:
   contents: write
 
 on:
-  schedule:
-    # Monday Pre-Market: 8:00 AM ET (13:00 UTC) + backup 9:00 AM ET (14:00 UTC)
-    - cron: "0 13 * * 1"
-    - cron: "0 14 * * 1"
-    # Monday Aggregation: 8:45 AM ET (13:45 UTC) + backup 9:45 AM ET (14:45 UTC)
-    - cron: "45 13 * * 1"
-    - cron: "45 14 * * 1"
-    # Morning Execution: 9:15 AM ET (14:15 UTC) + backup 10:15 AM ET (15:15 UTC) Mon–Fri
-    - cron: "15 14 * * 1-5"
-    - cron: "15 15 * * 1-5"
-    # Midday Execution: 12:30 PM ET (17:30 UTC) + backup 1:30 PM ET (18:30 UTC) Mon–Fri
-    - cron: "30 17 * * 1-5"
-    - cron: "30 18 * * 1-5"
-    # Afternoon Execution: 2:30 PM ET (19:30 UTC) + backup 3:30 PM ET (20:30 UTC) Mon–Fri
-    - cron: "30 19 * * 1-5"
-    - cron: "30 20 * * 1-5"
-    # EOD Review: 4:30 PM ET (21:30 UTC) Mon–Fri
-    - cron: "30 21 * * 1-5"
   workflow_dispatch:
     inputs:
       task:
@@ -41,9 +25,7 @@ jobs:
   monday_premarket:
     name: Monday Pre-Market Scan
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'monday_premarket' ||
-      github.event_name == 'schedule' && (github.event.schedule == '0 13 * * 1' || github.event.schedule == '0 14 * * 1')
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -72,9 +54,7 @@ jobs:
   monday:
     name: Monday Aggregation
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'monday' ||
-      github.event_name == 'schedule' && (github.event.schedule == '45 13 * * 1' || github.event.schedule == '45 14 * * 1')
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -103,9 +83,7 @@ jobs:
   morning:
     name: Morning Research
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'morning' ||
-      github.event_name == 'schedule' && (github.event.schedule == '15 14 * * 1-5' || github.event.schedule == '15 15 * * 1-5')
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -143,9 +121,7 @@ jobs:
   midday:
     name: Midday Execution
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'midday' ||
-      github.event_name == 'schedule' && (github.event.schedule == '30 17 * * 1-5' || github.event.schedule == '30 18 * * 1-5')
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -183,9 +159,7 @@ jobs:
   afternoon:
     name: Afternoon Execution
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'afternoon' ||
-      github.event_name == 'schedule' && (github.event.schedule == '30 19 * * 1-5' || github.event.schedule == '30 20 * * 1-5')
+    if: false
     steps:
       - uses: actions/checkout@v4
 
@@ -223,9 +197,7 @@ jobs:
   eod:
     name: EOD Review
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' && github.event.inputs.task == 'eod' ||
-      github.event_name == 'schedule' && github.event.schedule == '30 21 * * 1-5'
+    if: false
     steps:
       - uses: actions/checkout@v4
 
