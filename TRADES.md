@@ -1,65 +1,67 @@
 # PennyAlpha Trading Log
-_Last updated: 2026-05-05 (Midday Scan — 12:30 PM EST)_
+_Last updated: 2026-05-06 (EOD Review — 4:30 PM EST)_
 
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
+| ~~RLAY~~ | ~~BUY~~ | ~~$13.20~~ | ~~$11.88~~ | ~~$15.84~~ | ~~MED~~ | ~~REMOVED 2026-05-06~~ — Q1 EPS MISS (actual -$0.62 vs est. -$0.36, missed by $0.06 per MarketBeat alt. estimate); stock closed $12.98 on May 5 (-1.69% on earnings day); no Alpaca fill confirmed; thesis weakened. Removed from queue. |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|---------|------|----------|--------|------|------|--------|------|--------|
-| BB | $5.88 | 2026-05-04 | $100 | 17 | -$4.93 | -4.9% | Active 🔄 | $5.29 | $7.06 |
-| SMMT | $17.10 | 2026-05-05 | $137 | 8 | +$2.64 | +1.9% | Active 🔄 | $15.39 | $20.52 |
+| BB | $5.88 | 2026-05-04 | $100 | 17 | -$2.55 | -2.6% | Active 🔄 | $5.29 | $7.06 |
+| SMMT | $17.10 | 2026-05-05 | $137 | 8 | +$4.08 | +3.0% | Active 🔄 | $15.39 | $20.52 |
 
-_P&L updated: BB current ~$5.59 (Alpaca confirmed); SMMT filled at $17.10 (Alpaca confirmed 13:30:14 UTC), current $17.43. Stops updated: SMMT stop $15.39 (= $17.10 × 0.90), target $20.52 (= $17.10 × 1.20). SMMT SELL bracket expired (OrderStatus.EXPIRED) — bracket not yet re-placed; needs manual bracket or re-queue._
+_P&L updated 2026-05-06 EOD: BB current ~$5.73 (May 5 last trade; stop $5.29 not hit, target $7.06 not hit); SMMT closed $17.61 on May 5 (Q1 2026 EPS beat: $(0.24) vs est. $(0.27); stop $15.39 not hit, target $20.52 not hit). SMMT bracket still unprotected — manual stop/target re-placement remains needed. RLAY removed from Execution Queue (EPS miss, no Alpaca fill confirmed, stock below queue entry price)._
 
-_NOTE: FATN, ABSI, ABUS were tracked in prior TRADES.md but are NOT confirmed Alpaca positions (not found in open_positions from Alpaca API). These were likely paper/simulated entries not executed in Alpaca. They are retained in closed trades below for P&L tracking per original plan prices but are marked as UNCONFIRMED ALPACA FILL._
+_NOTE: FATN, ABSI, ABUS are NOT confirmed Alpaca positions. They are retained in the WATCHLIST for monitoring only._
 
 _Capital deployed (Alpaca confirmed): ~$237 / $500 (2 confirmed positions). 3 slots available._
 
 ## WATCHLIST
-_Reviewed 2026-05-05 Midday Scan_
+_Reviewed 2026-05-06 EOD — carry-forward from 2026-05-05 Midday Scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| RLAY | $13.20 est. | Q1 earnings after close TODAY (May 5); FDA Breakthrough Therapy zovegalisib; ISSVA World Congress data May 2026 | TODAY after close | 3/5 | RVOL sub-1.2 pre-earnings (normal quiet setup); 12 Buy ratings, $21 PT (+59%); $554M cash, zero dilution risk; **ENTERED Midday — see Execution Queue** |
-| PACB | $1.535 est. | Q1 earnings May 7 post-market; SparkNex launch; Trillion Gene Atlas | May 7 earnings | 3/5 | RVOL 0.76 today; Barclays $1 PT but 4 analysts Buy, avg PT $2.50 (+63%); watch for May 7 earnings-day volume surge |
-| RCAT | $11.11 est. | Q1 earnings May 7 post-market; defense drone sector; government contracts | May 7 earnings | 2/5 | RVOL unconfirmed; analyst consensus Buy $19.80 PT (+78% upside); price above $10 ceiling — monitor for post-earnings pullback into range |
-| FATN | $3.25 est. | Prelim Q4 rev $6.6-7.0M (+79% YoY); TD SYNNEX global deal; Earnings call May 18 | May 18 earnings | 3/5 | NOT confirmed Alpaca fill; price well above original $2.86 target (entry $2.38); strong uptrend; no new catalyst today; watch for May 18 earnings re-entry |
-| ABSI | $5.59 est. | ABS-201 Phase 1/2a interim data H1 2026; Q1 earnings May 7 after close | May 7 earnings | 2/5 | NOT confirmed Alpaca fill; Q1 earnings risk May 7 elevated; RVOL unconfirmed today |
-| ABUS | $4.37 est. | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | Ongoing | 2/5 | NOT confirmed Alpaca fill; price $4.37 above entry $4.04; thesis intact; no new catalyst today |
+| RLAY | $12.98 (May 5 close) | Q1 EPS missed by $0.06; revenue beat; pipeline advancing (zovegalisib Phase 3, breast cancer). ISSVA World Congress data still pending May 2026. | Ongoing pipeline | 2/5 | EPS miss weakens near-term momentum; 12 Buy ratings still intact, $21 avg PT; watch for ISSVA data catalyst re-entry |
+| PACB | $1.535 est. | Q1 earnings May 7 post-market; SparkNex launch; Trillion Gene Atlas | May 7 earnings | 3/5 | Watch for May 7 volume surge — re-evaluate pre-market May 8 |
+| RCAT | $11.11 est. | Q1 earnings May 7 post-market; defense drone sector; government contracts | May 7 earnings | 2/5 | Price above $10 ceiling — monitor for post-earnings pullback into range |
+| FATN | $3.25 est. | Prelim Q4 rev +79% YoY; TD SYNNEX global deal; Earnings call May 18 | May 18 earnings | 3/5 | NOT confirmed Alpaca fill; watch for May 18 earnings re-entry |
+| ABSI | $5.59 est. | ABS-201 Phase 1/2a interim data H1 2026; Q1 earnings May 7 after close | May 7 earnings | 2/5 | NOT confirmed Alpaca fill; Q1 earnings event risk May 7 |
+| ABUS | $4.37 est. | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | Ongoing | 2/5 | NOT confirmed Alpaca fill; thesis intact; no new catalyst today |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
-| RLAY | $14.80 | $12.99 | LOSS | 2026-05-05 | 2026-06-04 |
+| RLAY (unconfirmed) | $14.80 | $12.99 | 2026-05-05 | LOSS ❌ | -$10.73 (est.) | -12.2% (est.) | EARNINGS | MED | Midday | STOP HIT — ⚠️ UNCONFIRMED ALPACA FILL; malformed row from prior log; no Alpaca order confirmation found; retained for tracking only |
 | BZAI (original) | $1.75 | $2.46 | 2026-05-04 | WIN ✅ | +$39.76 | +40.6% | MOMENTUM | MED | Morning | MANUAL — closed near high; re-entered same session |
 | BBAI | $4.26 | $4.30 | 2026-05-04 | WIN ✅ | +$0.92 | +0.9% | EARNINGS | MED | Morning | TARGET HIT |
 | XRX | $2.97 | $2.68 | 2026-05-04 | LOSS ❌ | -$9.57 | -9.8% | EARNINGS | MED | Pre-Market | STOP HIT |
 | BZAI (re-entry) | $2.46 | $2.39 | 2026-05-04 | LOSS ❌ | -$4.20 | -2.8% | MOMENTUM | MED | Midday | STOP HIT |
 
-_Net realised P&L all closed trades: +$26.91._
+_Net realised P&L (Alpaca-confirmed trades only — excluding RLAY unconfirmed): +$26.91._
+_Net realised P&L (including RLAY unconfirmed row): +$16.18 est._
 
-_FATN, ABSI, ABUS — originally queued at $2.38, $5.22, $4.04 respectively on 2026-05-04; NOT confirmed as Alpaca fills (not present in Alpaca open_positions as of 2026-05-05 midday check). Retained in WATCHLIST with current prices for monitoring. If Alpaca did not execute these, they should be treated as watchlist positions only._
+_FATN, ABSI, ABUS — originally queued at $2.38, $5.22, $4.04 respectively on 2026-05-04; NOT confirmed as Alpaca fills. Retained in WATCHLIST for monitoring only._
 
 ## WEEKLY PERFORMANCE SUMMARY
-_Updated: 2026-05-05 Midday_
+_Updated: 2026-05-06 EOD_
 
 ### Week of May 4, 2026 (Running)
 | Metric | Value |
 |--------|-------|
-| Closed Trades | 4 |
-| Wins / Losses | 2 W / 2 L |
+| Closed Trades Today (May 6) | 0 |
+| Closed Trades (week total) | 4 confirmed + 1 unconfirmed |
+| Wins / Losses (confirmed) | 2 W / 2 L |
 | Win Rate | 50% |
-| Realised P&L | +$26.91 net |
+| Realised P&L (confirmed) | +$26.91 net |
 | Best Trade (closed) | BZAI original +$39.76 (+40.6%) |
 | Worst Trade (closed) | XRX –$9.57 (–9.8%) |
 | Active Positions (Alpaca confirmed) | 2 (BB, SMMT) |
 | Capital Deployed (Alpaca confirmed) | ~$237 / $500 |
-| Unrealised P&L (Alpaca confirmed) | –$2.29 net (BB –$4.93, SMMT +$2.64) |
-| New Entry Today | SMMT filled $17.10 (13:30 UTC); RLAY queued $13.20 |
-
-_Notes: Alpaca confirms 2 open positions only (BB, SMMT). FATN, ABSI, ABUS were not found as Alpaca open positions — likely not executed via trade.py. SMMT BUY filled at $17.10 on 2026-05-05; accompanying SELL bracket expired. Manual bracket re-placement needed: stop $15.39, target $20.52. Midday scan queued RLAY as new entry — earnings after close today, strong beat history, 12 analyst Buy ratings, $554M cash._
+| Unrealised P&L (updated May 6 EOD) | +$1.53 net (BB –$2.55, SMMT +$4.08) |
+| RLAY Queue Status | REMOVED — EPS miss May 5; no Alpaca fill confirmed |
+| SMMT Q1 2026 Earnings | EPS $(0.24) beat est. $(0.27) ✅; stock closed $17.61 (+3.0% vs our entry $17.10) |
 
 ### Week of April 28 – May 2, 2026
 | Metric | Value |
@@ -75,9 +77,11 @@ _Notes: Alpaca confirms 2 open positions only (BB, SMMT). FATN, ABSI, ABUS were 
 _Notes: First full week of trading._
 
 ## LESSONS LEARNED
-_Updated: 2026-05-05_
+_Updated: 2026-05-06_
 
 ### Win Rates
+_Based on 4 Alpaca-confirmed closed trades (BZAI original, BBAI, XRX, BZAI re-entry). RLAY unconfirmed row excluded from stats. No new closures on 2026-05-06._
+
 | Category | W | L | Win Rate | Avg Win% | Avg Loss% |
 |----------|---|---|----------|----------|-----------|
 | EARNINGS | 1 | 1 | 50% | +0.9% | -9.8% |
@@ -91,32 +95,38 @@ _Updated: 2026-05-05_
 | Morning scan | 2 | 0 | 100% | +20.8% | N/A |
 | Pre-Market scan | 0 | 1 | 0% | N/A | -9.8% |
 | Midday scan | 0 | 1 | 0% | N/A | -2.8% |
+| Afternoon scan | 0 | 0 | N/A | N/A | N/A |
 
-_Overall: 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original +40.6% (+$39.76). Worst trade: XRX –9.8% (–$9.57). Avg Win: +20.75%. Avg Loss: –6.30%._
+_Overall (confirmed): 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original +40.6% (+$39.76). Worst trade: XRX –9.8% (–$9.57). Avg Win: +20.75%. Avg Loss: –6.30%._
 
 ### Observations
-- **Morning scan is the strongest session (100% win rate, 2/2).** Both morning entries produced wins — BZAI's $50M contract win (+40.6%) and BBAI's earnings squeeze (+0.9%). Prioritise morning scan candidates and apply highest scrutiny to confirm catalysts before entry.
-- **Pre-Market entries carry the highest loss risk (0% win rate, 0/1, –9.8%).** XRX was bought into a pre-market spike on earnings day; the stock faded hard into close and hit the stop. Wait for open price stabilisation before entry.
-- **Same-session re-entries on exhausted momentum are low-probability (0% win rate).** The BZAI re-entry at $2.46, immediately after closing a +40.6% win, stopped out in hours at –2.8%. After a 40%+ intraday move, avoid chasing the same ticker same day.
-- **MOMENTUM catalysts have the highest ceiling (+40.6% win) but require discipline.** Verified 8-K contract wins like BZAI's $50M NeoTensr deal produce outsized moves. Take profit into strength, not at the top.
-- **Alpaca execution confirmation is critical.** FATN, ABSI, ABUS were queued and tracked in TRADES.md but Alpaca open_positions does not show them — always verify Alpaca API fill confirmation before treating a position as active. As of midday 2026-05-05, only BB and SMMT are confirmed Alpaca fills.
-- **SMMT bracket order expired — manual re-placement needed.** When bracket SELL orders expire (e.g. SMMT SELL expired same day as fill), the position is unprotected. Always verify bracket status post-fill; re-queue stop/target promptly.
+- **Morning scan is the strongest session (100% win rate, 2/2).** Both morning entries produced wins — BZAI's $50M contract win (+40.6%) and BBAI's earnings squeeze (+0.9%). Prioritise morning scan candidates with the highest scrutiny; it remains the most reliable session.
+- **Pre-Market entries carry the highest loss risk (0% win rate, 0/1, –9.8%).** XRX was bought into a pre-market spike on earnings day; the stock faded hard and hit the stop. Rule: wait for open-price stabilisation before entering any pre-market mover.
+- **Same-session re-entries on exhausted momentum fail (0% win rate).** BZAI re-entry at $2.46 immediately after a +40.6% win stopped out at –2.8%. After a 40%+ intraday move, do not re-enter the same ticker the same day.
+- **EPS misses kill pre-earnings setups — even confirmed catalysts.** RLAY was queued as a "Guaranteed Minimum Trade" on May 5 ahead of earnings; it missed EPS estimates and closed down –1.69% on earnings day. The lesson: low-RVOL, pre-earnings queue entries that miss EPS should be removed promptly. Don't invoke the Guaranteed Minimum Trade rule for low-RVOL, pre-event setups — wait for post-event confirmation.
+- **Alpaca execution confirmation is non-negotiable.** FATN, ABSI, ABUS were queued and tracked but never appeared in Alpaca open_positions. RLAY was queued but also has no Alpaca fill confirmation. Always verify the Alpaca API fill before marking any position as active. Ghost positions waste mental capital and distort the P&L log.
+- **SMMT bracket order discipline is a recurring gap.** The SELL bracket expired on entry day (May 5) and was still unprotected as of May 6 EOD. SMMT is currently +3.0% unrealised; the position is unprotected at $20.52 target and $15.39 stop. Re-placing the bracket is the highest-priority action for tomorrow morning.
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-06 EOD Review
+Closed today: 0 positions (0 wins, 0 losses) | P&L: $0.00
+Open positions (Alpaca confirmed): 2 (BB, SMMT) | Unrealised P&L: +$1.53 (BB –$2.55 at ~$5.73, SMMT +$4.08 at $17.61 close May 5)
+Notes: No Alpaca orders filled or closed today. RLAY removed from Execution Queue — Q1 EPS miss ($0.62 actual vs ~$0.36–0.42 estimate range), stock closed $12.98 on May 5 (below $13.20 queue entry), no Alpaca fill confirmed. SMMT Q1 2026 EPS $(0.24) beat est. $(0.27); closed $17.61 (+3.0% vs entry). SMMT bracket still needs manual re-placement (stop $15.39, target $20.52). PACB and ABSI report May 7 after close — re-evaluate pre-market May 8. Unrealised P&L swung positive (+$1.53) vs –$2.29 yesterday as SMMT moved in our favour.
 
 ### 2026-05-05 Midday Scan
 
 | Ticker | Price | Move% | RVOL | In Range | Catalyst | SEC Confirmed | Score | Result |
 |--------|-------|-------|------|----------|----------|---------------|-------|--------|
-| RLAY | ~$13.20 | +0.8% intraday | ~0.28 (sub-1.2) | ✅ $0.25–$25 | Q1 2026 earnings after close TODAY May 5; prior quarter EPS beat +22.24% surprise; +11.28% stock reaction post prior earnings; 12 analyst Buy ratings, $21 avg PT; FDA Breakthrough Therapy zovegalisib | Yes — FDA 8-K confirmed; earnings release today | MED (3) | **ENTERED — GUARANTEED MINIMUM TRADE; RVOL sub-1.2 but best available midday setup. Entry $13.20 stop $11.88 target $15.84** |
+| RLAY | ~$13.20 | +0.8% intraday | ~0.28 (sub-1.2) | ✅ $0.25–$25 | Q1 2026 earnings after close TODAY May 5; prior quarter EPS beat +22.24% surprise; +11.28% stock reaction post prior earnings; 12 analyst Buy ratings, $21 avg PT; FDA Breakthrough Therapy zovegalisib | Yes — FDA 8-K confirmed; earnings release today | MED (3) | **QUEUED — GUARANTEED MINIMUM TRADE; RVOL sub-1.2 but best available midday setup. Entry $13.20 stop $11.88 target $15.84. REMOVED 2026-05-06: EPS missed, no Alpaca fill confirmed.** |
 | PACB | ~$1.535 | -1.0% | 0.76 (sub-1.2) | ✅ $0.25–$25 | Q1 earnings May 7 post-market; SparkNex; Trillion Gene Atlas | Yes — prior 8-K | MED (3) | SCREENED OUT — RVOL 0.76 < 1.2; earnings not until May 7; WATCHLIST |
-| FATN | ~$3.25 | +4.5% | unconfirmed | ✅ $0.25–$25 | Prelim Q4 rev +79% YoY; TD SYNNEX deal; Earnings May 18 | Yes — 8-K Apr 30 | MED (3) | SCREENED OUT — no new catalyst today; not confirmed Alpaca fill; prior position unverified; Earnings May 18 better entry point |
+| FATN | ~$3.25 | +4.5% | unconfirmed | ✅ $0.25–$25 | Prelim Q4 rev +79% YoY; TD SYNNEX deal; Earnings May 18 | Yes — 8-K Apr 30 | MED (3) | SCREENED OUT — no new catalyst today; not confirmed Alpaca fill; Earnings May 18 better entry point |
 | ABUS | ~$4.37 | +0.5% | unconfirmed | ✅ $0.25–$25 | FDA Fast Track imdusiran; Moderna settlement | Yes | LOW (2) | SCREENED OUT — no new catalyst today; RVOL unconfirmed; not confirmed Alpaca fill |
 | ABSI | ~$5.59 | +0.4% | unconfirmed | ✅ $0.25–$25 | Phase 1/2a interim data H1 2026; Q1 earnings May 7 | UNCONFIRMED | LOW (2) | SCREENED OUT — no new catalyst today; earnings event risk May 7; not confirmed Alpaca fill |
 | IBRX | ~$7.22 | +7.22% | unknown | ✅ (if under $10) | Zacks top biotech list May 5 | Partial | LOW (1) | SCREENED OUT — insufficient data; requires dedicated search |
 | UAMY | sliding | -7.62% | high | ✅ | Momentum traders watching key levels (StocksToTrade) | Unknown | SCREENED OUT | DOWN move — not a buy setup |
 
-_Market context: Searches capped at 15 for this session. RLAY selected as mandatory midday entry (GUARANTEED MINIMUM TRADE rule invoked — RVOL sub-1.2 but no better confirmed setup found within search budget). Alpaca confirmed 2 open positions (BB, SMMT). 3 slots remain available post-RLAY queue. SMMT bracket expired — needs re-protection. FATN/ABSI/ABUS not in Alpaca open positions — execution gap identified._
+_Market context: Searches capped at 15 for this session. RLAY selected as mandatory midday entry (GUARANTEED MINIMUM TRADE rule invoked — RVOL sub-1.2 but no better confirmed setup found within search budget). Subsequently removed 2026-05-06 after EPS miss confirmed and no Alpaca fill found._
 
 ### 2026-05-05 Pre-Market
 
@@ -152,7 +162,7 @@ Notes: SMMT BUY filled $17.10; SMMT SELL bracket expired — unprotected, needs 
 | Ticker | Price | Move% | Vol | RVOL | Above SMA20 | Catalyst | SEC Confirmed | Conviction | Result |
 |--------|-------|-------|-----|------|-------------|----------|---------------|------------|--------|
 | SMMT | $16.20 est. | recovering from -24.9% (May 1–3) | 18.12M | 2.78 | No (recovering) | ASCO HARMONi-6 OS data May 31; ivonescimab Phase III PFS HR 0.52 confirmed | Yes — 424B5 ATM + Phase III 8-K | MED (4) | ENTERED $17.10 (Alpaca actual fill); stop $15.39; target $20.52 — SMMT SELL bracket EXPIRED; needs re-protection |
-| RLAY | $13.00 est. | 90d: +66.1%; 7d: -15.9% | 2.91M | 0.90 | Unclear | Q1 earnings today (May 5) after close; FDA Breakthrough Therapy zovegalisib | Yes — FDA designation 8-K | MED (4) | SCREENED OUT morning — RVOL 0.90 < 1.2; → RE-EVALUATED midday as RLAY now in Execution Queue (GUARANTEED MINIMUM TRADE) |
+| RLAY | $13.00 est. | 90d: +66.1%; 7d: -15.9% | 2.91M | 0.90 | Unclear | Q1 earnings today (May 5) after close; FDA Breakthrough Therapy zovegalisib | Yes — FDA designation 8-K | MED (4) | SCREENED OUT morning — RVOL 0.90 < 1.2; → RE-EVALUATED midday as RLAY queued (GUARANTEED MINIMUM TRADE). REMOVED 2026-05-06 after EPS miss. |
 | PACB | $1.59 | flat/+4% | unconfirmed | unconfirmed | Unclear | Q1 earnings May 6 after close; SparkNex chemistry; Trillion Gene Atlas partnership | Yes — prior 8-K | MED (3) | SCREENED OUT — RVOL not confirmed ≥ 1.2; WATCHLIST for May 7 earnings |
 | RCAT | $11.11 | -1.07% | ~6M (Apr 30) | unconfirmed | Unclear | Q1 earnings May 7 after close; defense drone sector | Upcoming 8-K | LOW (2) | SCREENED OUT — above $10 ceiling; WATCHLIST for May 7 |
 | SENS | $5.10 | -22.84% (May 4) | ~304K | 1.01 | No | Q1 earnings May 7 after close; Eversense CGM | Yes | LOW (1) | SCREENED OUT — RVOL 1.01 < 1.2; downtrend |
@@ -199,4 +209,4 @@ Notes: SMMT BUY filled $17.10; SMMT SELL bracket expired — unprotected, needs 
 ## RESEARCH ARCHIVE
 _Entries older than 14 days from the current review date are moved here._
 
-_Nothing archived yet — all research log entries are within the 14-day window as of 2026-05-05._
+_Nothing archived yet — all research log entries are within the 14-day window as of 2026-05-06._
