@@ -19,10 +19,11 @@ _NOTE: FATN, ABSI, ABUS are NOT confirmed Alpaca positions. They are retained in
 _Capital deployed (Alpaca confirmed): ~$237 / $500 (2 confirmed positions). 3 slots available._
 
 ## WATCHLIST
-_Reviewed 2026-05-06 EOD — carry-forward from 2026-05-05 Midday Scan_
+_Updated: 2026-05-06 pre-market scan_
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
+| EVC | $3.97 (May 5 close) | Q1 2026 revenue +114% to $197M; ATS segment +204%; net income turnaround to +$12.36M from -$47.97M; EPS $0.13 vs prior loss $0.53 | pre-market today | 4/5 | +74.2% PM on 1.6M shares; 8-K confirmed May 5; no dilution risk; gap-fill risk after 74% surge; +2 conviction for morning execution scan |
 | RLAY | $12.98 (May 5 close) | Q1 EPS missed by $0.06; revenue beat; pipeline advancing (zovegalisib Phase 3, breast cancer). ISSVA World Congress data still pending May 2026. | Ongoing pipeline | 2/5 | EPS miss weakens near-term momentum; 12 Buy ratings still intact, $21 avg PT; watch for ISSVA data catalyst re-entry |
 | PACB | $1.535 est. | Q1 earnings May 7 post-market; SparkNex launch; Trillion Gene Atlas | May 7 earnings | 3/5 | Watch for May 7 volume surge — re-evaluate pre-market May 8 |
 | RCAT | $11.11 est. | Q1 earnings May 7 post-market; defense drone sector; government contracts | May 7 earnings | 2/5 | Price above $10 ceiling — monitor for post-earnings pullback into range |
@@ -108,6 +109,18 @@ _Overall (confirmed): 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original 
 - **SMMT bracket order discipline is a recurring gap.** The SELL bracket expired on entry day (May 5) and was still unprotected as of May 6 EOD. SMMT is currently +3.0% unrealised; the position is unprotected at $20.52 target and $15.39 stop. Re-placing the bracket is the highest-priority action for tomorrow morning.
 
 ## WEEKLY RESEARCH LOG
+
+### 2026-05-06 Pre-Market
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| EVC | $3.97 (May 5) | ~$6.91 est. | +74.2% | UP | est. <2% | YES | Q1 2026 revenue +114% to $196.97M; ATS segment revenue +204% to $154.55M; net income $12.36M vs -$47.97M prior year; EPS $0.13 vs prior loss $0.53; PM volume 1.6M shares vs avg 345K | YES — 8-K filed May 5, 2026 |
+| EZGO | $1.90 (May 5) | ~$3.11 | +63.7% est. | UP | unknown | Unknown | Manufacturing facility ownership announcement April 2026 (stale catalyst) | SCREENED OUT — $100M ATM offering HIGH DILUTION RISK (Form 6-K April 8, 2026) |
+| ATOM | est. prior close | — | -40.1% | DOWN | — | NO | Q1 earnings miss; revenue only $11K; wider-than-expected loss | SCREENED OUT — down mover, earnings miss |
+| RCAT | ~$10.97 est. | ~$10.52 | -4.4% | DOWN | — | Unknown | Q1 earnings May 7 after close; defense drone sector | SCREENED OUT — above $10 ceiling; pre-earnings fade |
+| C3.ai (AI) | — | $9.41 | +2.1% | UP | — | — | Earnings May 27 after close | SCREENED OUT — PM move <5% threshold; approaching $10 ceiling |
+
+_Market context: May 6, 2026 pre-market risk-on environment. Russell 2000 +1.82%, Nasdaq 100 +1.43%, S&P 500 +0.83%, DJIA +1.01%. Iran War jitters from prior week dissipated. Heavy earnings slate (450 companies reporting). Only 1 qualifying candidate found (EVC). No biotech FDA PDUFA decisions confirmed for today or this week. EZGO screened on dilution; all others screened on price ceiling, direction, or insufficient PM move._
 
 ### 2026-05-06 EOD Review
 Closed today: 0 positions (0 wins, 0 losses) | P&L: $0.00
