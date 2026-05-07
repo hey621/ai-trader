@@ -18,7 +18,7 @@ _NOTE: FATN, ABSI, ABUS are NOT confirmed Alpaca positions. They are retained in
 _Capital deployed (Alpaca confirmed): ~$237 / $500 (2 confirmed positions). 3 slots available._
 
 ## WATCHLIST
-_Reviewed 2026-05-07 — morning scan complete. Re-populate from afternoon scan or pre-market May 8._
+_Pre-market scan 2026-05-07: 0 new qualifying candidates (all screened out — above $10 ceiling, down movers, or below 5% PM threshold). Morning scan 2026-05-07 complete. Re-populate from afternoon scan or pre-market May 8._
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
@@ -120,6 +120,21 @@ _Overall (confirmed): 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original 
 | AVTX | PM +53.7% | Very high | Unknown | $375M public offering to fund pipeline | YES | HIGH DILUTION RISK | SCREENED OUT — HIGH DILUTION RISK ($375M offering) |
 
 _Market context: May 7, 2026 morning. Heavy earnings day (PACB, ABSI, RCAT all reporting after close). Only 1 qualifying candidate found (EVC — post-earnings continuation). FATN screened on RVOL (0.12x) and stale catalyst. No biotech FDA PDUFA for today. 3 slots available (5 max – 2 active BB/SMMT). EVC fills 1 slot; PACB/ABSI/RCAT retained in watchlist for May 8 pre-market re-evaluation post-earnings._
+
+### 2026-05-07 Pre-Market
+
+| Ticker | Prev Close | PM Price | PM Move% | Direction | Spread | Above SMA20 | Catalyst | SEC Confirmed |
+|--------|-----------|---------|---------|-----------|--------|-------------|----------|---------------|
+| AVTX | ~$16.21 est. | ~$21.63 | +33–54% | UP | est. <2% | Yes | Phase 2 LOTUS positive: abdakibart HiSCR75 42.9% at Week 16 (p=0.015); $375M public offering priced $17.75/share May 6 | YES — GlobeNewswire May 6–7 | SCREENED OUT — above $10 ceiling; HIGH DILUTION RISK ($375M offering) |
+| AGL | ~$26.74 est. | ~$41.78 est. | +56.9% | UP | est. low | Yes | Q1 EPS $2.94 vs $1.05 est.; raised FY revenue and EBITDA guidance; prior 1-for-25 reverse split Mar 2026 | YES — earnings 8-K May 6 2026 | SCREENED OUT — above $10 ceiling (post-reverse-split ~$37+) |
+| SITM | — | ~$765 | +32.7% | UP | est. low | Yes | Q1 rev +88% to $113.6M; EPS $1.44 vs $1.17 est.; Q2 guide $140–$150M (+100% YoY) | YES — 8-K May 6 2026 | SCREENED OUT — above $10 ceiling |
+| TRDA | ~$16.00 est. | ~$8.95 | -44% | DOWN | est. wide | No | Ph1/2 ELEVATE-44-201 cohort 1: safety/tolerability OK, early functional benefit at 6 mg/kg; market disappointed by functional-only readout; dose escalation to 12 mg/kg approved | YES — GlobeNewswire May 7 2026 | SCREENED OUT — DOWN mover |
+| ONEG | $6.56 (May 6) | $1.96 | -70.1% | DOWN | est. wide | No | Director resignation Apr 2026; repeated trading halts May 5–6; no fundamental catalyst identified | Unclear | SCREENED OUT — DOWN mover; Chinese construction microcap |
+| SOUN | ~$9.40 est. | ~$9.14 | -3.5% | FLAT/DOWN | est. <2% | Unknown | Q1 2026 earnings tonight after close; ~16% implied options move; analysts avg PT $14.62 | Scheduled | SCREENED OUT — PM move <5% threshold; earnings EVENT RISK tonight |
+| NWTT | — | est. sub-$0.10 | +9900% | UP | Very wide | No | No confirmed SEC catalyst found | None confirmed | SCREENED OUT — extreme OTC pump; price likely below $0.50 floor; no SEC filing |
+| PACB | $1.535 est. | ~$1.54 | -0.65% | FLAT | est. <2% | No | Q1 2026 earnings tonight after close; pre-market volume 20K shares | Scheduled | SCREENED OUT — PM move <5% threshold; earnings EVENT RISK tonight |
+
+_Market context: May 7, 2026 pre-market (9:00 AM EST). 8 tickers screened; 0 qualifying candidates. All identified UP movers were above the $10 price ceiling (AGL, SITM, AVTX post-reverse-split) or extreme OTC pumps (NWTT). Down movers TRDA and ONEG screened on direction. SOUN and PACB below 5% PM threshold and carry earnings EVENT RISK tonight. No FDA PDUFA decisions confirmed for May 7. Heavy earnings slate tonight after close: SOUN, PACB, ABSI, RCAT — re-evaluate all pre-market May 8._
 
 ### 2026-05-06 Pre-Market
 
