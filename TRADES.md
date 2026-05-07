@@ -4,6 +4,7 @@ _Last updated: 2026-05-07 (Morning Scan — 10:15 AM EST)_
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
+| NUVB | BUY | $5.04 | $4.54 | $6.33 | MED | FDA sNDA accepted for IBTROZI (ROS1+ NSCLC, PDUFA Jan 4 2027); Q1 2026 EPS beat ($0.01 vs est. –$0.03); rev $83.2M; 23.6% short float; RVOL 2.2x |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
@@ -18,14 +19,10 @@ _NOTE: FATN, ABSI, ABUS are NOT confirmed Alpaca positions. They are retained in
 _Capital deployed (Alpaca confirmed): ~$237 / $500 (2 confirmed positions). 3 slots available._
 
 ## WATCHLIST
-_Pre-market scan 2026-05-07: 0 new qualifying candidates (all screened out — above $10 ceiling, down movers, or below 5% PM threshold). Morning scan 2026-05-07 complete. Re-populate from afternoon scan or pre-market May 8._
+_Reviewed 2026-05-07 Morning Scan (10:15 AM EST). All prior watchlist tickers screened out or cleared: PACB/ABSI report tonight after close (event risk — re-evaluate pre-market May 8); RCAT above $10 ceiling; ABUS RVOL 0.32 (below 1.2 minimum), no fresh catalyst. Re-populate from afternoon scan or pre-market May 8._
 
 | Ticker | Close Price | Catalyst | Expected | Score | Flags |
 |--------|------------|---------|---------|-------|-------|
-| PACB | $1.535 est. | Q1 earnings May 7 after close; SparkNex launch; Trillion Gene Atlas | May 8 pre-market | 3/5 | Reporting tonight — re-evaluate pre-market May 8 |
-| ABSI | $5.59 est. | ABS-201 Phase 1/2a interim data H1 2026; Q1 earnings May 7 after close | May 8 pre-market | 2/5 | Reporting tonight — re-evaluate pre-market May 8; $400M shelf exists (watch dilution) |
-| RCAT | $11.11 est. | Q1 earnings May 7 after close; defense drone sector | May 8 pre-market | 2/5 | Price above $10 ceiling — only actionable if post-earnings pullback brings it under $10 |
-| ABUS | $4.37 est. | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | Ongoing | 2/5 | Thesis intact; no fresh catalyst today; re-enter on confirmed RVOL spike |
 
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
@@ -118,8 +115,14 @@ _Overall (confirmed): 2W / 2L (50%), Net P&L +$26.91. Best trade: BZAI original 
 | RGTI | $18.69 | ~1.05x (24.6M vs 23.3M avg) | Unknown | Quantum computing 99.5% two-qubit fidelity; earnings May 18 | YES — prior 8-K | LOW (1) | SCREENED OUT — RVOL 1.05 below 1.2 minimum; no fresh catalyst today |
 | ABUS | ~$4.37 est. | Unconfirmed | Unknown | FDA Fast Track imdusiran; Moderna $2.25B settlement ($950M cash July 2026) | YES — press release | LOW (2) | SCREENED OUT — no fresh catalyst today; RVOL unconfirmed; WATCHLIST |
 | AVTX | PM +53.7% | Very high | Unknown | $375M public offering to fund pipeline | YES | HIGH DILUTION RISK | SCREENED OUT — HIGH DILUTION RISK ($375M offering) |
+| NUVB | $5.04 (+9.52%) | 2.2x (10.89M vs 4.95M avg) | YES (recovering off lows) | FDA accepted sNDA for IBTROZI (ROS1+ NSCLC); Q1 2026 EPS $0.01 beat est. –$0.03; rev $83.2M vs $3.1M YoY; cash $533.7M; no S-1/ATM found | YES — sNDA acceptance + Q1 8-K | MED (4) | **ENTERED — $5.04 stop $4.54 target $6.33** |
+| VTYX | ~$14.00 | N/A | N/A | Eli Lilly acquisition at $14/share (closed Mar 4 2026) | YES | M&A ARB | SCREENED OUT — M&A arbitrage, zero upside beyond deal price |
+| SIDU | ~$2.95 (May 5) | 0.46x (8.3M vs 17.9M avg) | Unknown | MDA SHIELD IDIQ contract (historical); earnings May 20 | No fresh today | LOW (1) | SCREENED OUT — RVOL 0.46 below 1.2 minimum |
+| CDXS | $2.67 (+7.37%) | 0.49x (957K vs 1.97M avg) | YES (above 50-day $1.81) | Q1 2026 earnings tonight after close; $5.00 Stifel PT; Outperform Cantor | Upcoming (tonight) | LOW (1) | SCREENED OUT — RVOL 0.49 below 1.2 minimum; earnings event risk tonight |
+| MDAI | $2.15 (+4.88%) | Unconfirmed | Unknown | Spectral AI wound imaging; no fresh 8-K confirmed | None confirmed | LOW (1) | SCREENED OUT — RVOL unconfirmed; no confirmed catalyst today |
+| ABUS | ~$4.22 | 0.32x (775K vs 2.43M avg) | Unknown | FDA Fast Track imdusiran; Moderna settlement $950M July 2026 | YES — prior releases | LOW (2) | SCREENED OUT — RVOL 0.32 below 1.2 minimum; no fresh catalyst today |
 
-_Market context: May 7, 2026 morning. Heavy earnings day (PACB, ABSI, RCAT all reporting after close). Only 1 qualifying candidate found (EVC — post-earnings continuation). FATN screened on RVOL (0.12x) and stale catalyst. No biotech FDA PDUFA for today. 3 slots available (5 max – 2 active BB/SMMT). EVC fills 1 slot; PACB/ABSI/RCAT retained in watchlist for May 8 pre-market re-evaluation post-earnings._
+_Market context: May 7, 2026 morning (10:15 AM EST). Risk-on session: S&P 500 +1.46%, Nasdaq 100 +2.08% (AMD +17%, SMCI +24% on earnings). Heavy earnings tonight (PACB, ABSI, RCAT, CDXS). 1 new qualifying candidate found (NUVB — FDA sNDA + Q1 earnings beat momentum). VTYX screened (M&A arb). SIDU/CDXS/MDAI/ABUS all below RVOL minimum. EVC from prior morning scan already at ~$7.22 (ran +81% from $3.98 entry). 3 slots available (5 max – 2 active BB/SMMT). NUVB fills 1 slot; PACB/ABSI cleared from watchlist for May 8 pre-market re-evaluation post-earnings._
 
 ### 2026-05-07 Pre-Market
 
