@@ -4,13 +4,13 @@ _Last updated: 2026-05-07 (Morning Scan — 10:15 AM EST)_
 ## EXECUTION QUEUE
 | Ticker | Signal | Entry | Stop | Target | Conviction | Notes |
 |--------|--------|-------|------|--------|------------|-------|
-| NUVB | BUY | $5.04 | $4.54 | $6.33 | MED | FDA sNDA accepted for IBTROZI (ROS1+ NSCLC, PDUFA Jan 4 2027); Q1 2026 EPS beat ($0.01 vs est. –$0.03); rev $83.2M; 23.6% short float; RVOL 2.2x |
 
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|---------|------|----------|--------|------|------|--------|------|--------|
 | BB | $5.88 | 2026-05-04 | $100 | 17 | -$2.55 | -2.6% | Active 🔄 | $5.29 | $7.06 |
 | SMMT | $17.10 | 2026-05-05 | $137 | 8 | +$4.08 | +3.0% | Active 🔄 | $15.39 | $20.52 |
+| NUVB | $4.85 | 2026-05-11 | $97 | 20 | — | — | Active | $4.54 | $6.33 |
 
 _P&L updated 2026-05-06 EOD: BB current ~$5.73 (May 5 last trade; stop $5.29 not hit, target $7.06 not hit); SMMT closed $17.61 on May 5 (Q1 2026 EPS beat: $(0.24) vs est. $(0.27); stop $15.39 not hit, target $20.52 not hit). SMMT bracket still unprotected — manual stop/target re-placement remains needed. RLAY removed from Execution Queue (EPS miss, no Alpaca fill confirmed, stock below queue entry price)._
 
