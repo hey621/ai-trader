@@ -8,7 +8,6 @@ _Last updated: 2026-05-07 (Morning Scan — 10:15 AM EST)_
 ## ACTIVE POSITIONS
 | Ticker | Entry $ | Date | Deployed | Shares | P&L$ | P&L% | Status | Stop | Target |
 |--------|---------|------|----------|--------|------|------|--------|------|--------|
-| BB | $5.88 | 2026-05-04 | $100 | 17 | -$2.55 | -2.6% | Active 🔄 | $5.29 | $7.06 |
 | SMMT | $17.10 | 2026-05-05 | $137 | 8 | +$4.08 | +3.0% | Active 🔄 | $15.39 | $20.52 |
 
 _P&L updated 2026-05-06 EOD: BB current ~$5.73 (May 5 last trade; stop $5.29 not hit, target $7.06 not hit); SMMT closed $17.61 on May 5 (Q1 2026 EPS beat: $(0.24) vs est. $(0.27); stop $15.39 not hit, target $20.52 not hit). SMMT bracket still unprotected — manual stop/target re-placement remains needed. RLAY removed from Execution Queue (EPS miss, no Alpaca fill confirmed, stock below queue entry price)._
@@ -26,6 +25,7 @@ _Reviewed 2026-05-07 Morning Scan (10:15 AM EST). All prior watchlist tickers sc
 ## CLOSED TRADES
 | Ticker | Entry $ | Exit $ | Date | Result | P&L$ | P&L% | Catalyst Type | Conviction | Scan Session | Exit Reason |
 |--------|---------|--------|------|--------|------|------|---------------|------------|--------------|-------------|
+| BB | $5.88 | $7.90 | WIN | 2026-05-22 | 2026-06-21 |
 | NUVB | $4.85 | $4.77 | LOSS | 2026-05-11 | 2026-06-10 |
 | RLAY (unconfirmed) | $14.80 | $12.99 | 2026-05-05 | LOSS ❌ | -$10.73 (est.) | -12.2% (est.) | EARNINGS | MED | Midday | STOP HIT — ⚠️ UNCONFIRMED ALPACA FILL; malformed row from prior log; no Alpaca order confirmation found; retained for tracking only |
 | BZAI (original) | $1.75 | $2.46 | 2026-05-04 | WIN ✅ | +$39.76 | +40.6% | MOMENTUM | MED | Morning | MANUAL — closed near high; re-entered same session |
